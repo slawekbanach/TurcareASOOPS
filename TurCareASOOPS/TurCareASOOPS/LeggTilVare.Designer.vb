@@ -39,6 +39,7 @@ Partial Class LeggTilVare
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnLeggTilVare = New System.Windows.Forms.Button()
         Me.btntilbake = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtVarenavn
@@ -179,18 +180,29 @@ Partial Class LeggTilVare
         '
         'btntilbake
         '
-        Me.btntilbake.Location = New System.Drawing.Point(29, 446)
+        Me.btntilbake.Location = New System.Drawing.Point(23, 506)
         Me.btntilbake.Name = "btntilbake"
         Me.btntilbake.Size = New System.Drawing.Size(75, 23)
         Me.btntilbake.TabIndex = 16
         Me.btntilbake.Text = "<- Tilbake"
         Me.btntilbake.UseVisualStyleBackColor = True
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(102, 440)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(385, 13)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Under tilbud skriv avslag i prisen på desimalform. Full pris flir 1.00 for eksemp" &
+    "el :) "
+        '
         'LeggTilVare
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(554, 494)
+        Me.ClientSize = New System.Drawing.Size(554, 566)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btntilbake)
         Me.Controls.Add(Me.btnLeggTilVare)
         Me.Controls.Add(Me.Label8)
@@ -232,4 +244,5 @@ Partial Class LeggTilVare
     Friend WithEvents Label8 As Label
     Friend WithEvents btnLeggTilVare As Button
     Friend WithEvents btntilbake As Button
+    Friend WithEvents Label9 As Label
 End Class
