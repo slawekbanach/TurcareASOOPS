@@ -25,7 +25,7 @@ Partial Class meny
         Me.btnLeggTilAnsatt = New System.Windows.Forms.Button()
         Me.btnLeggTilVare = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnSjekkLager = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -61,14 +61,14 @@ Partial Class meny
         Me.Button3.Text = "Statistikk"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnSjekkLager
         '
-        Me.Button4.Location = New System.Drawing.Point(70, 143)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(119, 54)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Sjekk lagerstatus"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnSjekkLager.Location = New System.Drawing.Point(70, 143)
+        Me.btnSjekkLager.Name = "btnSjekkLager"
+        Me.btnSjekkLager.Size = New System.Drawing.Size(119, 54)
+        Me.btnSjekkLager.TabIndex = 3
+        Me.btnSjekkLager.Text = "Sjekk lagerstatus"
+        Me.btnSjekkLager.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -135,7 +135,7 @@ Partial Class meny
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.btnSjekkLager)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnLeggTilVare)
         Me.Controls.Add(Me.btnLeggTilAnsatt)
@@ -149,7 +149,7 @@ Partial Class meny
     Friend WithEvents btnLeggTilAnsatt As Button
     Friend WithEvents btnLeggTilVare As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnSjekkLager As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button

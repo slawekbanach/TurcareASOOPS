@@ -72,6 +72,7 @@ Partial Class LeggTilVare
         'cmbSalgutleie
         '
         Me.cmbSalgutleie.FormattingEnabled = True
+        Me.cmbSalgutleie.Items.AddRange(New Object() {"Salg", "Utleie"})
         Me.cmbSalgutleie.Location = New System.Drawing.Point(216, 115)
         Me.cmbSalgutleie.Name = "cmbSalgutleie"
         Me.cmbSalgutleie.Size = New System.Drawing.Size(171, 21)
@@ -80,6 +81,7 @@ Partial Class LeggTilVare
         'cmbVaretilstand
         '
         Me.cmbVaretilstand.FormattingEnabled = True
+        Me.cmbVaretilstand.Items.AddRange(New Object() {"Ny", "Brukt"})
         Me.cmbVaretilstand.Location = New System.Drawing.Point(216, 156)
         Me.cmbVaretilstand.Name = "cmbVaretilstand"
         Me.cmbVaretilstand.Size = New System.Drawing.Size(171, 21)
@@ -88,6 +90,7 @@ Partial Class LeggTilVare
         'cmbVarestatus
         '
         Me.cmbVarestatus.FormattingEnabled = True
+        Me.cmbVarestatus.Items.AddRange(New Object() {"På lager", "Utleid"})
         Me.cmbVarestatus.Location = New System.Drawing.Point(216, 278)
         Me.cmbVarestatus.Name = "cmbVarestatus"
         Me.cmbVarestatus.Size = New System.Drawing.Size(171, 21)

@@ -9,4 +9,10 @@
         Me.Hide()
         LeggTilVare.Show()
     End Sub
+
+    Private Sub btnSjekkLager_Click(sender As Object, e As EventArgs) Handles btnSjekkLager.Click
+        Me.Hide()
+        SjekkLager.Show()
+
+    End Sub
 End Class

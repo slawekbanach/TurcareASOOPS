@@ -2,7 +2,7 @@
 
 Public Class LeggTilVare
 
-    Public tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_t4;Uid=_oops_t4;Pwd=passord123")
+    Public tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_t4;Uid=g_oops_t4;Pwd=passord123")
 
     Private Function sporring(ByVal sql As String) As DataTable
         Dim mydata As New DataTable
@@ -33,7 +33,7 @@ Public Class LeggTilVare
         Dim salgutleie As String = cmbSalgutleie.Text
         Dim varetilstand As String = cmbVaretilstand.Text
         Dim varepris As Integer = txtVarepris.Text
-        Dim varetilbud As Integer = txtVaretilbud.Text
+        Dim varetilbud As Double = txtVaretilbud.Text
         Dim varestatus As String = cmbVarestatus.Text
         Dim vareantall As Integer = txtVareantall.Text
         sporring("INSERT INTO vare (vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_tilbud, vare_status, vare_antall) VALUES ('" & varenavn & "', '" & salgutleie & "', '" & varetilstand & "', '" & varepris & "', '" & varetilbud & "', '" & varestatus & "', '" & vareantall & "');")
