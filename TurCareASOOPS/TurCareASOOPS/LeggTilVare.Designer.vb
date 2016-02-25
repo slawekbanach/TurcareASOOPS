@@ -192,9 +192,9 @@ Partial Class LeggTilVare
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(102, 440)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(385, 13)
+        Me.Label9.Size = New System.Drawing.Size(388, 13)
         Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Under tilbud skriv avslag i prisen på desimalform. Full pris flir 1.00 for eksemp" &
+        Me.Label9.Text = "Under tilbud skriv avslag i prisen på desimalform. Full pris blir 1.00 for eksemp" &
     "el :) "
         '
         'LeggTilVare

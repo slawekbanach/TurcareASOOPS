@@ -36,7 +36,19 @@ Public Class LeggTilVare
         Dim varetilbud As Double = txtVaretilbud.Text
         Dim varestatus As String = cmbVarestatus.Text
         Dim vareantall As Integer = txtVareantall.Text
-        sporring("INSERT INTO vare (vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_tilbud, vare_status, vare_antall) VALUES ('" & varenavn & "', '" & salgutleie & "', '" & varetilstand & "', '" & varepris & "', '" & varetilbud & "', '" & varestatus & "', '" & vareantall & "');")
+        Try
+            sporring("INSERT INTO vare (vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_tilbud, vare_status, vare_antall) VALUES ('" & varenavn & "', '" & salgutleie & "', '" & varetilstand & "', '" & varepris & "', '" & varetilbud & "', '" & varestatus & "', '" & vareantall & "');")
+            MessageBox.Show("Varen(e) ble lagt til i databasen")
+            txtVarenavn.Text = ""
+            cmbSalgutleie.ResetText()
+            txtVarepris.Text = ""
+            txtVaretilbud.Text = ""
+            cmbVarestatus.ResetText()
+            txtVareantall.Text = ""
+            cmbVaretilstand.ResetText()
+        Catch ex As Exception
+            MessageBox.Show("Feil: " & ex.Message)
+        End Try
 
     End Sub
 End Class
