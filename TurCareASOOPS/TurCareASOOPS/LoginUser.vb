@@ -3,7 +3,7 @@ Public Class LoginUser
     Private tilkobling As MySqlConnection
 
     Private Sub LoginUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=perkp;Uid=perkp;Pwd=passord123")
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_t4;Uid=g_oops_t4;Pwd=passord123")
         tilkobling.Open()
     End Sub
 
@@ -11,7 +11,7 @@ Public Class LoginUser
 
         Dim brukernavn = txtAnsattbrukernavn.Text.Replace("'", "/")
         Dim passord = txtAnsattpassord.Text.Replace("'", "/")
-        Dim sqlsporring = "Select * from brukere where brukernavn='" & brukernavn & "' " & "and passord='" & passord & "'"
+        Dim sqlsporring = "Select * from personer where person_type = 'ansatt' and person_brukernavn='" & brukernavn & "' " & "and person_passord='" & passord & "'"
         Dim sql As New MySqlCommand(sqlsporring, tilkobling)
         Dim da As New MySqlDataAdapter
         Dim interntabell As New DataTable
@@ -22,7 +22,7 @@ Public Class LoginUser
             'Label1.Text = brukernavn
             'Label2.Visible = True
             Me.Hide()
-            RegistrerBruker.Show()
+            meny.Show()
         Else
             MsgBox("Feil brukernavn eller passord")
         End If

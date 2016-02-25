@@ -32,6 +32,7 @@ Partial Class RegistrerBruker
         Me.txtgjentapw = New System.Windows.Forms.TextBox()
         Me.ComboAnsattype = New System.Windows.Forms.ComboBox()
         Me.btnRegistrerBruker = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -120,11 +121,21 @@ Partial Class RegistrerBruker
         Me.btnRegistrerBruker.Text = "Registrer ny bruker"
         Me.btnRegistrerBruker.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(43, 305)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(90, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = " <- Gå tilbake"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'RegistrerBruker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(323, 296)
+        Me.ClientSize = New System.Drawing.Size(323, 351)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnRegistrerBruker)
         Me.Controls.Add(Me.ComboAnsattype)
         Me.Controls.Add(Me.txtgjentapw)
@@ -152,4 +163,5 @@ Partial Class RegistrerBruker
     Friend WithEvents txtgjentapw As TextBox
     Friend WithEvents ComboAnsattype As ComboBox
     Friend WithEvents btnRegistrerBruker As Button
+    Friend WithEvents Button1 As Button
 End Class

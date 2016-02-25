@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LeggTilVare.Designer.vb">
+      <DependentUpon>LeggTilVare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LeggTilVare.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginDB.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
       <DependentUpon>LoginUser.vb</DependentUpon>
     </Compile>
     <Compile Include="LoginUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meny.Designer.vb">
+      <DependentUpon>meny.vb</DependentUpon>
+    </Compile>
+    <Compile Include="meny.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -109,11 +121,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LeggTilVare.resx">
+      <DependentUpon>LeggTilVare.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginDB.resx">
       <DependentUpon>LoginDB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUser.resx">
       <DependentUpon>LoginUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meny.resx">
+      <DependentUpon>meny.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
