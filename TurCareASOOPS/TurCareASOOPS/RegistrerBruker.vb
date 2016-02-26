@@ -58,7 +58,7 @@ Public Class RegistrerBruker
 
             If passord = passord2 Then
 
-                sporring("INSERT INTO personer (person_fornavn, person_etternavn, person_epost, person_tlf, person_adresse, person_postnr, person_poststed, person_type, person_passord, person_brukernavn) 
+                sporring("INSERT INTO personer (person_fornavn, person_etternavn, person_epost, person_tlf, person_adresse, person_postnr, person_poststed, person_type, person_brukernavn, person_passord) 
                 VALUES ('" & fornavn & "', '" & etternavn & "', '" & epost & "', '" & tlf & "', '" & adresse & "', '" & postnr & "', '" & poststed & "', 'Ansatt', '" & brukernavn & "' , '" & passord & "');")
                 MessageBox.Show("Ansatt ble lagt til i databasen")
             Else
