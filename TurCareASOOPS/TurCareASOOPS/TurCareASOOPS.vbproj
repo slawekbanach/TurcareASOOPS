@@ -86,6 +86,12 @@
     <Compile Include="ListUtAnsatte.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListUtKunder.Designer.vb">
+      <DependentUpon>ListUtKunder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListUtKunder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginDB.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListUtAnsatte.resx">
       <DependentUpon>ListUtAnsatte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListUtKunder.resx">
+      <DependentUpon>ListUtKunder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginDB.resx">
       <DependentUpon>LoginDB.vb</DependentUpon>

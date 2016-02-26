@@ -20,4 +20,10 @@
         Me.Hide()
         ListUtAnsatte.Show()
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Me.Hide()
+        ListUtKunder.show
+
+    End Sub
 End Class
