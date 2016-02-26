@@ -28,6 +28,7 @@ Partial Class SjekkLager
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnTilbake = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -82,11 +83,21 @@ Partial Class SjekkLager
         Me.btnTilbake.Text = "<- Tilbake"
         Me.btnTilbake.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(37, 177)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(168, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Alle varer"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'SjekkLager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(774, 384)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnTilbake)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.ListBox1)
@@ -106,4 +117,5 @@ Partial Class SjekkLager
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents btnClear As Button
     Friend WithEvents btnTilbake As Button
+    Friend WithEvents Button1 As Button
 End Class

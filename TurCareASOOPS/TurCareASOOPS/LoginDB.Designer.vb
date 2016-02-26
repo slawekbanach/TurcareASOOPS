@@ -64,6 +64,7 @@ Partial Class LoginDB
         Me.txtDBpassord.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtDBpassord.Size = New System.Drawing.Size(132, 20)
         Me.txtDBpassord.TabIndex = 6
+        Me.txtDBpassord.Text = "passord123"
         '
         'txtDBuser
         '
@@ -71,6 +72,7 @@ Partial Class LoginDB
         Me.txtDBuser.Name = "txtDBuser"
         Me.txtDBuser.Size = New System.Drawing.Size(132, 20)
         Me.txtDBuser.TabIndex = 5
+        Me.txtDBuser.Text = "g_oops_t4"
         '
         'Label3
         '

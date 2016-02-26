@@ -73,6 +73,7 @@ Partial Class LoginUser
         Me.txtAnsattpassord.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtAnsattpassord.Size = New System.Drawing.Size(132, 20)
         Me.txtAnsattpassord.TabIndex = 12
+        Me.txtAnsattpassord.Text = "123"
         '
         'txtAnsattbrukernavn
         '
@@ -80,6 +81,7 @@ Partial Class LoginUser
         Me.txtAnsattbrukernavn.Name = "txtAnsattbrukernavn"
         Me.txtAnsattbrukernavn.Size = New System.Drawing.Size(132, 20)
         Me.txtAnsattbrukernavn.TabIndex = 11
+        Me.txtAnsattbrukernavn.Text = "admin"
         '
         'LoginUser
         '

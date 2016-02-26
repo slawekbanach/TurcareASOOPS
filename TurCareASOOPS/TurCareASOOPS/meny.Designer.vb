@@ -40,7 +40,7 @@ Partial Class meny
         Me.btnLeggTilAnsatt.Name = "btnLeggTilAnsatt"
         Me.btnLeggTilAnsatt.Size = New System.Drawing.Size(119, 54)
         Me.btnLeggTilAnsatt.TabIndex = 0
-        Me.btnLeggTilAnsatt.Text = "Legg til ny ansatt"
+        Me.btnLeggTilAnsatt.Text = "Legg til ny person"
         Me.btnLeggTilAnsatt.UseVisualStyleBackColor = True
         '
         'btnLeggTilVare

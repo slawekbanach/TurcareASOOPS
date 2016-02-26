@@ -51,4 +51,25 @@ Public Class SjekkLager
         meny.Show()
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim mydata As New DataTable
+        mydata = sporring("SELECT vare_navn, vare_id, vare_pris, vare_antall, vare_salg_utleie FROM vare")
+
+        Dim varenavn, vareid, varepris, vareantall, varesalgutleie As String
+
+        ListBox1.Items.Add("Navn" & vbTab & "ID" & vbTab & "Pris" & vbTab & "Antall" & vbTab & "Salg/Utleie")
+        ListBox1.Items.Add("")
+        For Each rad As DataRow In mydata.Rows
+
+            varenavn = rad("vare_navn")
+            vareid = rad("vare_id")
+            varepris = rad("vare_pris")
+            vareantall = rad("vare_antall")
+            varesalgutleie = rad("vare_salg_utleie")
+            ListBox1.Items.Add(varenavn & vbTab & vareid & vbTab & varepris & vbTab & vareantall & vbTab & varesalgutleie)
+
+        Next
+    End Sub
 End Class
