@@ -1,5 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
+
+
 Public Class LoginUser
+    Public bruker As String
     Private tilkobling As MySqlConnection
 
     Private Sub LoginUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -7,8 +10,9 @@ Public Class LoginUser
         tilkobling.Open()
     End Sub
 
-    Private Sub btnAnsattlogin_Click_1(sender As Object, e As EventArgs) Handles btnAnsattlogin.Click
 
+    Private Sub btnAnsattlogin_Click_1(sender As Object, e As EventArgs) Handles btnAnsattlogin.Click
+        bruker = txtAnsattbrukernavn.Text
         Dim brukernavn = txtAnsattbrukernavn.Text.Replace("'", "/")
         Dim passord = txtAnsattpassord.Text.Replace("'", "/")
         Dim sqlsporring = "Select * from personer where person_type = 'ansatt' and person_brukernavn='" & brukernavn & "' " & "and person_passord='" & passord & "'"
@@ -33,5 +37,6 @@ Public Class LoginUser
         tilkobling.Close()
         tilkobling.Dispose()
     End Sub
+
 
 End Class

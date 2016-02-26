@@ -132,6 +132,12 @@
     <Compile Include="RegistrerBruker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegistrerSalg.Designer.vb">
+      <DependentUpon>RegistrerSalg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrerSalg.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SjekkLager.Designer.vb">
       <DependentUpon>SjekkLager.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrerBruker.resx">
       <DependentUpon>RegistrerBruker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrerSalg.resx">
+      <DependentUpon>RegistrerSalg.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SjekkLager.resx">
       <DependentUpon>SjekkLager.vb</DependentUpon>
