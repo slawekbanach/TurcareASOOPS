@@ -23,51 +23,60 @@ Partial Class ListUtAnsatte
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.btnTilbake = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(101, 322)
+        Me.Button1.Location = New System.Drawing.Point(152, 495)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(112, 35)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "List ut"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(13, 13)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(515, 290)
-        Me.ListBox1.TabIndex = 1
-        '
         'btnTilbake
         '
-        Me.btnTilbake.Location = New System.Drawing.Point(12, 388)
+        Me.btnTilbake.Location = New System.Drawing.Point(18, 597)
+        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnTilbake.Name = "btnTilbake"
-        Me.btnTilbake.Size = New System.Drawing.Size(75, 23)
+        Me.btnTilbake.Size = New System.Drawing.Size(112, 35)
         Me.btnTilbake.TabIndex = 2
         Me.btnTilbake.Text = "Tilbake"
         Me.btnTilbake.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(909, 487)
+        Me.DataGridView1.TabIndex = 3
+        '
         'ListUtAnsatte
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 423)
+        Me.ClientSize = New System.Drawing.Size(909, 651)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnTilbake)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ListUtAnsatte"
         Me.Text = "ListUtAnsatte"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents btnTilbake As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
