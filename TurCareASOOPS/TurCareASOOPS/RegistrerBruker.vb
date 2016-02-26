@@ -40,7 +40,7 @@ Public Class RegistrerBruker
         Dim tlf As Integer = txtTlf.Text
         Dim adresse As String = txtAdresse.Text
         Dim postnr As Integer = txtPostNr.Text
-        Dim poststed As String = txtPostNr.Text
+        Dim poststed As String = txtPoststed.Text
         Dim brukernavn As String = txtBrukernavn.Text
         Dim passord As String = txtPW.Text
         Dim passord2 As String = txtGjentaPw.Text
