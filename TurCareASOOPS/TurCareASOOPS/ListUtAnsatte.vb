@@ -58,7 +58,7 @@ Public Class ListUtAnsatte
         Try
             tilkobling.open()
             Dim query As String
-            query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer"
+            query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer where person_type not like 'Kunde'"
             command = New MySqlCommand(query, tilkobling)
             SDA.SelectCommand = command
             SDA.Fill(dbdataset)
@@ -75,4 +75,27 @@ Public Class ListUtAnsatte
 
     End Sub
 
+    Private Sub Søk_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+        Dim SDA As New MySqlDataAdapter
+        Dim dbdataset As New DataTable
+        Dim bsource As New BindingSource
+        Dim sok As String = txtSoek.Text
+        Try
+            tilkobling.open()
+            Dim query As String
+            query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer where person_type not like 'Kunde' and (person_fornavn like '%" & sok & "%' or person_etternavn like '%" & sok & "%');"
+            command = New MySqlCommand(query, tilkobling)
+            SDA.SelectCommand = command
+            SDA.Fill(dbdataset)
+            bsource.DataSource = dbdataset
+            DataGridView1.DataSource = bsource
+            SDA.Update(dbdataset)
+            tilkobling.close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            tilkobling.dispose()
+
+        End Try
+    End Sub
 End Class
