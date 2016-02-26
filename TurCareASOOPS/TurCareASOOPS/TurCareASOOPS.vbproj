@@ -80,6 +80,12 @@
     <Compile Include="LeggTilVare.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListUtAnsatte.Designer.vb">
+      <DependentUpon>ListUtAnsatte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListUtAnsatte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginDB.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
   <ItemGroup>
     <EmbeddedResource Include="LeggTilVare.resx">
       <DependentUpon>LeggTilVare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListUtAnsatte.resx">
+      <DependentUpon>ListUtAnsatte.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginDB.resx">
       <DependentUpon>LoginDB.vb</DependentUpon>

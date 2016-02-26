@@ -90,11 +90,11 @@ Partial Class meny
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(70, 306)
+        Me.Button7.Location = New System.Drawing.Point(70, 233)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(119, 54)
         Me.Button7.TabIndex = 6
-        Me.Button7.Text = "Button7"
+        Me.Button7.Text = "Liste over ansatte"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
