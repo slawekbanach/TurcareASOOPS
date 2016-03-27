@@ -87,9 +87,9 @@ Partial Class RegistrerSalg
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(78, 197)
+        Me.Button3.Location = New System.Drawing.Point(78, 187)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(75, 36)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
