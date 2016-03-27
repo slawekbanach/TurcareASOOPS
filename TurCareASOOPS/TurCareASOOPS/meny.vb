@@ -1,4 +1,5 @@
 ﻿Public Class meny
+
     Private Sub btnLeggTilAnsatt_Click(sender As Object, e As EventArgs) Handles btnLeggTilAnsatt.Click
         Me.Hide()
         RegistrerBruker.Show()
@@ -23,7 +24,7 @@
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         Me.Hide()
-        ListUtKunder.show
+        ListUtKunder.Show()
 
     End Sub
 
