@@ -1,25 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
-
+﻿
 Public Class RegistrerBruker
 
-    Public tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_t4;Uid=g_oops_t4;Pwd=passord123")
-
-    Private Function sporring(ByVal sql As String) As DataTable
-        Dim mydata As New DataTable
-        Try
-            tilkobling.Open()
-            Dim kommando As New MySqlCommand(sql, tilkobling)
-            Dim da As New MySqlDataAdapter
-            da.SelectCommand = kommando
-            da.Fill(mydata)
-            tilkobling.Close()
-        Catch ex As Exception
-            MessageBox.Show("Noe gikk galt. " & ex.Message)
-            tilkobling.Close()
-        End Try
-        Return mydata
-
-    End Function
+    Dim tilkobling As New DBConnect
 
     Private Sub RegistrerBruker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblBrukernavn.Visible = False
@@ -33,6 +15,8 @@ Public Class RegistrerBruker
     End Sub
 
     Private Sub btnRegistrerBruker_Click(sender As Object, e As EventArgs) Handles btnRegistrerBruker.Click
+
+        Dim sporring As New Query
 
         Dim fornavn As String = txtFornavn.Text
         Dim etternavn As String = TxtEtternavn.Text
@@ -58,7 +42,7 @@ Public Class RegistrerBruker
 
             If passord = passord2 Then
 
-                sporring("INSERT INTO personer (person_fornavn, person_etternavn, person_epost, person_tlf, person_adresse, person_postnr, person_poststed, person_type, person_brukernavn, person_passord) 
+                sporring.sporring("INSERT INTO personer (person_fornavn, person_etternavn, person_epost, person_tlf, person_adresse, person_postnr, person_poststed, person_type, person_brukernavn, person_passord) 
                 VALUES ('" & fornavn & "', '" & etternavn & "', '" & epost & "', '" & tlf & "', '" & adresse & "', '" & postnr & "', '" & poststed & "', 'Ansatt', '" & brukernavn & "' , '" & passord & "');")
                 MessageBox.Show("Ansatt ble lagt til i databasen")
             Else
@@ -68,7 +52,7 @@ Public Class RegistrerBruker
 
         If radioKunde.Checked Then
 
-            sporring("INSERT INTO personer (person_fornavn, person_etternavn, person_epost, person_tlf, person_adresse, person_postnr, person_poststed, person_type) 
+            sporring.sporring("INSERT INTO personer (person_fornavn, person_etternavn, person_epost, person_tlf, person_adresse, person_postnr, person_poststed, person_type) 
                 VALUES ('" & fornavn & "', '" & etternavn & "', '" & epost & "', '" & tlf & "', '" & adresse & "', '" & postnr & "', '" & poststed & "', 'Kunde');")
             MessageBox.Show("Kunden ble lagt til i databasen")
         End If
