@@ -81,6 +81,12 @@
     <Compile Include="Classes\Database\DBconfig.vb" />
     <Compile Include="Classes\Database\DBConnect.vb" />
     <Compile Include="Classes\Database\Query.vb" />
+    <Compile Include="Forms\Utleie.Designer.vb">
+      <DependentUpon>Utleie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utleie.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\g_oops_t4DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\meny.resx">
       <DependentUpon>meny.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utleie.resx">
+      <DependentUpon>Utleie.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
