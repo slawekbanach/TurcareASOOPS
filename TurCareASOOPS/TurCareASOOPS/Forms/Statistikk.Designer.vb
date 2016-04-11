@@ -24,13 +24,23 @@ Partial Class Statistikk
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.g_oops_t4DataSet = New TurCareASOOPS.g_oops_t4DataSet()
         Me.salgBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.g_oops_t4DataSet = New TurCareASOOPS.g_oops_t4DataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.salgTableAdapter = New TurCareASOOPS.g_oops_t4DataSetTableAdapters.salgTableAdapter()
-        CType(Me.g_oops_t4DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.salgBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.g_oops_t4DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'salgBindingSource
+        '
+        Me.salgBindingSource.DataMember = "salg"
+        Me.salgBindingSource.DataSource = Me.g_oops_t4DataSet
+        '
+        'g_oops_t4DataSet
+        '
+        Me.g_oops_t4DataSet.DataSetName = "g_oops_t4DataSet"
+        Me.g_oops_t4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class Statistikk
         Me.ReportViewer1.Size = New System.Drawing.Size(1059, 477)
         Me.ReportViewer1.TabIndex = 0
         '
-        'g_oops_t4DataSet
-        '
-        Me.g_oops_t4DataSet.DataSetName = "g_oops_t4DataSet"
-        Me.g_oops_t4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'salgBindingSource
-        '
-        Me.salgBindingSource.DataMember = "salg"
-        Me.salgBindingSource.DataSource = Me.g_oops_t4DataSet
-        '
         'salgTableAdapter
         '
         Me.salgTableAdapter.ClearBeforeFill = True
@@ -66,8 +66,8 @@ Partial Class Statistikk
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "Statistikk"
         Me.Text = "Statistikk"
-        CType(Me.g_oops_t4DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.salgBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.g_oops_t4DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

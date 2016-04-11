@@ -5,6 +5,7 @@
         con.Dispose()
         txtSelger.Text = LoginUser.bruker
         txtSelger.Enabled = False
+        txtTotalpris.Enabled = False
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "dd/MM/yyyy"
         DateTimePicker2.Format = DateTimePickerFormat.Custom
@@ -36,14 +37,23 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    '    Dim fradato As Date = DateTimePicker1.Value
+    '    Dim tildato As Date = DateTimePicker2.Value
+    '    'Dim sluttpris As String = CInt(txtTotalpris.Text)
+    '    Dim pris As Integer = txtPris.Text
+    '    Dim antalldager As Integer = tildato.Subtract(fradato).Days
+    '    txtTotalpris.Text = CInt(antalldager.ToString) * pris
+
+
+    'End Sub
+
+    Private Sub txtPris_TextChanged(sender As Object, e As EventArgs) Handles txtPris.TextChanged
         Dim fradato As Date = DateTimePicker1.Value
         Dim tildato As Date = DateTimePicker2.Value
         'Dim sluttpris As String = CInt(txtTotalpris.Text)
         Dim pris As Integer = txtPris.Text
         Dim antalldager As Int32 = tildato.Subtract(fradato).Days
         txtTotalpris.Text = CInt(antalldager.ToString) * pris
-
-
     End Sub
 End Class

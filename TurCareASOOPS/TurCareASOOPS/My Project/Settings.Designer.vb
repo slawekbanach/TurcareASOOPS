@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("g_oops_t4ConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=mysql.stud.iie.ntnu.no;user id=g_oops_t4;persistsecurityinfo=True;database"& _ 
+            "=g_oops_t4")>  _
+        Public ReadOnly Property g_oops_t4ConnectionString1() As String
+            Get
+                Return CType(Me("g_oops_t4ConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -168,6 +168,9 @@
     <Compile Include="Forms\Statistikk.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\g_oops_t4DataSet.vb">
+      <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\LeggTilVare.resx">
