@@ -5182,7 +5182,7 @@ Namespace g_oops_t4DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(2) {}
+            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(1) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT `vare_id`, `vare_navn`, `vare_salg_utleie`, `vare_tilstand`, `vare_pris`, "& _ 
@@ -5191,11 +5191,11 @@ Namespace g_oops_t4DataSetTableAdapters
             Me._commandCollection(1) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "INSERT INTO `vare` (`vare_navn`, `vare_salg_utleie`, `vare_tilstand`, `vare_pris`"& _ 
-                ", `vare_tilbud`, `vare_status`, `vare_antall`) VALUES (@p1, @p2, @p3, @p4, @p5, "& _ 
-                "@p6, @p7)"
+                ", `vare_tilbud`, `vare_status`, `vare_antall`) VALUES (@vare_navn, @vare_salg_ut"& _ 
+                "leie, @vare_tilstand, @vare_pris, @vare_tilbud, @vare_status, @vare_antall)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p1"
+            param.ParameterName = "@vare_navn"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.Size = 40
@@ -5203,7 +5203,7 @@ Namespace g_oops_t4DataSetTableAdapters
             param.SourceColumn = "vare_navn"
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p2"
+            param.ParameterName = "@vare_salg_utleie"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.Size = 10
@@ -5211,7 +5211,7 @@ Namespace g_oops_t4DataSetTableAdapters
             param.SourceColumn = "vare_salg_utleie"
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p3"
+            param.ParameterName = "@vare_tilstand"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.Size = 10
@@ -5219,21 +5219,21 @@ Namespace g_oops_t4DataSetTableAdapters
             param.SourceColumn = "vare_tilstand"
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p4"
+            param.ParameterName = "@vare_pris"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
             param.SourceColumn = "vare_pris"
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p5"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.ParameterName = "@vare_tilbud"
+            param.DbType = Global.System.Data.DbType.[Decimal]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.NewDecimal
             param.IsNullable = true
             param.SourceColumn = "vare_tilbud"
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p6"
+            param.ParameterName = "@vare_status"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.Size = 15
@@ -5241,141 +5241,12 @@ Namespace g_oops_t4DataSetTableAdapters
             param.SourceColumn = "vare_status"
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p7"
+            param.ParameterName = "@vare_antall"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
             param.SourceColumn = "vare_antall"
             Me._commandCollection(1).Parameters.Add(param)
-            Me._commandCollection(2) = New Global.MySql.Data.MySqlClient.MySqlCommand()
-            Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "UPDATE `vare` SET `vare_navn` = @p1, `vare_salg_utleie` = @p2, `vare_tilstand` = "& _ 
-                "@p3, `vare_pris` = @p4, `vare_tilbud` = @p5, `vare_status` = @p6, `vare_antall` "& _ 
-                "= @p7 WHERE ((`vare_id` = @p8) AND (`vare_navn` = @p9) AND (`vare_salg_utleie` ="& _ 
-                " @p10) AND (`vare_tilstand` = @p11) AND (`vare_pris` = @p12) AND (`vare_tilbud` "& _ 
-                "= @p13) AND (`vare_status` = @p14) AND (`vare_antall` = @p15))"
-            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p1"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 40
-            param.IsNullable = true
-            param.SourceColumn = "vare_navn"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p2"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 10
-            param.IsNullable = true
-            param.SourceColumn = "vare_salg_utleie"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p3"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 10
-            param.IsNullable = true
-            param.SourceColumn = "vare_tilstand"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p4"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_pris"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p5"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_tilbud"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p6"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 15
-            param.IsNullable = true
-            param.SourceColumn = "vare_status"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p7"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_antall"
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p8"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_id"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p9"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 40
-            param.IsNullable = true
-            param.SourceColumn = "vare_navn"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p10"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 10
-            param.IsNullable = true
-            param.SourceColumn = "vare_salg_utleie"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p11"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 10
-            param.IsNullable = true
-            param.SourceColumn = "vare_tilstand"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p12"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_pris"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p13"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_tilbud"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p14"
-            param.DbType = Global.System.Data.DbType.[String]
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 15
-            param.IsNullable = true
-            param.SourceColumn = "vare_status"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p15"
-            param.DbType = Global.System.Data.DbType.Int32
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
-            param.IsNullable = true
-            param.SourceColumn = "vare_antall"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._commandCollection(2).Parameters.Add(param)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5588,100 +5459,31 @@ Namespace g_oops_t4DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertQuery(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As Integer, ByVal p5 As Integer, ByVal p6 As String, ByVal p7 As Integer) As Integer
+        Public Overloads Overridable Function InsertQuery(ByVal vare_navn As String, ByVal vare_salg_utleie As String, ByVal vare_tilstand As String, ByVal vare_pris As Integer, ByVal vare_tilbud As Decimal, ByVal vare_status As String, ByVal vare_antall As Integer) As Integer
             Dim command As Global.MySql.Data.MySqlClient.MySqlCommand = Me.CommandCollection(1)
-            If (p1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p1")
+            If (vare_navn Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("vare_navn")
             Else
-                command.Parameters(0).Value = CType(p1,String)
+                command.Parameters(0).Value = CType(vare_navn,String)
             End If
-            If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
+            If (vare_salg_utleie Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("vare_salg_utleie")
             Else
-                command.Parameters(1).Value = CType(p2,String)
+                command.Parameters(1).Value = CType(vare_salg_utleie,String)
             End If
-            If (p3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p3")
+            If (vare_tilstand Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("vare_tilstand")
             Else
-                command.Parameters(2).Value = CType(p3,String)
+                command.Parameters(2).Value = CType(vare_tilstand,String)
             End If
-            command.Parameters(3).Value = CType(p4,Integer)
-            command.Parameters(4).Value = CType(p5,Integer)
-            If (p6 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p6")
+            command.Parameters(3).Value = CType(vare_pris,Integer)
+            command.Parameters(4).Value = CType(vare_tilbud,Decimal)
+            If (vare_status Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("vare_status")
             Else
-                command.Parameters(5).Value = CType(p6,String)
+                command.Parameters(5).Value = CType(vare_status,String)
             End If
-            command.Parameters(6).Value = CType(p7,Integer)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open
-            End If
-            Dim returnValue As Integer
-            Try 
-                returnValue = command.ExecuteNonQuery
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close
-                End If
-            End Try
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function UpdateQuery(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As Integer, ByVal p5 As Integer, ByVal p6 As String, ByVal p7 As Integer, ByVal p8 As Integer, ByVal p9 As String, ByVal p10 As String, ByVal p11 As String, ByVal p12 As Integer, ByVal p13 As Integer, ByVal p14 As String, ByVal p15 As Integer) As Integer
-            Dim command As Global.MySql.Data.MySqlClient.MySqlCommand = Me.CommandCollection(2)
-            If (p1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p1")
-            Else
-                command.Parameters(0).Value = CType(p1,String)
-            End If
-            If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
-            Else
-                command.Parameters(1).Value = CType(p2,String)
-            End If
-            If (p3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p3")
-            Else
-                command.Parameters(2).Value = CType(p3,String)
-            End If
-            command.Parameters(3).Value = CType(p4,Integer)
-            command.Parameters(4).Value = CType(p5,Integer)
-            If (p6 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p6")
-            Else
-                command.Parameters(5).Value = CType(p6,String)
-            End If
-            command.Parameters(6).Value = CType(p7,Integer)
-            command.Parameters(7).Value = CType(p8,Integer)
-            If (p9 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p9")
-            Else
-                command.Parameters(8).Value = CType(p9,String)
-            End If
-            If (p10 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p10")
-            Else
-                command.Parameters(9).Value = CType(p10,String)
-            End If
-            If (p11 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p11")
-            Else
-                command.Parameters(10).Value = CType(p11,String)
-            End If
-            command.Parameters(11).Value = CType(p12,Integer)
-            command.Parameters(12).Value = CType(p13,Integer)
-            If (p14 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p14")
-            Else
-                command.Parameters(13).Value = CType(p14,String)
-            End If
-            command.Parameters(14).Value = CType(p15,Integer)
+            command.Parameters(6).Value = CType(vare_antall,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

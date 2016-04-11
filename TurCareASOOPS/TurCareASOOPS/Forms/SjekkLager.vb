@@ -1,7 +1,4 @@
-﻿Imports System
-Imports System.Data
-Imports System.Data.SqlClient
-Imports MySql.Data.MySqlClient
+﻿
 
 
 Public Class SjekkLager
@@ -57,8 +54,4 @@ Public Class SjekkLager
         Me.VareTableAdapter.Update(Me.G_oops_t4DataSet.vare)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.VareTableAdapter.InsertQuery()
-
-    End Sub
 End Class

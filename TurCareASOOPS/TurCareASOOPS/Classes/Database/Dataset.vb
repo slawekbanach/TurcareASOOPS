@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.Types
 Public Class Dataset
 
 
