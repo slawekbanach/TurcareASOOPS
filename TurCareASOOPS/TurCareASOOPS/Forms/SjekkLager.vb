@@ -6,7 +6,6 @@ Public Class SjekkLager
     Dim tilkobling As New DBConnect
 
 
-
     Private Sub btnListUt_Click(sender As Object, e As EventArgs) Handles btnListUt.Click
 
 

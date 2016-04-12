@@ -4,6 +4,13 @@ Public Class ListUtAnsatte
 
     Dim tilkobling As New DBConnect
 
+
+    Private Sub ListUtAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'G_oops_t4DataSet.personer' table. You can move, or remove it, as needed.
+        Me.PersonerTableAdapter.Fill(Me.G_oops_t4DataSet.personer)
+
+    End Sub
+
     Private Sub btnTilbake_Click(sender As Object, e As EventArgs) Handles btnTilbake.Click
         Me.Hide()
         meny.Show()
@@ -35,4 +42,6 @@ Public Class ListUtAnsatte
 
 
     End Sub
+
+
 End Class

@@ -23,15 +23,15 @@ Partial Class SjekkLager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtsoek = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.VarenavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VaresalgutleieDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VaretilstandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VareprisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VaretilbudDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VarestatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VareBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.G_oops_t4DataSet = New TurCareASOOPS.g_oops_t4DataSet()
         Me.btnTilbake = New System.Windows.Forms.Button()
@@ -39,7 +39,13 @@ Partial Class SjekkLager
         Me.btnListUt = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.VareTableAdapter = New TurCareASOOPS.g_oops_t4DataSetTableAdapters.vareTableAdapter()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.VarenavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VaresalgutleieDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VaretilstandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VareprisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VaretilbudDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VarestatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.G_oops_t4DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,48 +73,6 @@ Partial Class SjekkLager
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1161, 508)
         Me.DataGridView1.TabIndex = 8
-        '
-        'VarenavnDataGridViewTextBoxColumn
-        '
-        Me.VarenavnDataGridViewTextBoxColumn.DataPropertyName = "vare_navn"
-        Me.VarenavnDataGridViewTextBoxColumn.HeaderText = "vare_navn"
-        Me.VarenavnDataGridViewTextBoxColumn.Name = "VarenavnDataGridViewTextBoxColumn"
-        '
-        'VaresalgutleieDataGridViewTextBoxColumn
-        '
-        Me.VaresalgutleieDataGridViewTextBoxColumn.DataPropertyName = "vare_salg_utleie"
-        Me.VaresalgutleieDataGridViewTextBoxColumn.HeaderText = "vare_salg_utleie"
-        Me.VaresalgutleieDataGridViewTextBoxColumn.Name = "VaresalgutleieDataGridViewTextBoxColumn"
-        '
-        'VaretilstandDataGridViewTextBoxColumn
-        '
-        Me.VaretilstandDataGridViewTextBoxColumn.DataPropertyName = "vare_tilstand"
-        Me.VaretilstandDataGridViewTextBoxColumn.HeaderText = "vare_tilstand"
-        Me.VaretilstandDataGridViewTextBoxColumn.Name = "VaretilstandDataGridViewTextBoxColumn"
-        '
-        'VareprisDataGridViewTextBoxColumn
-        '
-        Me.VareprisDataGridViewTextBoxColumn.DataPropertyName = "vare_pris"
-        Me.VareprisDataGridViewTextBoxColumn.HeaderText = "vare_pris"
-        Me.VareprisDataGridViewTextBoxColumn.Name = "VareprisDataGridViewTextBoxColumn"
-        '
-        'VaretilbudDataGridViewTextBoxColumn
-        '
-        Me.VaretilbudDataGridViewTextBoxColumn.DataPropertyName = "vare_tilbud"
-        Me.VaretilbudDataGridViewTextBoxColumn.HeaderText = "vare_tilbud"
-        Me.VaretilbudDataGridViewTextBoxColumn.Name = "VaretilbudDataGridViewTextBoxColumn"
-        '
-        'VarestatusDataGridViewTextBoxColumn
-        '
-        Me.VarestatusDataGridViewTextBoxColumn.DataPropertyName = "vare_status"
-        Me.VarestatusDataGridViewTextBoxColumn.HeaderText = "vare_status"
-        Me.VarestatusDataGridViewTextBoxColumn.Name = "VarestatusDataGridViewTextBoxColumn"
-        '
-        'VareantallDataGridViewTextBoxColumn
-        '
-        Me.VareantallDataGridViewTextBoxColumn.DataPropertyName = "vare_antall"
-        Me.VareantallDataGridViewTextBoxColumn.HeaderText = "vare_antall"
-        Me.VareantallDataGridViewTextBoxColumn.Name = "VareantallDataGridViewTextBoxColumn"
         '
         'VareBindingSource
         '
@@ -154,30 +118,77 @@ Partial Class SjekkLager
         '
         Me.Button1.Location = New System.Drawing.Point(263, 536)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 35)
+        Me.Button1.Size = New System.Drawing.Size(172, 35)
         Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Test update"
+        Me.Button1.Text = "Oppdater/lagre"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'VareTableAdapter
         '
         Me.VareTableAdapter.ClearBeforeFill = True
         '
-        'Button2
+        'VarenavnDataGridViewTextBoxColumn
         '
-        Me.Button2.Location = New System.Drawing.Point(424, 536)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(127, 35)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Test insert"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.VarenavnDataGridViewTextBoxColumn.DataPropertyName = "vare_navn"
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VarenavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle15
+        Me.VarenavnDataGridViewTextBoxColumn.HeaderText = "Varenavn"
+        Me.VarenavnDataGridViewTextBoxColumn.Name = "VarenavnDataGridViewTextBoxColumn"
+        '
+        'VaresalgutleieDataGridViewTextBoxColumn
+        '
+        Me.VaresalgutleieDataGridViewTextBoxColumn.DataPropertyName = "vare_salg_utleie"
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaresalgutleieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle16
+        Me.VaresalgutleieDataGridViewTextBoxColumn.HeaderText = "Salg eller Utleie"
+        Me.VaresalgutleieDataGridViewTextBoxColumn.Name = "VaresalgutleieDataGridViewTextBoxColumn"
+        '
+        'VaretilstandDataGridViewTextBoxColumn
+        '
+        Me.VaretilstandDataGridViewTextBoxColumn.DataPropertyName = "vare_tilstand"
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaretilstandDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle17
+        Me.VaretilstandDataGridViewTextBoxColumn.HeaderText = "Tilstand"
+        Me.VaretilstandDataGridViewTextBoxColumn.Name = "VaretilstandDataGridViewTextBoxColumn"
+        '
+        'VareprisDataGridViewTextBoxColumn
+        '
+        Me.VareprisDataGridViewTextBoxColumn.DataPropertyName = "vare_pris"
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VareprisDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle18
+        Me.VareprisDataGridViewTextBoxColumn.HeaderText = "Enhetspris"
+        Me.VareprisDataGridViewTextBoxColumn.Name = "VareprisDataGridViewTextBoxColumn"
+        '
+        'VaretilbudDataGridViewTextBoxColumn
+        '
+        Me.VaretilbudDataGridViewTextBoxColumn.DataPropertyName = "vare_tilbud"
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaretilbudDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle19
+        Me.VaretilbudDataGridViewTextBoxColumn.HeaderText = "Tilbud (desimal) "
+        Me.VaretilbudDataGridViewTextBoxColumn.Name = "VaretilbudDataGridViewTextBoxColumn"
+        '
+        'VarestatusDataGridViewTextBoxColumn
+        '
+        Me.VarestatusDataGridViewTextBoxColumn.DataPropertyName = "vare_status"
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VarestatusDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle20
+        Me.VarestatusDataGridViewTextBoxColumn.HeaderText = "Status"
+        Me.VarestatusDataGridViewTextBoxColumn.Name = "VarestatusDataGridViewTextBoxColumn"
+        '
+        'VareantallDataGridViewTextBoxColumn
+        '
+        Me.VareantallDataGridViewTextBoxColumn.DataPropertyName = "vare_antall"
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.Transparent
+        Me.VareantallDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle21
+        Me.VareantallDataGridViewTextBoxColumn.HeaderText = "Antall på lager"
+        Me.VareantallDataGridViewTextBoxColumn.Name = "VareantallDataGridViewTextBoxColumn"
         '
         'SjekkLager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1161, 662)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtsoek)
         Me.Controls.Add(Me.DataGridView1)
@@ -211,5 +222,4 @@ Partial Class SjekkLager
     Friend WithEvents VaretilbudDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents VarestatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents VareantallDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
 End Class
