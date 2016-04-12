@@ -20,11 +20,12 @@ Public Class Dataset
             'DataGridView1.DataSource = bsource
             SDA.Update(dbdataset)
 
-            Return bsource
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
 
+        Return bsource
 
     End Function
 
