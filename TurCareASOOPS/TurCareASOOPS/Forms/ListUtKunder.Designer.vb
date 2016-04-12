@@ -32,30 +32,27 @@ Partial Class ListUtKunder
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(18, 517)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button1.Location = New System.Drawing.Point(12, 336)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 35)
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnSok
         '
-        Me.btnSok.Location = New System.Drawing.Point(840, 517)
-        Me.btnSok.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSok.Location = New System.Drawing.Point(560, 336)
         Me.btnSok.Name = "btnSok"
-        Me.btnSok.Size = New System.Drawing.Size(112, 35)
+        Me.btnSok.Size = New System.Drawing.Size(75, 23)
         Me.btnSok.TabIndex = 1
         Me.btnSok.Text = "Button2"
         Me.btnSok.UseVisualStyleBackColor = True
         '
         'btnTilbake
         '
-        Me.btnTilbake.Location = New System.Drawing.Point(20, 591)
-        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTilbake.Location = New System.Drawing.Point(13, 384)
         Me.btnTilbake.Name = "btnTilbake"
-        Me.btnTilbake.Size = New System.Drawing.Size(112, 35)
+        Me.btnTilbake.Size = New System.Drawing.Size(75, 23)
         Me.btnTilbake.TabIndex = 2
         Me.btnTilbake.Text = "Button2"
         Me.btnTilbake.UseVisualStyleBackColor = True
@@ -65,30 +62,27 @@ Partial Class ListUtKunder
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1026, 508)
+        Me.DataGridView1.Size = New System.Drawing.Size(684, 330)
         Me.DataGridView1.TabIndex = 3
         '
         'txtsoek
         '
-        Me.txtsoek.Location = New System.Drawing.Point(840, 563)
-        Me.txtsoek.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtsoek.Location = New System.Drawing.Point(560, 366)
         Me.txtsoek.Name = "txtsoek"
-        Me.txtsoek.Size = New System.Drawing.Size(148, 26)
+        Me.txtsoek.Size = New System.Drawing.Size(100, 20)
         Me.txtsoek.TabIndex = 4
         '
         'ListUtKunder
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1026, 645)
+        Me.ClientSize = New System.Drawing.Size(684, 419)
         Me.Controls.Add(Me.txtsoek)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnTilbake)
         Me.Controls.Add(Me.btnSok)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ListUtKunder"
         Me.Text = "ListUtKunder"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
