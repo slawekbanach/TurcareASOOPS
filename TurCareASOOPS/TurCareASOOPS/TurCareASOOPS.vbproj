@@ -81,6 +81,11 @@
     <Compile Include="Classes\Database\DBconfig.vb" />
     <Compile Include="Classes\Database\DBConnect.vb" />
     <Compile Include="Classes\Database\Query.vb" />
+    <Compile Include="DatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Utleie.Designer.vb">
       <DependentUpon>Utleie.vb</DependentUpon>
     </Compile>
@@ -215,6 +220,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Reports\g_oops_t4DataSet.xsc">
       <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>
     </None>
