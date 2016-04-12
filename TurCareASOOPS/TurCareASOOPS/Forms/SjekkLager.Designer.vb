@@ -32,14 +32,6 @@ Partial Class SjekkLager
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtsoek = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnTilbake = New System.Windows.Forms.Button()
-        Me.btnSok = New System.Windows.Forms.Button()
-        Me.btnListUt = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.VareBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
-        Me.VareTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.vareTableAdapter()
         Me.VarenavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VaresalgutleieDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VaretilstandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,6 +39,14 @@ Partial Class SjekkLager
         Me.VaretilbudDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VarestatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VareBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
+        Me.btnTilbake = New System.Windows.Forms.Button()
+        Me.btnSok = New System.Windows.Forms.Button()
+        Me.btnListUt = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.VareTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.vareTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,64 +75,6 @@ Partial Class SjekkLager
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1161, 508)
         Me.DataGridView1.TabIndex = 8
-        '
-        'btnTilbake
-        '
-        Me.btnTilbake.Location = New System.Drawing.Point(32, 610)
-        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnTilbake.Name = "btnTilbake"
-        Me.btnTilbake.Size = New System.Drawing.Size(112, 35)
-        Me.btnTilbake.TabIndex = 7
-        Me.btnTilbake.Text = "<- Tilbake"
-        Me.btnTilbake.UseVisualStyleBackColor = True
-        '
-        'btnSok
-        '
-        Me.btnSok.Location = New System.Drawing.Point(854, 548)
-        Me.btnSok.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnSok.Name = "btnSok"
-        Me.btnSok.Size = New System.Drawing.Size(112, 35)
-        Me.btnSok.TabIndex = 6
-        Me.btnSok.Text = "Søk på vare"
-        Me.btnSok.UseVisualStyleBackColor = True
-        '
-        'btnListUt
-        '
-        Me.btnListUt.Location = New System.Drawing.Point(30, 536)
-        Me.btnListUt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnListUt.Name = "btnListUt"
-        Me.btnListUt.Size = New System.Drawing.Size(208, 35)
-        Me.btnListUt.TabIndex = 5
-        Me.btnListUt.Text = "List ut alle varer"
-        Me.btnListUt.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(263, 536)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(172, 35)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Oppdater/lagre"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'VareBindingSource
-        '
-        Me.VareBindingSource.DataMember = "vare"
-        Me.VareBindingSource.DataSource = Me.DatabaseDataSetBindingSource
-        '
-        'DatabaseDataSetBindingSource
-        '
-        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
-        Me.DatabaseDataSetBindingSource.Position = 0
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VareTableAdapter
-        '
-        Me.VareTableAdapter.ClearBeforeFill = True
         '
         'VarenavnDataGridViewTextBoxColumn
         '
@@ -189,6 +131,64 @@ Partial Class SjekkLager
         Me.VareantallDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
         Me.VareantallDataGridViewTextBoxColumn.HeaderText = "Antall på lager"
         Me.VareantallDataGridViewTextBoxColumn.Name = "VareantallDataGridViewTextBoxColumn"
+        '
+        'VareBindingSource
+        '
+        Me.VareBindingSource.DataMember = "vare"
+        Me.VareBindingSource.DataSource = Me.DatabaseDataSetBindingSource
+        '
+        'DatabaseDataSetBindingSource
+        '
+        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
+        Me.DatabaseDataSetBindingSource.Position = 0
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'btnTilbake
+        '
+        Me.btnTilbake.Location = New System.Drawing.Point(32, 610)
+        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTilbake.Name = "btnTilbake"
+        Me.btnTilbake.Size = New System.Drawing.Size(112, 35)
+        Me.btnTilbake.TabIndex = 7
+        Me.btnTilbake.Text = "<- Tilbake"
+        Me.btnTilbake.UseVisualStyleBackColor = True
+        '
+        'btnSok
+        '
+        Me.btnSok.Location = New System.Drawing.Point(854, 548)
+        Me.btnSok.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSok.Name = "btnSok"
+        Me.btnSok.Size = New System.Drawing.Size(112, 35)
+        Me.btnSok.TabIndex = 6
+        Me.btnSok.Text = "Søk på vare"
+        Me.btnSok.UseVisualStyleBackColor = True
+        '
+        'btnListUt
+        '
+        Me.btnListUt.Location = New System.Drawing.Point(30, 536)
+        Me.btnListUt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnListUt.Name = "btnListUt"
+        Me.btnListUt.Size = New System.Drawing.Size(208, 35)
+        Me.btnListUt.TabIndex = 5
+        Me.btnListUt.Text = "List ut alle varer"
+        Me.btnListUt.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(263, 536)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(172, 35)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Oppdater/lagre"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'VareTableAdapter
+        '
+        Me.VareTableAdapter.ClearBeforeFill = True
         '
         'SjekkLager
         '

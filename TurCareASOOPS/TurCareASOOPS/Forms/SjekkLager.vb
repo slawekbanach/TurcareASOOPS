@@ -50,13 +50,6 @@ Public Class SjekkLager
 
     End Sub
 
-    Private Sub SjekkLager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'G_oops_t4DataSet.vare' table. You can move, or remove it, as needed.
-        Me.VareTableAdapter.Fill(Me.G_oops_t4DataSet.vare)
-        Catch ex As Exception
-
-        End Try
-
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.VareTableAdapter.Update(Me.DatabaseDataSet.vare)

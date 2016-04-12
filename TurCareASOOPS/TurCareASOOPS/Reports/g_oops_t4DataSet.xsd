@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personerTableAdapter" GeneratorDataComponentClassName="personerTableAdapter" Name="personer" UserDataComponentName="personerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="g_oops_t4ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="g_oops_t4ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAnsatt" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataAnsatt" GeneratorSourceName="FillAnsatt" GetMethodModifier="Public" GetMethodName="GetDataAnsatt" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataAnsatt" UserSourceName="FillAnsatt">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `person_fornavn`, `person_etternavn`, `person_epost`, `person_tlf`, `person_adresse`, `person_postnr`, `person_poststed`, `person_type`,  `person_brukernavn`, ENCRYPT(`person_passord`) FROM `personer`
+                    <CommandText>SELECT `person_fornavn`, `person_etternavn`, `person_epost`, `person_tlf`, `person_adresse`, `person_postnr`, `person_poststed`, `person_type`,  `person_brukernavn`, `person_passord` FROM `personer` WHERE `person_type` = 'ansatt'
 ORDER BY `person_fornavn` ASC;</CommandText>
                     <Parameters />
                   </DbCommand>
