@@ -3,6 +3,7 @@ Public Class Query
 
     Public Function sporring(ByVal sql As String) As DataTable
         Dim dt As New DataTable
+        con.Close()
         Try
             con.Open()
             Dim cmd As New MySqlCommand(sql, con)

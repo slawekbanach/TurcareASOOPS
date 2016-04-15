@@ -42,4 +42,9 @@
         Me.Hide()
         Utleie.Show()
     End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Me.Hide()
+        Kurs.Show()
+    End Sub
 End Class

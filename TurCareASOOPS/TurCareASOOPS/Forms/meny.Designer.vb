@@ -36,90 +36,81 @@ Partial Class meny
         '
         'btnLeggTilAnsatt
         '
-        Me.btnLeggTilAnsatt.Location = New System.Drawing.Point(105, 88)
-        Me.btnLeggTilAnsatt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLeggTilAnsatt.Location = New System.Drawing.Point(70, 57)
         Me.btnLeggTilAnsatt.Name = "btnLeggTilAnsatt"
-        Me.btnLeggTilAnsatt.Size = New System.Drawing.Size(178, 83)
+        Me.btnLeggTilAnsatt.Size = New System.Drawing.Size(119, 54)
         Me.btnLeggTilAnsatt.TabIndex = 0
         Me.btnLeggTilAnsatt.Text = "Legg til ny person"
         Me.btnLeggTilAnsatt.UseVisualStyleBackColor = True
         '
         'btnLeggTilVare
         '
-        Me.btnLeggTilVare.Location = New System.Drawing.Point(363, 88)
-        Me.btnLeggTilVare.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLeggTilVare.Location = New System.Drawing.Point(242, 57)
         Me.btnLeggTilVare.Name = "btnLeggTilVare"
-        Me.btnLeggTilVare.Size = New System.Drawing.Size(178, 83)
+        Me.btnLeggTilVare.Size = New System.Drawing.Size(119, 54)
         Me.btnLeggTilVare.TabIndex = 1
         Me.btnLeggTilVare.Text = "Legg til vare"
         Me.btnLeggTilVare.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(604, 88)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button3.Location = New System.Drawing.Point(403, 57)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(178, 83)
+        Me.Button3.Size = New System.Drawing.Size(119, 54)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Statistikk"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'btnSjekkLager
         '
-        Me.btnSjekkLager.Location = New System.Drawing.Point(105, 220)
-        Me.btnSjekkLager.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSjekkLager.Location = New System.Drawing.Point(70, 143)
         Me.btnSjekkLager.Name = "btnSjekkLager"
-        Me.btnSjekkLager.Size = New System.Drawing.Size(178, 83)
+        Me.btnSjekkLager.Size = New System.Drawing.Size(119, 54)
         Me.btnSjekkLager.TabIndex = 3
         Me.btnSjekkLager.Text = "Sjekk lagerstatus eller legg til ny vare"
         Me.btnSjekkLager.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(363, 220)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button5.Location = New System.Drawing.Point(242, 143)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(178, 83)
+        Me.Button5.Size = New System.Drawing.Size(119, 54)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Salg"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(604, 220)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button6.Location = New System.Drawing.Point(403, 143)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(178, 83)
+        Me.Button6.Size = New System.Drawing.Size(119, 54)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Utleie"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(105, 358)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button7.Location = New System.Drawing.Point(70, 233)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(178, 83)
+        Me.Button7.Size = New System.Drawing.Size(119, 54)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "Liste over ansatte"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(363, 358)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button8.Location = New System.Drawing.Point(242, 233)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(178, 83)
+        Me.Button8.Size = New System.Drawing.Size(119, 54)
         Me.Button8.TabIndex = 7
         Me.Button8.Text = "Kurs"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(604, 358)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button9.Location = New System.Drawing.Point(403, 233)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(178, 83)
+        Me.Button9.Size = New System.Drawing.Size(119, 54)
         Me.Button9.TabIndex = 8
         Me.Button9.Text = "Liste over kunder"
         Me.Button9.UseVisualStyleBackColor = True
@@ -127,18 +118,17 @@ Partial Class meny
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(406, 32)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(271, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 20)
+        Me.Label1.Size = New System.Drawing.Size(64, 13)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Hovedmeny"
         '
         'meny
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(930, 572)
+        Me.ClientSize = New System.Drawing.Size(620, 372)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
@@ -149,7 +139,6 @@ Partial Class meny
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnLeggTilVare)
         Me.Controls.Add(Me.btnLeggTilAnsatt)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "meny"
         Me.Text = "Menu"
         Me.ResumeLayout(False)
