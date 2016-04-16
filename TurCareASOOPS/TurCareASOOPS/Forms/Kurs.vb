@@ -2,7 +2,10 @@
 
 
     Private Sub Kurs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'TODO: This line of code loads data into the 'DatabaseDataSet.vare' table. You can move, or remove it, as needed.
+        Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
+        DataGridView1.Visible = False
+        ComboBox1.Visible = False
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Panel1.Visible = False
@@ -45,6 +48,19 @@
             MessageBox.Show("Feil: " & ex.Message)
         End Try
 
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ComboBox1.Visible = True
+
+        'Dim sporring As New Query
+        'Try
+
+        'Catch ex As Exception
+
+        'End Try
 
 
     End Sub

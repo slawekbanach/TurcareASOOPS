@@ -22,6 +22,7 @@ Partial Class Kurs
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -39,8 +40,24 @@ Partial Class Kurs
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
+        Me.DatabaseDataSet1 = New TurCareASOOPS.DatabaseDataSet()
+        Me.DatabaseDataSet2 = New TurCareASOOPS.DatabaseDataSet()
+        Me.DatabaseDataSet3 = New TurCareASOOPS.DatabaseDataSet()
+        Me.VareBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VareTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.vareTableAdapter()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -192,11 +209,64 @@ Partial Class Kurs
         Me.Panel2.Size = New System.Drawing.Size(241, 258)
         Me.Panel2.TabIndex = 5
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 126)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(730, 289)
+        Me.DataGridView1.TabIndex = 10
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(248, 99)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
+        Me.ComboBox1.TabIndex = 11
+        Me.ComboBox1.Text = "System.Data.DataViewManagerListItemTypeDescriptor"
+        '
+        'DatabaseDataSetBindingSource
+        '
+        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
+        Me.DatabaseDataSetBindingSource.Position = 0
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DatabaseDataSet1
+        '
+        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DatabaseDataSet2
+        '
+        Me.DatabaseDataSet2.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DatabaseDataSet3
+        '
+        Me.DatabaseDataSet3.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VareBindingSource
+        '
+        Me.VareBindingSource.DataMember = "vare"
+        Me.VareBindingSource.DataSource = Me.DatabaseDataSetBindingSource
+        '
+        'VareTableAdapter
+        '
+        Me.VareTableAdapter.ClearBeforeFill = True
+        '
         'Kurs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(733, 584)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button3)
@@ -208,6 +278,13 @@ Partial Class Kurs
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -229,4 +306,13 @@ Partial Class Kurs
     Friend WithEvents Button3 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents DatabaseDataSetBindingSource As BindingSource
+    Friend WithEvents DatabaseDataSet As DatabaseDataSet
+    Friend WithEvents DatabaseDataSet1 As DatabaseDataSet
+    Friend WithEvents DatabaseDataSet2 As DatabaseDataSet
+    Friend WithEvents DatabaseDataSet3 As DatabaseDataSet
+    Friend WithEvents VareBindingSource As BindingSource
+    Friend WithEvents VareTableAdapter As DatabaseDataSetTableAdapters.vareTableAdapter
 End Class
