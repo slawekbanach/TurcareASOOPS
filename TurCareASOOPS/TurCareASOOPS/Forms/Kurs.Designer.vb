@@ -44,14 +44,14 @@ Partial Class Kurs
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DeltagernavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeltagertlfDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KursidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PameldingkursBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KursDataSet = New TurCareASOOPS.kursDataSet()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Pamelding_kursTableAdapter = New TurCareASOOPS.kursDataSetTableAdapters.pamelding_kursTableAdapter()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.DeltagernavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DeltagertlfDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KursidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -238,6 +238,30 @@ Partial Class Kurs
         Me.DataGridView1.Size = New System.Drawing.Size(1095, 394)
         Me.DataGridView1.TabIndex = 10
         '
+        'DeltagernavnDataGridViewTextBoxColumn
+        '
+        Me.DeltagernavnDataGridViewTextBoxColumn.DataPropertyName = "deltager_navn"
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DeltagernavnDataGridViewTextBoxColumn.HeaderText = "Navn"
+        Me.DeltagernavnDataGridViewTextBoxColumn.Name = "DeltagernavnDataGridViewTextBoxColumn"
+        '
+        'DeltagertlfDataGridViewTextBoxColumn
+        '
+        Me.DeltagertlfDataGridViewTextBoxColumn.DataPropertyName = "deltager_tlf"
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DeltagertlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
+        Me.DeltagertlfDataGridViewTextBoxColumn.Name = "DeltagertlfDataGridViewTextBoxColumn"
+        '
+        'KursidDataGridViewTextBoxColumn
+        '
+        Me.KursidDataGridViewTextBoxColumn.DataPropertyName = "kurs_id"
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        Me.KursidDataGridViewTextBoxColumn.HeaderText = "Kurs ID"
+        Me.KursidDataGridViewTextBoxColumn.Name = "KursidDataGridViewTextBoxColumn"
+        '
         'PameldingkursBindingSource
         '
         Me.PameldingkursBindingSource.DataMember = "pamelding_kurs"
@@ -271,30 +295,6 @@ Partial Class Kurs
         Me.Button4.TabIndex = 12
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'DeltagernavnDataGridViewTextBoxColumn
-        '
-        Me.DeltagernavnDataGridViewTextBoxColumn.DataPropertyName = "deltager_navn"
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DeltagernavnDataGridViewTextBoxColumn.HeaderText = "Navn"
-        Me.DeltagernavnDataGridViewTextBoxColumn.Name = "DeltagernavnDataGridViewTextBoxColumn"
-        '
-        'DeltagertlfDataGridViewTextBoxColumn
-        '
-        Me.DeltagertlfDataGridViewTextBoxColumn.DataPropertyName = "deltager_tlf"
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DeltagertlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
-        Me.DeltagertlfDataGridViewTextBoxColumn.Name = "DeltagertlfDataGridViewTextBoxColumn"
-        '
-        'KursidDataGridViewTextBoxColumn
-        '
-        Me.KursidDataGridViewTextBoxColumn.DataPropertyName = "kurs_id"
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
-        Me.KursidDataGridViewTextBoxColumn.HeaderText = "Kurs ID"
-        Me.KursidDataGridViewTextBoxColumn.Name = "KursidDataGridViewTextBoxColumn"
         '
         'Kurs
         '

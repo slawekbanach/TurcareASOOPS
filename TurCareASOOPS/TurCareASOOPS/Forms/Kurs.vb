@@ -100,15 +100,10 @@ Public Class Kurs
         Button4.Visible = True
         Me.KursDataSet.pamelding_kurs.Clear()
         kursid = ComboBox1.Text.Split(" ")
-        'Dim query As String
-        'query = "SELECT deltager_navn, deltager_tlf, kurs_id FROM pamelding_kurs"
-        'Dim DGview As New Dataset
-        'DGview.dataset(query)
-        'DataGridView1.DataSource = DGview.dataset(query)
-        'Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
+
         DataGridView1.Visible = True
 
-        DataGridView1.Rows(0).Cells(2).Value = CInt(kursid(0))
+        'DataGridView1.Rows(0).Cells(2).Value = CInt(kursid(0))
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -121,6 +116,12 @@ Public Class Kurs
 
     End Sub
 
+    Private Sub dataGridView1_DefaultValuesNeeded(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowEventArgs) Handles DataGridView1.DefaultValuesNeeded
+
+        e.Row.Cells("KursidDataGridViewTextBoxColumn").Value = kursid(0)
+
+
+    End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
         Try
             DataGridView1.Rows(e.RowIndex).Cells(2).ReadOnly = True
@@ -129,4 +130,6 @@ Public Class Kurs
         End Try
 
     End Sub
+
+
 End Class
