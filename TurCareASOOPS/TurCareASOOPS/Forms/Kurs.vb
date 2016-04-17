@@ -4,6 +4,7 @@ Public Class Kurs
     Public kursid() As String
 
     Private Sub Kurs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView2.Visible = False
         'TODO: This line of code loads data into the 'KursDataSet.pamelding_kurs' table. You can move, or remove it, as needed.
         Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
         con.Dispose()
@@ -20,7 +21,8 @@ Public Class Kurs
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Panel1.Visible = True
-
+        DataGridView1.Visible = False
+        DataGridView2.Visible = False
         Panel2.Visible = True
         Button3.Visible = True
         Button3.Text = "Registrer kurs"
@@ -60,6 +62,7 @@ Public Class Kurs
         Panel1.Visible = False
         Panel2.Visible = False
         Button3.Visible = False
+        DataGridView2.Visible = False
 
 
         Dim cmd As New MySqlCommand("SELECT kurs_id, kurs_type FROM registrere_kurs", con)
@@ -107,6 +110,7 @@ Public Class Kurs
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        DataGridView2.Visible = False
         Try
             Me.Pamelding_kursTableAdapter.Update(Me.KursDataSet.pamelding_kurs)
             MessageBox.Show("Påmelding vellykket")
@@ -128,6 +132,23 @@ Public Class Kurs
             DataGridView1.Rows(e.RowIndex).Cells(2).Value = CInt(kursid(0))
         Catch ex As Exception
         End Try
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        DataGridView2.Visible = True
+        ComboBox1.Visible = False
+        DataGridView1.Visible = False
+        Panel1.Visible = False
+        Panel2.Visible = False
+        Button3.Visible = False
+        Button4.Visible = False
+
+        Dim query As String
+        query = "SELECT deltager_navn, deltager_tlf, kurs_id FROM pamelding_kurs order by kurs_id ASC"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        DataGridView2.DataSource = DGview.dataset(query)
 
     End Sub
 

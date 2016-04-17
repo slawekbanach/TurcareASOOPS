@@ -23,9 +23,9 @@ Partial Class Kurs
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -42,26 +42,36 @@ Partial Class Kurs
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.PameldingkursBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KursDataSet = New TurCareASOOPS.kursDataSet()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DeltagernavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DeltagertlfDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.KursidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PameldingkursBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KursDataSet = New TurCareASOOPS.kursDataSet()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Pamelding_kursTableAdapter = New TurCareASOOPS.kursDataSetTableAdapters.pamelding_kursTableAdapter()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.KursDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PameldingkursBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DeltagernavnDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeltagertlfDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KursidDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PameldingkursBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KursDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KursDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PameldingkursBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(198, 57)
+        Me.Button1.Location = New System.Drawing.Point(91, 57)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(218, 68)
@@ -71,7 +81,7 @@ Partial Class Kurs
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(627, 57)
+        Me.Button2.Location = New System.Drawing.Point(372, 57)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(218, 68)
@@ -211,6 +221,29 @@ Partial Class Kurs
         Me.Panel1.Size = New System.Drawing.Size(112, 403)
         Me.Panel1.TabIndex = 9
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DeltagernavnDataGridViewTextBoxColumn1, Me.DeltagertlfDataGridViewTextBoxColumn1, Me.KursidDataGridViewTextBoxColumn1})
+        Me.DataGridView2.DataSource = Me.PameldingkursBindingSource1
+        Me.DataGridView2.Location = New System.Drawing.Point(1, 208)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowTemplate.Height = 28
+        Me.DataGridView2.Size = New System.Drawing.Size(1075, 377)
+        Me.DataGridView2.TabIndex = 14
+        '
+        'PameldingkursBindingSource
+        '
+        Me.PameldingkursBindingSource.DataMember = "pamelding_kurs"
+        Me.PameldingkursBindingSource.DataSource = Me.KursDataSet
+        '
+        'KursDataSet
+        '
+        Me.KursDataSet.DataSetName = "kursDataSet"
+        Me.KursDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.TextBox5)
@@ -232,45 +265,35 @@ Partial Class Kurs
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DeltagernavnDataGridViewTextBoxColumn, Me.DeltagertlfDataGridViewTextBoxColumn, Me.KursidDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.PameldingkursBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 194)
+        Me.DataGridView1.Location = New System.Drawing.Point(-8, 208)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1095, 394)
+        Me.DataGridView1.Size = New System.Drawing.Size(1095, 297)
         Me.DataGridView1.TabIndex = 10
         '
         'DeltagernavnDataGridViewTextBoxColumn
         '
         Me.DeltagernavnDataGridViewTextBoxColumn.DataPropertyName = "deltager_navn"
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
         Me.DeltagernavnDataGridViewTextBoxColumn.HeaderText = "Navn"
         Me.DeltagernavnDataGridViewTextBoxColumn.Name = "DeltagernavnDataGridViewTextBoxColumn"
         '
         'DeltagertlfDataGridViewTextBoxColumn
         '
         Me.DeltagertlfDataGridViewTextBoxColumn.DataPropertyName = "deltager_tlf"
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
         Me.DeltagertlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
         Me.DeltagertlfDataGridViewTextBoxColumn.Name = "DeltagertlfDataGridViewTextBoxColumn"
         '
         'KursidDataGridViewTextBoxColumn
         '
         Me.KursidDataGridViewTextBoxColumn.DataPropertyName = "kurs_id"
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
         Me.KursidDataGridViewTextBoxColumn.HeaderText = "Kurs ID"
         Me.KursidDataGridViewTextBoxColumn.Name = "KursidDataGridViewTextBoxColumn"
-        '
-        'PameldingkursBindingSource
-        '
-        Me.PameldingkursBindingSource.DataMember = "pamelding_kurs"
-        Me.PameldingkursBindingSource.DataSource = Me.KursDataSet
-        '
-        'KursDataSet
-        '
-        Me.KursDataSet.DataSetName = "kursDataSet"
-        Me.KursDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ComboBox1
         '
@@ -296,14 +319,54 @@ Partial Class Kurs
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(661, 57)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(218, 68)
+        Me.Button5.TabIndex = 13
+        Me.Button5.Text = "Vis påmeldte "
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'KursDataSetBindingSource
+        '
+        Me.KursDataSetBindingSource.DataSource = Me.KursDataSet
+        Me.KursDataSetBindingSource.Position = 0
+        '
+        'PameldingkursBindingSource1
+        '
+        Me.PameldingkursBindingSource1.DataMember = "pamelding_kurs"
+        Me.PameldingkursBindingSource1.DataSource = Me.KursDataSetBindingSource
+        '
+        'DeltagernavnDataGridViewTextBoxColumn1
+        '
+        Me.DeltagernavnDataGridViewTextBoxColumn1.DataPropertyName = "deltager_navn"
+        Me.DeltagernavnDataGridViewTextBoxColumn1.HeaderText = "Navn"
+        Me.DeltagernavnDataGridViewTextBoxColumn1.Name = "DeltagernavnDataGridViewTextBoxColumn1"
+        '
+        'DeltagertlfDataGridViewTextBoxColumn1
+        '
+        Me.DeltagertlfDataGridViewTextBoxColumn1.DataPropertyName = "deltager_tlf"
+        Me.DeltagertlfDataGridViewTextBoxColumn1.HeaderText = "Telefon"
+        Me.DeltagertlfDataGridViewTextBoxColumn1.Name = "DeltagertlfDataGridViewTextBoxColumn1"
+        '
+        'KursidDataGridViewTextBoxColumn1
+        '
+        Me.KursidDataGridViewTextBoxColumn1.DataPropertyName = "kurs_id"
+        Me.KursidDataGridViewTextBoxColumn1.HeaderText = "Kurs ID "
+        Me.KursidDataGridViewTextBoxColumn1.Name = "KursidDataGridViewTextBoxColumn1"
+        '
         'Kurs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1100, 1000)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button3)
@@ -314,11 +377,14 @@ Partial Class Kurs
         Me.Text = "Kurs"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PameldingkursBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KursDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PameldingkursBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KursDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KursDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PameldingkursBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -349,4 +415,11 @@ Partial Class Kurs
     Friend WithEvents DeltagernavnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DeltagertlfDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents KursidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Button5 As Button
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DeltagernavnDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DeltagertlfDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents KursidDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents PameldingkursBindingSource1 As BindingSource
+    Friend WithEvents KursDataSetBindingSource As BindingSource
 End Class
