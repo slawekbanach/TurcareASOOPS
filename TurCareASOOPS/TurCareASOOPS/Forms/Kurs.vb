@@ -1,9 +1,12 @@
-﻿Public Class Kurs
+﻿Imports MySql.Data.MySqlClient
+Public Class Kurs
 
+    Public kursid() As String
 
     Private Sub Kurs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'DatabaseDataSet.vare' table. You can move, or remove it, as needed.
-        Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
+        'TODO: This line of code loads data into the 'KursDataSet.pamelding_kurs' table. You can move, or remove it, as needed.
+        Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
+        con.Dispose()
         DataGridView1.Visible = False
         ComboBox1.Visible = False
         DateTimePicker1.Format = DateTimePickerFormat.Custom
@@ -11,6 +14,7 @@
         Panel1.Visible = False
         Panel2.Visible = False
         Button3.Visible = False
+        Button4.Visible = False
 
     End Sub
 
@@ -53,15 +57,76 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Panel1.Visible = False
+        Panel2.Visible = False
+        Button3.Visible = False
+
+
+        Dim cmd As New MySqlCommand("SELECT kurs_id, kurs_type FROM registrere_kurs", con)
+        Dim kurs As New List(Of String)
+
+        Try
+
+            con.Open()
+            Dim rd As MySqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+
+            While rd.Read()
+                Dim kursmedid As String = rd("kurs_id") & " " & rd("kurs_type")
+                Dim kursid As Integer = rd("kurs_id")
+                kurs.Add(kursmedid)
+            End While
+            rd.Close()
+            con.Close()
+            Me.ComboBox1.Items.Clear()
+            Me.ComboBox1.Items.AddRange(kurs.ToArray)
+
+        Catch ex As System.Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
         ComboBox1.Visible = True
+        'Dim query As String
+        'query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer where person_type = 'Kunde'"
+        'Dim DGview As New Dataset
+        'DGview.dataset(query)
+        'DataGridView1.DataSource = DGview.dataset(query)
 
-        'Dim sporring As New Query
-        'Try
 
-        'Catch ex As Exception
+    End Sub
 
-        'End Try
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Button4.Text = "Meld på"
+        Button4.Visible = True
+        Me.KursDataSet.pamelding_kurs.Clear()
+        kursid = ComboBox1.Text.Split(" ")
+        'Dim query As String
+        'query = "SELECT deltager_navn, deltager_tlf, kurs_id FROM pamelding_kurs"
+        'Dim DGview As New Dataset
+        'DGview.dataset(query)
+        'DataGridView1.DataSource = DGview.dataset(query)
+        'Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
+        DataGridView1.Visible = True
 
+        DataGridView1.Rows(0).Cells(2).Value = CInt(kursid(0))
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Try
+            Me.Pamelding_kursTableAdapter.Update(Me.KursDataSet.pamelding_kurs)
+            MessageBox.Show("Påmelding vellykket")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
+        Try
+            DataGridView1.Rows(e.RowIndex).Cells(2).ReadOnly = True
+            DataGridView1.Rows(e.RowIndex).Cells(2).Value = CInt(kursid(0))
+        Catch ex As Exception
+        End Try
 
     End Sub
 End Class

@@ -101,6 +101,11 @@
     <Compile Include="Forms\Utleie.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kursDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kursDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\g_oops_t4DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -242,6 +247,17 @@
     </None>
     <None Include="DatabaseDataSet.xss">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kursDataSet.xsc">
+      <DependentUpon>kursDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kursDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kursDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kursDataSet.xss">
+      <DependentUpon>kursDataSet.xsd</DependentUpon>
     </None>
     <None Include="Reports\g_oops_t4DataSet.xsc">
       <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>
