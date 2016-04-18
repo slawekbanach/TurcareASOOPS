@@ -142,6 +142,7 @@ Partial Class Utleie
         '
         Me.txtPris.Location = New System.Drawing.Point(333, 329)
         Me.txtPris.Name = "txtPris"
+        Me.txtPris.ReadOnly = True
         Me.txtPris.Size = New System.Drawing.Size(181, 26)
         Me.txtPris.TabIndex = 20
         '

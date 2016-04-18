@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Utleie
     Public kundeid() As String
-    Public vareid() As String
+    Public varepris As Integer
 
     Private Sub Utleie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con.Dispose()
@@ -34,13 +34,14 @@ Public Class Utleie
         '/////////////////////////
 
         '// loadfunksjon for varer //
-        Dim cmd2 As New MySqlCommand("SELECT vare_navn FROM vare where vare_salg_utleie = 'utleie'", con)
+        Dim cmd2 As New MySqlCommand("SELECT vare_navn, vare_pris FROM vare where vare_salg_utleie = 'utleie'", con)
         Dim varer As New List(Of String)
         Try
             con.Open()
             Dim rd As MySqlDataReader = cmd2.ExecuteReader(CommandBehavior.CloseConnection)
             While rd.Read()
                 Dim vare As String = rd("vare_navn")
+                varepris = rd("vare_pris")
                 varer.Add(vare)
             End While
             rd.Close()
@@ -94,5 +95,16 @@ Public Class Utleie
 
     End Sub
 
+    Private Sub cmbVarer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVarer.SelectedIndexChanged
+        txtPris.Text = CInt(varepris)
+    End Sub
 
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        Dim fradato As Date = DateTimePicker1.Value
+        Dim tildato As Date = DateTimePicker2.Value
+        'Dim sluttpris As String = CInt(txtTotalpris.Text)
+        Dim pris As Integer = txtPris.Text
+        Dim antalldager As Int32 = tildato.Subtract(fradato).Days
+        txtTotalpris.Text = CInt(antalldager.ToString) * pris
+    End Sub
 End Class
