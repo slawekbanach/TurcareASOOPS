@@ -19,7 +19,7 @@ Public Class frmMain
         txtSelgerSalg.Enabled = False
         txtDatoSalg.Enabled = False
         txtPrisSalg.Enabled = False
-        txtDatoSalg.Text = Date.Today.ToString("dd/MM/yyyy")
+        txtDatoSalg.Text = Date.Today.ToString("yyyy-MM-dd")
 
         '//// loadfunksjon for kunder ////
         Dim cmd As New MySqlCommand("SELECT person_id, person_fornavn, person_etternavn FROM personer where person_type = 'kunde'", con)
@@ -137,12 +137,13 @@ Public Class frmMain
 
         Dim selgerid As String = txtSelgerSalg.Text
         Dim kundeid = cmbKundeSalg.Text.Split(" ")
-        Dim dato As Date = txtDatoSalg.Text
-        Dim vare As String = cmbVareSalg.Text
+
+        Dim dato As Date = Format(dtpSalg.Value, "yyyy-MM-dd")
+        Dim vare() As String = cmbVareSalg.Text.Split(" ")
         Dim pris As String = txtPrisSalg.Text
         Dim antall As String = txtAntallSalg.Text
         Try
-            sporring.sporring("INSERT INTO salg (salg_selger_id, salg_kunde_id, salg_dato, salg_vare, salg_antall, salg_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & dato.ToShortDateString.ToString & "', '" & vare & "', '" & antall & "', '" & pris & "');")
+            sporring.sporring("INSERT INTO salg (salg_selger_id, salg_kunde_id, salg_dato, salg_vare, salg_antall, salg_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & txtDatoSalg.Text & "', '" & vare(0) & "', '" & antall & "', '" & pris & "');")
             MessageBox.Show("Registrering av salg vellykket!")
             txtDatoSalg.Text = ""
             txtPrisSalg.Text = ""
