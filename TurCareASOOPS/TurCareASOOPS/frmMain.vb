@@ -3,6 +3,7 @@ Public Class frmMain
     Dim tilkobling As New DBConnect
     Public kundeid() As String
     Public varepris As Integer
+    Public vareid() As Integer
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '// laster inn lager // 
         Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
@@ -39,13 +40,13 @@ Public Class frmMain
         End Try
 
         '// loadfunksjon for salgsvarer //
-        Dim cmd2 As New MySqlCommand("SELECT vare_navn, vare_pris FROM vare where vare_salg_utleie = 'salg'", con)
+        Dim cmd2 As New MySqlCommand("SELECT vare_pris, vare_navn FROM vare where vare_salg_utleie = 'salg'", con)
         Dim varer As New List(Of String)
         Try
             con.Open()
             Dim rd As MySqlDataReader = cmd2.ExecuteReader(CommandBehavior.CloseConnection)
             While rd.Read()
-                Dim vare As String = rd("vare_navn")
+                Dim vare As String = rd("vare_navn") & " - pris: " & rd("vare_pris")
                 varepris = rd("vare_pris")
                 varer.Add(vare)
             End While
@@ -153,11 +154,9 @@ Public Class frmMain
     End Sub
 
     Private Sub cmbVareSalg_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVareSalg.SelectedIndexChanged
-        txtenhetsprissalg.Text = CInt(varepris)
+        txtEnhetsprisSalg.Text = varepris
+
     End Sub
 
-    Private Sub txtAntallSalg_TextChanged(sender As Object, e As EventArgs) Handles txtAntallSalg.TextChanged, txtEnhetsprisSalg.TextChanged
-        'Dim antall As Integer = CInt(txtAntallSalg.Text)
-        txtPrisSalg.Text = CInt(txtAntallSalg.Text) * CInt(txtEnhetsprisSalg.Text)
-    End Sub
+
 End Class
