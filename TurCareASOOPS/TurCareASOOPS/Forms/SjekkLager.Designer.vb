@@ -45,7 +45,7 @@ Partial Class SjekkLager
         Me.btnTilbake = New System.Windows.Forms.Button()
         Me.btnSok = New System.Windows.Forms.Button()
         Me.btnListUt = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLagreLager = New System.Windows.Forms.Button()
         Me.VareTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.vareTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,14 +177,14 @@ Partial Class SjekkLager
         Me.btnListUt.Text = "List ut alle varer"
         Me.btnListUt.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnLagreLager
         '
-        Me.Button1.Location = New System.Drawing.Point(263, 536)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(172, 35)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Oppdater/lagre"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnLagreLager.Location = New System.Drawing.Point(263, 536)
+        Me.btnLagreLager.Name = "btnLagreLager"
+        Me.btnLagreLager.Size = New System.Drawing.Size(172, 35)
+        Me.btnLagreLager.TabIndex = 10
+        Me.btnLagreLager.Text = "Oppdater/lagre"
+        Me.btnLagreLager.UseVisualStyleBackColor = True
         '
         'VareTableAdapter
         '
@@ -195,7 +195,7 @@ Partial Class SjekkLager
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1161, 662)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnLagreLager)
         Me.Controls.Add(Me.txtsoek)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnTilbake)
@@ -218,7 +218,7 @@ Partial Class SjekkLager
     Friend WithEvents btnTilbake As Button
     Friend WithEvents btnSok As Button
     Friend WithEvents btnListUt As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLagreLager As Button
     Friend WithEvents DatabaseDataSetBindingSource As BindingSource
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents VareBindingSource As BindingSource
