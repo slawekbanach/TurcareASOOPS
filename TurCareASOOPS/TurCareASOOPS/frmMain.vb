@@ -138,26 +138,34 @@ Public Class frmMain
         Dim selgerid As String = txtSelgerSalg.Text
         Dim kundeid = cmbKundeSalg.Text.Split(" ")
 
-        Dim dato As Date = Format(dtpSalg.Value, "yyyy-MM-dd")
+        'datofeltet ligger i formload
         Dim vare() As String = cmbVareSalg.Text.Split(" ")
-        Dim pris As String = txtPrisSalg.Text
-        Dim antall As String = txtAntallSalg.Text
+        Dim pris As Integer = CInt(txtPrisSalg.Text)
+        Dim antall As Integer = CInt(txtAntallSalg.Text)
         Try
-            sporring.sporring("INSERT INTO salg (salg_selger_id, salg_kunde_id, salg_dato, salg_vare, salg_antall, salg_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & txtDatoSalg.Text & "', '" & vare(0) & "', '" & antall & "', '" & pris & "');")
-            MessageBox.Show("Registrering av salg vellykket!")
-            txtDatoSalg.Text = ""
-            txtPrisSalg.Text = ""
-            txtAntallSalg.Text = ""
+            sporring.sporring("INSERT INTO salg (salg_selger_id, salg_kunde_id, salg_dato, salg_vare, salg_antall, salg_pris) VALUES ('" & selgerid & "', '" & CInt(kundeid(0)) & "', '" & txtDatoSalg.Text & "', '" & vare(0) & "', '" & antall & "', '" & pris & "');")
+            'txtDatoSalg.Text = ""
+            'txtPrisSalg.Text = ""
+            'txtAntallSalg.Text = ""
         Catch ex As Exception
             MessageBox.Show("Feil: " & ex.Message)
         End Try
+        MessageBox.Show("Registrering av salg vellykket!")
 
     End Sub
 
     Private Sub cmbVareSalg_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVareSalg.SelectedIndexChanged
-        txtEnhetsprisSalg.Text = varepris
+
+        Dim prisen As String() = cmbVareSalg.Text.Split(": ")
+        txtEnhetsprisSalg.Text = CInt(prisen(1))
+
 
     End Sub
 
+    Private Sub txtAntallSalg_TextChanged(sender As Object, e As EventArgs) Handles txtAntallSalg.TextChanged
+        Dim enhetspris As Integer = CInt(txtEnhetsprisSalg.Text)
+        Dim antall As Integer = CInt(txtAntallSalg.Text)
+        txtPrisSalg.Text = CInt(enhetspris * antall)
 
+    End Sub
 End Class
