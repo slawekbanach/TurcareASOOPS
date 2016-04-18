@@ -33,19 +33,9 @@ Partial Class ListUtAnsatte
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnTilbake = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PersonerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
-        Me.txtSoek = New System.Windows.Forms.TextBox()
-        Me.btnSok = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.PersonerTableAdapter1 = New TurCareASOOPS.g_oops_t4DataSetTableAdapters.personerTableAdapter()
-        Me.PersonerTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.personerTableAdapter()
+        Me.btnListUtAnsatte = New System.Windows.Forms.Button()
+        Me.btnTilbakePerson = New System.Windows.Forms.Button()
+        Me.dgvPerson = New System.Windows.Forms.DataGridView()
         Me.PersonfornavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PersonetternavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PersonepostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,117 +46,55 @@ Partial Class ListUtAnsatte
         Me.PersontypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PersonbrukernavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PersonpassordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PersonerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
+        Me.txtSoekPerson = New System.Windows.Forms.TextBox()
+        Me.btnSokPerson = New System.Windows.Forms.Button()
+        Me.btnLeggTilAnsatt = New System.Windows.Forms.Button()
+        Me.btnListUtKunder = New System.Windows.Forms.Button()
+        Me.btnLeggTilKunde = New System.Windows.Forms.Button()
+        Me.PersonerTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.personerTableAdapter()
+        CType(Me.dgvPerson, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnListUtAnsatte
         '
-        Me.Button1.Location = New System.Drawing.Point(18, 508)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(138, 35)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "List ut ansatte"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnListUtAnsatte.Location = New System.Drawing.Point(18, 508)
+        Me.btnListUtAnsatte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnListUtAnsatte.Name = "btnListUtAnsatte"
+        Me.btnListUtAnsatte.Size = New System.Drawing.Size(138, 35)
+        Me.btnListUtAnsatte.TabIndex = 0
+        Me.btnListUtAnsatte.Text = "List ut ansatte"
+        Me.btnListUtAnsatte.UseVisualStyleBackColor = True
         '
-        'btnTilbake
+        'btnTilbakePerson
         '
-        Me.btnTilbake.Location = New System.Drawing.Point(18, 597)
-        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnTilbake.Name = "btnTilbake"
-        Me.btnTilbake.Size = New System.Drawing.Size(112, 35)
-        Me.btnTilbake.TabIndex = 2
-        Me.btnTilbake.Text = "Tilbake"
-        Me.btnTilbake.UseVisualStyleBackColor = True
+        Me.btnTilbakePerson.Location = New System.Drawing.Point(18, 597)
+        Me.btnTilbakePerson.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTilbakePerson.Name = "btnTilbakePerson"
+        Me.btnTilbakePerson.Size = New System.Drawing.Size(112, 35)
+        Me.btnTilbakePerson.TabIndex = 2
+        Me.btnTilbakePerson.Text = "Tilbake"
+        Me.btnTilbakePerson.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvPerson
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PersonfornavnDataGridViewTextBoxColumn, Me.PersonetternavnDataGridViewTextBoxColumn, Me.PersonepostDataGridViewTextBoxColumn, Me.PersontlfDataGridViewTextBoxColumn, Me.PersonadresseDataGridViewTextBoxColumn, Me.PersonpostnrDataGridViewTextBoxColumn, Me.PersonpoststedDataGridViewTextBoxColumn, Me.PersontypeDataGridViewTextBoxColumn, Me.PersonbrukernavnDataGridViewTextBoxColumn, Me.PersonpassordDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PersonerBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(1237, 488)
-        Me.DataGridView1.TabIndex = 3
-        '
-        'PersonerBindingSource
-        '
-        Me.PersonerBindingSource.DataMember = "personer"
-        Me.PersonerBindingSource.DataSource = Me.DatabaseDataSetBindingSource
-        '
-        'DatabaseDataSetBindingSource
-        '
-        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
-        Me.DatabaseDataSetBindingSource.Position = 0
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'txtSoek
-        '
-        Me.txtSoek.Location = New System.Drawing.Point(705, 495)
-        Me.txtSoek.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSoek.Name = "txtSoek"
-        Me.txtSoek.Size = New System.Drawing.Size(148, 26)
-        Me.txtSoek.TabIndex = 4
-        '
-        'btnSok
-        '
-        Me.btnSok.Location = New System.Drawing.Point(705, 537)
-        Me.btnSok.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnSok.Name = "btnSok"
-        Me.btnSok.Size = New System.Drawing.Size(112, 35)
-        Me.btnSok.TabIndex = 5
-        Me.btnSok.Text = "Button2"
-        Me.btnSok.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(18, 552)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(138, 35)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Legg til Ansatt"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(179, 508)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(138, 35)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "List ut kunder"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(179, 553)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(138, 35)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Legg til Kunde"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'PersonerTableAdapter1
-        '
-        'Me.PersonerTableAdapter1.ClearBeforeFill = True
-        '
-        'PersonerTableAdapter
-        '
-        Me.PersonerTableAdapter.ClearBeforeFill = True
+        Me.dgvPerson.AutoGenerateColumns = False
+        Me.dgvPerson.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPerson.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PersonfornavnDataGridViewTextBoxColumn, Me.PersonetternavnDataGridViewTextBoxColumn, Me.PersonepostDataGridViewTextBoxColumn, Me.PersontlfDataGridViewTextBoxColumn, Me.PersonadresseDataGridViewTextBoxColumn, Me.PersonpostnrDataGridViewTextBoxColumn, Me.PersonpoststedDataGridViewTextBoxColumn, Me.PersontypeDataGridViewTextBoxColumn, Me.PersonbrukernavnDataGridViewTextBoxColumn, Me.PersonpassordDataGridViewTextBoxColumn})
+        Me.dgvPerson.DataSource = Me.PersonerBindingSource
+        Me.dgvPerson.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dgvPerson.GridColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgvPerson.Location = New System.Drawing.Point(0, 0)
+        Me.dgvPerson.Name = "dgvPerson"
+        Me.dgvPerson.RowTemplate.Height = 28
+        Me.dgvPerson.Size = New System.Drawing.Size(1237, 488)
+        Me.dgvPerson.TabIndex = 3
         '
         'PersonfornavnDataGridViewTextBoxColumn
         '
@@ -248,23 +176,90 @@ Partial Class ListUtAnsatte
         Me.PersonpassordDataGridViewTextBoxColumn.HeaderText = "Passord - ansatte"
         Me.PersonpassordDataGridViewTextBoxColumn.Name = "PersonpassordDataGridViewTextBoxColumn"
         '
+        'PersonerBindingSource
+        '
+        Me.PersonerBindingSource.DataMember = "personer"
+        Me.PersonerBindingSource.DataSource = Me.DatabaseDataSetBindingSource
+        '
+        'DatabaseDataSetBindingSource
+        '
+        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
+        Me.DatabaseDataSetBindingSource.Position = 0
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'txtSoekPerson
+        '
+        Me.txtSoekPerson.Location = New System.Drawing.Point(705, 495)
+        Me.txtSoekPerson.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSoekPerson.Name = "txtSoekPerson"
+        Me.txtSoekPerson.Size = New System.Drawing.Size(148, 26)
+        Me.txtSoekPerson.TabIndex = 4
+        '
+        'btnSokPerson
+        '
+        Me.btnSokPerson.Location = New System.Drawing.Point(705, 537)
+        Me.btnSokPerson.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSokPerson.Name = "btnSokPerson"
+        Me.btnSokPerson.Size = New System.Drawing.Size(112, 35)
+        Me.btnSokPerson.TabIndex = 5
+        Me.btnSokPerson.Text = "Button2"
+        Me.btnSokPerson.UseVisualStyleBackColor = True
+        '
+        'btnLeggTilAnsatt
+        '
+        Me.btnLeggTilAnsatt.Location = New System.Drawing.Point(18, 552)
+        Me.btnLeggTilAnsatt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLeggTilAnsatt.Name = "btnLeggTilAnsatt"
+        Me.btnLeggTilAnsatt.Size = New System.Drawing.Size(138, 35)
+        Me.btnLeggTilAnsatt.TabIndex = 6
+        Me.btnLeggTilAnsatt.Text = "Legg til Ansatt"
+        Me.btnLeggTilAnsatt.UseVisualStyleBackColor = True
+        '
+        'btnListUtKunder
+        '
+        Me.btnListUtKunder.Location = New System.Drawing.Point(179, 508)
+        Me.btnListUtKunder.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnListUtKunder.Name = "btnListUtKunder"
+        Me.btnListUtKunder.Size = New System.Drawing.Size(138, 35)
+        Me.btnListUtKunder.TabIndex = 7
+        Me.btnListUtKunder.Text = "List ut kunder"
+        Me.btnListUtKunder.UseVisualStyleBackColor = True
+        '
+        'btnLeggTilKunde
+        '
+        Me.btnLeggTilKunde.Location = New System.Drawing.Point(179, 553)
+        Me.btnLeggTilKunde.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLeggTilKunde.Name = "btnLeggTilKunde"
+        Me.btnLeggTilKunde.Size = New System.Drawing.Size(138, 35)
+        Me.btnLeggTilKunde.TabIndex = 8
+        Me.btnLeggTilKunde.Text = "Legg til Kunde"
+        Me.btnLeggTilKunde.UseVisualStyleBackColor = True
+        '
+        'PersonerTableAdapter
+        '
+        Me.PersonerTableAdapter.ClearBeforeFill = True
+        '
         'ListUtAnsatte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1237, 652)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.btnSok)
-        Me.Controls.Add(Me.txtSoek)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnTilbake)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnLeggTilKunde)
+        Me.Controls.Add(Me.btnListUtKunder)
+        Me.Controls.Add(Me.btnLeggTilAnsatt)
+        Me.Controls.Add(Me.btnSokPerson)
+        Me.Controls.Add(Me.txtSoekPerson)
+        Me.Controls.Add(Me.dgvPerson)
+        Me.Controls.Add(Me.btnTilbakePerson)
+        Me.Controls.Add(Me.btnListUtAnsatte)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ListUtAnsatte"
         Me.Text = "ListUtAnsatte"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvPerson, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -273,14 +268,14 @@ Partial Class ListUtAnsatte
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnTilbake As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents txtSoek As TextBox
-    Friend WithEvents btnSok As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnListUtAnsatte As Button
+    Friend WithEvents btnTilbakePerson As Button
+    Friend WithEvents dgvPerson As DataGridView
+    Friend WithEvents txtSoekPerson As TextBox
+    Friend WithEvents btnSokPerson As Button
+    Friend WithEvents btnLeggTilAnsatt As Button
+    Friend WithEvents btnListUtKunder As Button
+    Friend WithEvents btnLeggTilKunde As Button
     Friend WithEvents DatabaseDataSetBindingSource As BindingSource
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents PersonerTableAdapter1 As g_oops_t4DataSetTableAdapters.personerTableAdapter

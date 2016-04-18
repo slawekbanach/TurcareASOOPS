@@ -25,7 +25,7 @@ Public Class LoginUser
             'Label1.Text = brukernavn
             'Label2.Visible = True
             Me.Hide()
-            meny.Show()
+            frmMain.Show()
         Else
             MsgBox("Feil brukernavn eller passord")
         End If

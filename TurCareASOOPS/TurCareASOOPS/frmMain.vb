@@ -7,8 +7,8 @@ Public Class frmMain
         '//////////
 
         '// laster inn pagePerson // 
-        btnListUtAnsatte.Visible = False
-        btnListUtKunder.Visible = False
+        btnLeggTilAnsatt.Visible = False
+        btnLeggTilKunde.Visible = False
         '///
 
 
@@ -22,7 +22,7 @@ Public Class frmMain
         query = "SELECT vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_status, vare_antall FROM vare"
         Dim DGview As New Dataset
         DGview.dataset(query)
-        DataGridView1.DataSource = DGview.dataset(query)
+        dgvLager.DataSource = DGview.dataset(query)
     End Sub
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
         Dim sok As String = txtsoek.Text
@@ -30,7 +30,7 @@ Public Class frmMain
         query = "SELECT vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_status, vare_antall FROM vare where vare_navn like '%" & sok & "%';"
         Dim DGview As New Dataset
         DGview.dataset(query)
-        DataGridView1.DataSource = DGview.dataset(query)
+        dgvLager.DataSource = DGview.dataset(query)
     End Sub
     Private Sub btnLagreLager_Click(sender As Object, e As EventArgs) Handles btnLagreLager.Click
         Me.VareTableAdapter.Update(Me.DatabaseDataSet.vare)
@@ -40,21 +40,29 @@ Public Class frmMain
 
     '//pagePerson//
     Private Sub btnListUtAnsatte_Click(sender As Object, e As EventArgs) Handles btnListUtAnsatte.Click
+
         Me.PersonerTableAdapter.FillAnsatt(Me.DatabaseDataSet.personer)
-        btnListUtAnsatte.Visible = True
+        btnLeggTilAnsatt.Visible = True
+
     End Sub
-    Private Sub btnSoekAnsattKunde_Click(sender As Object, e As EventArgs) Handles btnSoekAnsattKunde.Click
-        Dim sok As String = txtsoek.Text
+
+    Private Sub btnsokperson_Click(sender As Object, e As EventArgs) Handles btnSokPerson.Click
+
+        Dim sok As String = txtSoekPerson.Text
         Dim query As String
         query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer where person_type not like 'Kunde' and (person_fornavn like '%" & sok & "%' or person_etternavn like '%" & sok & "%');"
         Dim DGview As New Dataset
         DGview.dataset(query)
-        DataGridView1.DataSource = DGview.dataset(query)
+        dgvPerson.DataSource = DGview.dataset(query)
+
+
     End Sub
+
     Private Sub btnListUtKunder_Click(sender As Object, e As EventArgs) Handles btnListUtKunder.Click
         Me.PersonerTableAdapter.FillKunde(Me.DatabaseDataSet.personer)
-        btnListUtKunder.Visible = True
+        btnLeggTilKunde.Visible = True
     End Sub
+
     Private Sub btnLeggTilAnsatt_Click(sender As Object, e As EventArgs) Handles btnLeggTilAnsatt.Click
         Try
             Me.PersonerTableAdapter.Update(Me.DatabaseDataSet.personer)
@@ -63,6 +71,7 @@ Public Class frmMain
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
     Private Sub btnLeggTilKunde_Click(sender As Object, e As EventArgs) Handles btnLeggTilKunde.Click
         Try
             Me.PersonerTableAdapter.Update(Me.DatabaseDataSet.personer)
@@ -71,5 +80,4 @@ Public Class frmMain
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
 End Class
