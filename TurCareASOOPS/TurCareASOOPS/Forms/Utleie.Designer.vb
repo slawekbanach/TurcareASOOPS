@@ -22,14 +22,12 @@ Partial Class Utleie
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnKunder = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Pris = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnVarer = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnRegistrerSalg = New System.Windows.Forms.Button()
         Me.txtPris = New System.Windows.Forms.TextBox()
@@ -41,15 +39,6 @@ Partial Class Utleie
         Me.cmbKunder = New System.Windows.Forms.ComboBox()
         Me.cmbVarer = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
-        '
-        'btnKunder
-        '
-        Me.btnKunder.Location = New System.Drawing.Point(502, 528)
-        Me.btnKunder.Name = "btnKunder"
-        Me.btnKunder.Size = New System.Drawing.Size(184, 48)
-        Me.btnKunder.TabIndex = 31
-        Me.btnKunder.Text = "Oversikt over kunder"
-        Me.btnKunder.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -110,15 +99,6 @@ Partial Class Utleie
         Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Selger"
-        '
-        'btnVarer
-        '
-        Me.btnVarer.Location = New System.Drawing.Point(278, 528)
-        Me.btnVarer.Name = "btnVarer"
-        Me.btnVarer.Size = New System.Drawing.Size(184, 48)
-        Me.btnVarer.TabIndex = 23
-        Me.btnVarer.Text = "Oversikt over varer"
-        Me.btnVarer.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -215,14 +195,12 @@ Partial Class Utleie
         Me.Controls.Add(Me.txtTotalpris)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.btnKunder)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Pris)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnVarer)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnRegistrerSalg)
         Me.Controls.Add(Me.txtPris)
@@ -234,15 +212,12 @@ Partial Class Utleie
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnKunder As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Pris As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnVarer As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents btnRegistrerSalg As Button
     Friend WithEvents txtPris As TextBox
