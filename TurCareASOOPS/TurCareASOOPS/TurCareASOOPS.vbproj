@@ -102,10 +102,10 @@
     <Compile Include="Forms\Utleie.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="helo.Designer.vb">
-      <DependentUpon>helo.vb</DependentUpon>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="helo.vb">
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="kursDataSet.Designer.vb">
@@ -223,8 +223,8 @@
     <EmbeddedResource Include="Forms\Utleie.resx">
       <DependentUpon>Utleie.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="helo.resx">
-      <DependentUpon>helo.vb</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
