@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmMain
     Dim tilkobling As New DBConnect
+    Public kundeid() As String
+    Public varepris As Integer
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '// laster inn lager // 
         Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
@@ -11,6 +13,52 @@ Public Class frmMain
         btnLeggTilKunde.Visible = False
         '///
 
+        '// laster inn pageSalg //
+        txtSelgerSalg.Text = LoginUser.bruker
+        txtSelgerSalg.Enabled = False
+        txtDatoSalg.Enabled = False
+        txtPrisSalg.Enabled = False
+        txtDatoSalg.Text = Date.Today.ToString("dd/MM/yyyy")
+
+        '//// loadfunksjon for kunder ////
+        Dim cmd As New MySqlCommand("SELECT person_id, person_fornavn, person_etternavn FROM personer where person_type = 'kunde'", con)
+        Dim kunder As New List(Of String)
+        Try
+            Dim rd As MySqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+            While rd.Read()
+                Dim kundemedid As String = rd("person_id") & " " & rd("person_fornavn") & " " & rd("person_etternavn")
+                Dim kundeid As Integer = rd("person_id")
+                kunder.Add(kundemedid)
+            End While
+            rd.Close()
+            con.Close()
+            Me.cmbKundeSalg.Items.Clear()
+            Me.cmbKundeSalg.Items.AddRange(kunder.ToArray)
+        Catch ex As System.Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        '// loadfunksjon for salgsvarer //
+        Dim cmd2 As New MySqlCommand("SELECT vare_navn, vare_pris FROM vare where vare_salg_utleie = 'salg'", con)
+        Dim varer As New List(Of String)
+        Try
+            con.Open()
+            Dim rd As MySqlDataReader = cmd2.ExecuteReader(CommandBehavior.CloseConnection)
+            While rd.Read()
+                Dim vare As String = rd("vare_navn")
+                varepris = rd("vare_pris")
+                varer.Add(vare)
+            End While
+            rd.Close()
+            con.Close()
+            Me.cmbVareSalg.Items.Clear()
+            Me.cmbVareSalg.Items.AddRange(varer.ToArray)
+        Catch ex As System.Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+        '//
 
 
     End Sub
@@ -79,5 +127,37 @@ Public Class frmMain
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+    '//pagePerson finito//
+
+    '//pageSalg//
+    Private Sub btnRegistrerSalg_Click(sender As Object, e As EventArgs) Handles btnRegistrerSalg.Click
+        Dim sporring As New Query
+
+        Dim selgerid As String = txtSelgerSalg.Text
+        Dim kundeid = cmbKundeSalg.Text.Split(" ")
+        Dim dato As Date = txtDatoSalg.Text
+        Dim vare As String = cmbVareSalg.Text
+        Dim pris As String = txtPrisSalg.Text
+        Dim antall As String = txtAntallSalg.Text
+        Try
+            sporring.sporring("INSERT INTO salg (salg_selger_id, salg_kunde_id, salg_dato, salg_vare, salg_antall, salg_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & dato.ToShortDateString.ToString & "', '" & vare & "', '" & antall & "', '" & pris & "');")
+            MessageBox.Show("Registrering av salg vellykket!")
+            txtDatoSalg.Text = ""
+            txtPrisSalg.Text = ""
+            txtAntallSalg.Text = ""
+        Catch ex As Exception
+            MessageBox.Show("Feil: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub cmbVareSalg_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVareSalg.SelectedIndexChanged
+        txtenhetsprissalg.Text = CInt(varepris)
+    End Sub
+
+    Private Sub txtAntallSalg_TextChanged(sender As Object, e As EventArgs) Handles txtAntallSalg.TextChanged, txtEnhetsprisSalg.TextChanged
+        'Dim antall As Integer = CInt(txtAntallSalg.Text)
+        txtPrisSalg.Text = CInt(txtAntallSalg.Text) * CInt(txtEnhetsprisSalg.Text)
     End Sub
 End Class

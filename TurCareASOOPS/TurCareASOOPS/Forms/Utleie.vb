@@ -107,4 +107,6 @@ Public Class Utleie
         Dim antalldager As Int32 = tildato.Subtract(fradato).Days
         txtTotalpris.Text = CInt(antalldager.ToString) * pris
     End Sub
+
+
 End Class
