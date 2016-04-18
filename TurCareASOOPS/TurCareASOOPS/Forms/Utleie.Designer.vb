@@ -33,14 +33,13 @@ Partial Class Utleie
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnRegistrerSalg = New System.Windows.Forms.Button()
         Me.txtPris = New System.Windows.Forms.TextBox()
-        Me.txtVare = New System.Windows.Forms.TextBox()
-        Me.txtKunde = New System.Windows.Forms.TextBox()
         Me.txtSelger = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.txtTotalpris = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmbKunder = New System.Windows.Forms.ComboBox()
+        Me.cmbVarer = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnKunder
@@ -146,20 +145,6 @@ Partial Class Utleie
         Me.txtPris.Size = New System.Drawing.Size(181, 26)
         Me.txtPris.TabIndex = 20
         '
-        'txtVare
-        '
-        Me.txtVare.Location = New System.Drawing.Point(332, 157)
-        Me.txtVare.Name = "txtVare"
-        Me.txtVare.Size = New System.Drawing.Size(181, 26)
-        Me.txtVare.TabIndex = 19
-        '
-        'txtKunde
-        '
-        Me.txtKunde.Location = New System.Drawing.Point(332, 108)
-        Me.txtKunde.Name = "txtKunde"
-        Me.txtKunde.Size = New System.Drawing.Size(181, 26)
-        Me.txtKunde.TabIndex = 17
-        '
         'txtSelger
         '
         Me.txtSelger.Location = New System.Drawing.Point(332, 52)
@@ -190,16 +175,6 @@ Partial Class Utleie
         Me.txtTotalpris.Size = New System.Drawing.Size(181, 26)
         Me.txtTotalpris.TabIndex = 34
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(574, 382)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 35)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Vis totalpris"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -210,13 +185,32 @@ Partial Class Utleie
         Me.Label6.TabIndex = 36
         Me.Label6.Text = "Til dato"
         '
+        'cmbKunder
+        '
+        Me.cmbKunder.FormattingEnabled = True
+        Me.cmbKunder.Location = New System.Drawing.Point(332, 104)
+        Me.cmbKunder.Name = "cmbKunder"
+        Me.cmbKunder.Size = New System.Drawing.Size(183, 28)
+        Me.cmbKunder.TabIndex = 37
+        Me.cmbKunder.Text = "Velg kunde fra listen"
+        '
+        'cmbVarer
+        '
+        Me.cmbVarer.FormattingEnabled = True
+        Me.cmbVarer.Location = New System.Drawing.Point(331, 160)
+        Me.cmbVarer.Name = "cmbVarer"
+        Me.cmbVarer.Size = New System.Drawing.Size(184, 28)
+        Me.cmbVarer.TabIndex = 38
+        Me.cmbVarer.Text = "Velg vare fra listen"
+        '
         'Utleie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 663)
+        Me.Controls.Add(Me.cmbVarer)
+        Me.Controls.Add(Me.cmbKunder)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtTotalpris)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -231,8 +225,6 @@ Partial Class Utleie
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnRegistrerSalg)
         Me.Controls.Add(Me.txtPris)
-        Me.Controls.Add(Me.txtVare)
-        Me.Controls.Add(Me.txtKunde)
         Me.Controls.Add(Me.txtSelger)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Utleie"
@@ -253,12 +245,11 @@ Partial Class Utleie
     Friend WithEvents Button2 As Button
     Friend WithEvents btnRegistrerSalg As Button
     Friend WithEvents txtPris As TextBox
-    Friend WithEvents txtVare As TextBox
-    Friend WithEvents txtKunde As TextBox
     Friend WithEvents txtSelger As TextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents txtTotalpris As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents cmbKunder As ComboBox
+    Friend WithEvents cmbVarer As ComboBox
 End Class

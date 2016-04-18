@@ -22,9 +22,12 @@ Partial Class helo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(helo))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,6 +37,7 @@ Partial Class helo
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.ImageList = Me.ImageList1
         Me.TabControl1.ItemSize = New System.Drawing.Size(85, 40)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Multiline = True
@@ -44,6 +48,7 @@ Partial Class helo
         '
         'TabPage1
         '
+        Me.TabPage1.ImageIndex = 0
         Me.TabPage1.Location = New System.Drawing.Point(44, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -57,10 +62,16 @@ Partial Class helo
         Me.TabPage2.Location = New System.Drawing.Point(44, 4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(557, 430)
+        Me.TabPage2.Size = New System.Drawing.Size(800, 449)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "book.png")
         '
         'helo
         '
@@ -78,4 +89,5 @@ Partial Class helo
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents ImageList1 As ImageList
 End Class
