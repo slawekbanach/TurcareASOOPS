@@ -42,7 +42,7 @@ Public Class frmMain
             MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
         End Try
 
-        '// loadfunksjon for salgsvarer //
+        '// -----loadfunksjon for salgsvarer //
         Dim cmd2 As New MySqlCommand("SELECT vare_pris, vare_navn FROM vare where vare_salg_utleie = 'salg'", con)
         Dim varer As New List(Of String)
         Try
@@ -65,6 +65,53 @@ Public Class frmMain
         '//
 
         '// laster inn utleie //
+        txtSelger.Text = LoginUser.bruker
+        txtSelger.Enabled = False
+        txtTotalpris.Enabled = False
+        dtpFraDatoUtleie.Format = DateTimePickerFormat.Custom
+        dtpFraDatoUtleie.CustomFormat = "dd/MM/yyyy"
+        dtpTilDatoUtleie.Format = DateTimePickerFormat.Custom
+        dtpTilDatoUtleie.CustomFormat = "dd/MM/yyyy"
+
+        '//// loadfunksjon for kunder ////
+        Dim cmdKunderUtleie As New MySqlCommand("SELECT person_id, person_fornavn, person_etternavn FROM personer where person_type = 'kunde'", con)
+        Dim kunderUtleie As New List(Of String)
+        Try
+            con.Open()
+            Dim rd As MySqlDataReader = cmdKunderUtleie.ExecuteReader(CommandBehavior.CloseConnection)
+            While rd.Read()
+                Dim kundemedid As String = rd("person_id") & " " & rd("person_fornavn") & " " & rd("person_etternavn")
+                Dim kundeid As Integer = rd("person_id")
+                kunderUtleie.Add(kundemedid)
+            End While
+            rd.Close()
+            con.Close()
+            Me.cmbKunderUtleie.Items.Clear()
+            Me.cmbKunderUtleie.Items.AddRange(kunderUtleie.ToArray)
+        Catch ex As System.Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        '/////////////////////////
+
+        '// loadfunksjon for varer //
+        Dim cmdVarerUtleie As New MySqlCommand("SELECT vare_navn, vare_pris FROM vare where vare_salg_utleie = 'utleie'", con)
+        Dim varerUtleie As New List(Of String)
+        Try
+            con.Open()
+            Dim rd As MySqlDataReader = cmdVarerUtleie.ExecuteReader(CommandBehavior.CloseConnection)
+            While rd.Read()
+                Dim vare As String = rd("vare_navn")
+                varepris = rd("vare_pris")
+                varerUtleie.Add(vare)
+            End While
+            rd.Close()
+            con.Close()
+            Me.cmbVarerUtleie.Items.Clear()
+            Me.cmbVarerUtleie.Items.AddRange(varerUtleie.ToArray)
+        Catch ex As System.Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
 
 
 
@@ -193,11 +240,55 @@ Public Class frmMain
     '//pageSalg finito // 
 
     '//pageUtleie// 
+    Private Sub btnRegistrerUtleie_Click(sender As Object, e As EventArgs) Handles btnRegistrerUtleie.Click
+
+        Dim sporring As New Query
+
+        Dim selgerid As String = txtSelger.Text
+
+        Dim fradato As Date = dtpFraDatoUtleie.Value.ToString
+        Dim tildato As Date = dtpTilDatoUtleie.Value.ToString
+        kundeid = cmbKunderUtleie.Text.Split(" ")
+        'vareid = cmbVarer.Text.Split(" ")
+
+        Dim vare As String = cmbVarerUtleie.Text
+        'Dim pris As Integer = txtPris.Text
+        Dim totalpris As Integer = txtTotalpris.Text
+        Try
+            sporring.sporring("INSERT INTO utleie (utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & fradato.ToShortDateString.ToString & "', '" & tildato.ToShortDateString.ToString & "', '" & vare & "', '" & totalpris & "');")
+            MessageBox.Show("Registrering av utleie vellykket!")
+            'txtKunde.Text = ""
+            'txtVare.Text = ""
+            'txtPris.Text = ""
+            'txtTotalpris.Text = ""
+        Catch ex As Exception
+            MessageBox.Show("Feil: " & ex.Message)
+        End Try
+
+    End Sub
+    Private Sub txtPris_TextChanged(sender As Object, e As EventArgs) Handles txtPris.TextChanged
+        Dim fradato As Date = dtpFraDatoUtleie.Value
+        Dim tildato As Date = dtpTilDatoUtleie.Value
+        'Dim sluttpris As String = CInt(txtTotalpris.Text)
+        Dim pris As Integer = txtPris.Text
+        Dim antalldager As Int32 = tildato.Subtract(fradato).Days
+        txtTotalpris.Text = CInt(antalldager.ToString) * pris
 
 
 
-
-
+    End Sub
+    Private Sub cmbVarer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVarerUtleie.SelectedIndexChanged
+        txtPris.Text = CInt(varepris)
+    End Sub
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles dtpTilDatoUtleie.ValueChanged
+        Dim fradato As Date = dtpFraDatoUtleie.Value
+        Dim tildato As Date = dtpTilDatoUtleie.Value
+        'Dim sluttpris As String = CInt(txtTotalpris.Text)
+        Dim pris As Integer = txtPris.Text
+        Dim antalldager As Int32 = tildato.Subtract(fradato).Days
+        txtTotalpris.Text = CInt(antalldager.ToString) * pris
+    End Sub
+    '//pageUtleie finito//
 
     '//pageKurs //
     Private Sub btnRegistrerKurs_click(sender As Object, e As EventArgs) Handles btnRegistrerKurs.Click
@@ -267,9 +358,7 @@ Public Class frmMain
         e.Row.Cells("KursidDataGridViewTextBoxColumn").Value = kursid(0)
     End Sub
 
-
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnVisPameldteKurs.Click
+    Private Sub btnVisPameldteKurs_Click(sender As Object, e As EventArgs) Handles btnVisPameldteKurs.Click
         dgvKursdeltagereOversikt.Visible = True
         cmbVelgKurs.Visible = False
         dgvKursMeldPa.Visible = False

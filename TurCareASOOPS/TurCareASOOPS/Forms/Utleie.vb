@@ -8,10 +8,10 @@ Public Class Utleie
         txtSelger.Text = LoginUser.bruker
         txtSelger.Enabled = False
         txtTotalpris.Enabled = False
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "dd/MM/yyyy"
-        DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.CustomFormat = "dd/MM/yyyy"
+        dtpFraDatoUtleie.Format = DateTimePickerFormat.Custom
+        dtpFraDatoUtleie.CustomFormat = "dd/MM/yyyy"
+        dtpTilDatoUtleie.Format = DateTimePickerFormat.Custom
+        dtpTilDatoUtleie.CustomFormat = "dd/MM/yyyy"
 
         '//// loadfunksjon for kunder ////
         Dim cmd As New MySqlCommand("SELECT person_id, person_fornavn, person_etternavn FROM personer where person_type = 'kunde'", con)
@@ -61,8 +61,8 @@ Public Class Utleie
 
         Dim selgerid As String = txtSelger.Text
 
-        Dim fradato As Date = DateTimePicker1.Value.ToString
-        Dim tildato As Date = DateTimePicker2.Value.ToString
+        Dim fradato As Date = dtpFraDatoUtleie.Value.ToString
+        Dim tildato As Date = dtpTilDatoUtleie.Value.ToString
         kundeid = cmbKunder.Text.Split(" ")
         'vareid = cmbVarer.Text.Split(" ")
 
@@ -84,8 +84,8 @@ Public Class Utleie
 
 
     Private Sub txtPris_TextChanged(sender As Object, e As EventArgs) Handles txtPris.TextChanged
-        Dim fradato As Date = DateTimePicker1.Value
-        Dim tildato As Date = DateTimePicker2.Value
+        Dim fradato As Date = dtpFraDatoUtleie.Value
+        Dim tildato As Date = dtpTilDatoUtleie.Value
         'Dim sluttpris As String = CInt(txtTotalpris.Text)
         Dim pris As Integer = txtPris.Text
         Dim antalldager As Int32 = tildato.Subtract(fradato).Days
@@ -99,16 +99,16 @@ Public Class Utleie
         txtPris.Text = CInt(varepris)
     End Sub
 
-    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
-        Dim fradato As Date = DateTimePicker1.Value
-        Dim tildato As Date = DateTimePicker2.Value
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles dtpTilDatoUtleie.ValueChanged
+        Dim fradato As Date = dtpFraDatoUtleie.Value
+        Dim tildato As Date = dtpTilDatoUtleie.Value
         'Dim sluttpris As String = CInt(txtTotalpris.Text)
         Dim pris As Integer = txtPris.Text
         Dim antalldager As Int32 = tildato.Subtract(fradato).Days
         txtTotalpris.Text = CInt(antalldager.ToString) * pris
     End Sub
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dtpFraDatoUtleie.ValueChanged
 
     End Sub
 End Class

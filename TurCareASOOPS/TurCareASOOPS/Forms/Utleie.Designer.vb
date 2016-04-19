@@ -32,8 +32,8 @@ Partial Class Utleie
         Me.btnRegistrerSalg = New System.Windows.Forms.Button()
         Me.txtPris = New System.Windows.Forms.TextBox()
         Me.txtSelger = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFraDatoUtleie = New System.Windows.Forms.DateTimePicker()
+        Me.dtpTilDatoUtleie = New System.Windows.Forms.DateTimePicker()
         Me.txtTotalpris = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbKunder = New System.Windows.Forms.ComboBox()
@@ -43,156 +43,158 @@ Partial Class Utleie
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(135, 257)
+        Me.Label5.Location = New System.Drawing.Point(202, 395)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.Size = New System.Drawing.Size(69, 20)
         Me.Label5.TabIndex = 30
         Me.Label5.Text = "Totalpris"
         '
         'Pris
         '
         Me.Pris.AutoSize = True
-        Me.Pris.Location = New System.Drawing.Point(122, 217)
+        Me.Pris.Location = New System.Drawing.Point(183, 334)
+        Me.Pris.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Pris.Name = "Pris"
-        Me.Pris.Size = New System.Drawing.Size(60, 13)
+        Me.Pris.Size = New System.Drawing.Size(88, 20)
         Me.Pris.TabIndex = 28
         Me.Pris.Text = "Pris pr. dag"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(153, 109)
+        Me.Label4.Location = New System.Drawing.Point(230, 168)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(29, 13)
+        Me.Label4.Size = New System.Drawing.Size(43, 20)
         Me.Label4.TabIndex = 27
         Me.Label4.Text = "Vare"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(127, 153)
+        Me.Label3.Location = New System.Drawing.Point(190, 235)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.Size = New System.Drawing.Size(82, 20)
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "Utleiedato"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(145, 73)
+        Me.Label2.Location = New System.Drawing.Point(218, 112)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.Size = New System.Drawing.Size(55, 20)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Kunde"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(145, 37)
+        Me.Label1.Location = New System.Drawing.Point(218, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Selger"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(77, 343)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Location = New System.Drawing.Point(116, 528)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 31)
+        Me.Button2.Size = New System.Drawing.Size(112, 48)
         Me.Button2.TabIndex = 22
         Me.Button2.Text = "<- Tilbake"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'btnRegistrerSalg
         '
-        Me.btnRegistrerSalg.Location = New System.Drawing.Point(222, 289)
-        Me.btnRegistrerSalg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRegistrerSalg.Location = New System.Drawing.Point(333, 445)
         Me.btnRegistrerSalg.Name = "btnRegistrerSalg"
-        Me.btnRegistrerSalg.Size = New System.Drawing.Size(121, 28)
+        Me.btnRegistrerSalg.Size = New System.Drawing.Size(182, 43)
         Me.btnRegistrerSalg.TabIndex = 21
         Me.btnRegistrerSalg.Text = "Registrer Utleie"
         Me.btnRegistrerSalg.UseVisualStyleBackColor = True
         '
         'txtPris
         '
-        Me.txtPris.Location = New System.Drawing.Point(222, 214)
-        Me.txtPris.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPris.Location = New System.Drawing.Point(333, 329)
         Me.txtPris.Name = "txtPris"
         Me.txtPris.ReadOnly = True
-        Me.txtPris.Size = New System.Drawing.Size(122, 20)
+        Me.txtPris.Size = New System.Drawing.Size(181, 26)
         Me.txtPris.TabIndex = 20
         '
         'txtSelger
         '
-        Me.txtSelger.Location = New System.Drawing.Point(221, 34)
-        Me.txtSelger.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSelger.Location = New System.Drawing.Point(332, 52)
         Me.txtSelger.Name = "txtSelger"
-        Me.txtSelger.Size = New System.Drawing.Size(122, 20)
+        Me.txtSelger.Size = New System.Drawing.Size(181, 26)
         Me.txtSelger.TabIndex = 16
         '
-        'DateTimePicker1
+        'dtpFraDatoUtleie
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(221, 147)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 32
+        Me.dtpFraDatoUtleie.Location = New System.Drawing.Point(332, 226)
+        Me.dtpFraDatoUtleie.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFraDatoUtleie.Name = "dtpFraDatoUtleie"
+        Me.dtpFraDatoUtleie.Size = New System.Drawing.Size(298, 26)
+        Me.dtpFraDatoUtleie.TabIndex = 32
         '
-        'DateTimePicker2
+        'dtpTilDatoUtleie
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(221, 175)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker2.TabIndex = 33
+        Me.dtpTilDatoUtleie.Location = New System.Drawing.Point(332, 269)
+        Me.dtpTilDatoUtleie.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpTilDatoUtleie.Name = "dtpTilDatoUtleie"
+        Me.dtpTilDatoUtleie.Size = New System.Drawing.Size(298, 26)
+        Me.dtpTilDatoUtleie.TabIndex = 33
         '
         'txtTotalpris
         '
-        Me.txtTotalpris.Location = New System.Drawing.Point(222, 250)
-        Me.txtTotalpris.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTotalpris.Location = New System.Drawing.Point(333, 385)
         Me.txtTotalpris.Name = "txtTotalpris"
-        Me.txtTotalpris.Size = New System.Drawing.Size(122, 20)
+        Me.txtTotalpris.Size = New System.Drawing.Size(181, 26)
         Me.txtTotalpris.TabIndex = 34
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(127, 181)
+        Me.Label6.Location = New System.Drawing.Point(190, 278)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 13)
+        Me.Label6.Size = New System.Drawing.Size(60, 20)
         Me.Label6.TabIndex = 36
         Me.Label6.Text = "Til dato"
         '
         'cmbKunder
         '
         Me.cmbKunder.FormattingEnabled = True
-        Me.cmbKunder.Location = New System.Drawing.Point(221, 68)
-        Me.cmbKunder.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbKunder.Location = New System.Drawing.Point(332, 105)
         Me.cmbKunder.Name = "cmbKunder"
-        Me.cmbKunder.Size = New System.Drawing.Size(123, 21)
+        Me.cmbKunder.Size = New System.Drawing.Size(182, 28)
         Me.cmbKunder.TabIndex = 37
         Me.cmbKunder.Text = "Velg kunde fra listen"
         '
         'cmbVarer
         '
         Me.cmbVarer.FormattingEnabled = True
-        Me.cmbVarer.Location = New System.Drawing.Point(221, 104)
-        Me.cmbVarer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbVarer.Location = New System.Drawing.Point(332, 160)
         Me.cmbVarer.Name = "cmbVarer"
-        Me.cmbVarer.Size = New System.Drawing.Size(124, 21)
+        Me.cmbVarer.Size = New System.Drawing.Size(184, 28)
         Me.cmbVarer.TabIndex = 38
         Me.cmbVarer.Text = "Velg vare fra listen"
         '
         'Utleie
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(534, 431)
+        Me.ClientSize = New System.Drawing.Size(801, 663)
         Me.Controls.Add(Me.cmbVarer)
         Me.Controls.Add(Me.cmbKunder)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtTotalpris)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtpTilDatoUtleie)
+        Me.Controls.Add(Me.dtpFraDatoUtleie)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Pris)
         Me.Controls.Add(Me.Label4)
@@ -203,6 +205,7 @@ Partial Class Utleie
         Me.Controls.Add(Me.btnRegistrerSalg)
         Me.Controls.Add(Me.txtPris)
         Me.Controls.Add(Me.txtSelger)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Utleie"
         Me.Text = "Utleie"
         Me.ResumeLayout(False)
@@ -219,8 +222,8 @@ Partial Class Utleie
     Friend WithEvents btnRegistrerSalg As Button
     Friend WithEvents txtPris As TextBox
     Friend WithEvents txtSelger As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents dtpFraDatoUtleie As DateTimePicker
+    Friend WithEvents dtpTilDatoUtleie As DateTimePicker
     Friend WithEvents txtTotalpris As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents cmbKunder As ComboBox
