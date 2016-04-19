@@ -4,6 +4,7 @@ Public Class frmMain
     Public kundeid() As String
     Public varepris As Integer
     Public vareid() As Integer
+    Public kursid() As String
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '// laster inn lager // 
         Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
@@ -35,8 +36,10 @@ Public Class frmMain
             con.Close()
             Me.cmbKundeSalg.Items.Clear()
             Me.cmbKundeSalg.Items.AddRange(kunder.ToArray)
-        Catch ex As System.Exception
-            MessageBox.Show(ex.Message)
+
+        Catch ex As Exception
+            Dim trace = New System.Diagnostics.StackTrace(ex, True)
+            MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
         End Try
 
         '// loadfunksjon for salgsvarer //
@@ -54,11 +57,25 @@ Public Class frmMain
             con.Close()
             Me.cmbVareSalg.Items.Clear()
             Me.cmbVareSalg.Items.AddRange(varer.ToArray)
-        Catch ex As System.Exception
-            MessageBox.Show(ex.Message)
+
+        Catch ex As Exception
+            Dim trace = New System.Diagnostics.StackTrace(ex, True)
+            MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
         End Try
+        '//
 
-
+        '//Laster inn kurs// 
+        dgvKursdeltagereOversikt.Visible = False
+        Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
+        con.Dispose()
+        dgvKursMeldPa.Visible = False
+        cmbVelgKurs.Visible = False
+        dtpKursDato.Format = DateTimePickerFormat.Custom
+        dtpKursDato.CustomFormat = "yyyy-MM-dd"
+        panelKursLabels.Visible = False
+        PanelKursTextboxes.Visible = False
+        btnLagreKurs.Visible = False
+        btnMeldPaDeltagerKurs.Visible = False
         '//
 
 
@@ -168,4 +185,136 @@ Public Class frmMain
         txtPrisSalg.Text = CInt(enhetspris * antall)
 
     End Sub
+
+    '//pageSalg finito // 
+
+    '//pageKurs //
+    Private Sub btnRegistrerKurs_click(sender As Object, e As EventArgs) Handles btnRegistrerKurs.Click
+        panelKursLabels.Visible = True
+        dgvKursMeldPa.Visible = False
+        dgvKursdeltagereOversikt.Visible = False
+        PanelKursTextboxes.Visible = True
+        btnLagreKurs.Visible = True
+        cmbVelgKurs.Visible = False
+        btnLagreKurs.Text = "Registrer kurs"
+        lblKursinstruktor.Text = "Kursinstruktør"
+        lblKursdato.Text = "Kursdato"
+        lblKursPlasser.Text = "Antall plasser"
+        lblKursSted.Text = "Sted"
+        lblKursType.Text = "Type"
+        lblKursPris.Text = "Pris per deltaker"
+    End Sub
+
+    Private Sub btnLagreKurs_click(sender As Object, e As EventArgs) Handles btnLagreKurs.Click
+        Dim leder As String = txtKursinstruktor.Text
+        Dim dato As Date = Format(dtpKursDato.Value, "yyyy-MM-dd")
+        Dim plasser As Integer = CInt(txtKursPlasser.Text)
+        Dim sted As String = txtKursSted.Text
+        Dim type As String = txtKursType.Text
+        Dim pris As Integer = CInt(txtKursPris.Text)
+
+        Dim sporring As New Query
+
+        Try
+            sporring.sporring("INSERT INTO registrere_kurs (kurs_instruktor, kurs_dato, antall_plasser, ledige_plasser, kurs_sted, kurs_type, kurs_pris) VALUES ('" & leder & "', '" & dtpKursDato.Text & "', '" & plasser & "', '" & plasser & "', '" & sted & "', '" & type & "', '" & pris & "');")
+
+        Catch ex As Exception
+            Dim trace = New System.Diagnostics.StackTrace(ex, True)
+            MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
+        End Try
+
+        MessageBox.Show("Registrering av kurs vellykket!")
+    End Sub
+
+    Private Sub cmbVelgKurs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVelgKurs.SelectedIndexChanged
+        btnMeldPaDeltagerKurs.Text = "Meld på"
+        btnMeldPaDeltagerKurs.Visible = True
+        Me.KursDataSet.pamelding_kurs.Clear()
+        kursid = cmbVelgKurs.Text.Split(" ")
+
+        dgvKursMeldPa.Visible = True
+
+        'DataGridView1.Rows(0).Cells(2).Value = CInt(kursid(0))
+    End Sub
+
+    Private Sub btnKursDeltagere_click(sender As Object, e As EventArgs) Handles btnMeldPaDeltagerKurs.Click
+        dgvKursdeltagereOversikt.Visible = False
+        Try
+            Me.Pamelding_kursTableAdapter.Update(Me.KursDataSet.pamelding_kurs)
+            MessageBox.Show("Påmelding vellykket")
+
+        Catch ex As Exception
+            Dim trace = New System.Diagnostics.StackTrace(ex, True)
+            MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
+        End Try
+
+    End Sub
+
+    Private Sub dgvKursMeldPa_DefaultValuesNeeded(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowEventArgs) Handles dgvKursMeldPa.DefaultValuesNeeded
+
+        e.Row.Cells("KursidDataGridViewTextBoxColumn").Value = kursid(0)
+    End Sub
+
+
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnVisPameldteKurs.Click
+        dgvKursdeltagereOversikt.Visible = True
+        cmbVelgKurs.Visible = False
+        dgvKursMeldPa.Visible = False
+        panelKursLabels.Visible = False
+        PanelKursTextboxes.Visible = False
+        btnLagreKurs.Visible = False
+        btnMeldPaDeltagerKurs.Visible = False
+
+        Dim query As String
+        query = "SELECT deltager_navn, deltager_tlf, kurs_id FROM pamelding_kurs order by kurs_id ASC"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvKursdeltagereOversikt.DataSource = DGview.dataset(query)
+
+    End Sub
+
+    Private Sub btnLeggTilKursdeltager_Click(sender As Object, e As EventArgs) Handles btnLeggTilKursdeltager.Click
+
+        panelKursLabels.Visible = False
+        PanelKursTextboxes.Visible = False
+
+        dgvKursdeltagereOversikt.Visible = False
+
+
+        Dim cmd As New MySqlCommand("SELECT kurs_id, kurs_type FROM registrere_kurs", con)
+        Dim kurs As New List(Of String)
+        Try
+            con.Open()
+            Dim rd As MySqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+            While rd.Read()
+                Dim kursmedid As String = rd("kurs_id") & " " & rd("kurs_type")
+                Dim kursid As Integer = rd("kurs_id")
+                kurs.Add(kursmedid)
+            End While
+            rd.Close()
+            con.Close()
+            Me.cmbVelgKurs.Items.Clear()
+            Me.cmbVelgKurs.Items.AddRange(kurs.ToArray)
+        Catch ex As Exception
+            Dim trace = New System.Diagnostics.StackTrace(ex, True)
+            MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
+        End Try
+
+        cmbVelgKurs.Visible = True
+
+    End Sub
+
+    Private Sub dgvKursMeldPa_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dgvKursMeldPa.RowsAdded
+        Try
+            dgvKursMeldPa.Rows(e.RowIndex).Cells(2).ReadOnly = True
+            'dgvKursMeldPa.Rows(e.RowIndex).Cells(2).Value = CInt(kursid(0))
+
+        Catch ex As Exception
+            Dim trace = New System.Diagnostics.StackTrace(ex, True)
+            MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
+        End Try
+
+    End Sub
+
 End Class

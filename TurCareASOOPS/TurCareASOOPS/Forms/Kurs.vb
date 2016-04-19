@@ -4,26 +4,26 @@ Public Class Kurs
     Public kursid() As String
 
     Private Sub Kurs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DataGridView2.Visible = False
+        dgvKursdeltagere.Visible = False
         'TODO: This line of code loads data into the 'KursDataSet.pamelding_kurs' table. You can move, or remove it, as needed.
         Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
         con.Dispose()
         DataGridView1.Visible = False
-        ComboBox1.Visible = False
+        cmbVelgKurs.Visible = False
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
-        Panel1.Visible = False
-        Panel2.Visible = False
+        panelKursLabels.Visible = False
+        PanelKursTextboxes.Visible = False
         Button3.Visible = False
         Button4.Visible = False
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Panel1.Visible = True
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRegistrerKurs.Click
+        panelKursLabels.Visible = True
         DataGridView1.Visible = False
-        DataGridView2.Visible = False
-        Panel2.Visible = True
+        dgvKursdeltagere.Visible = False
+        PanelKursTextboxes.Visible = True
         Button3.Visible = True
         Button3.Text = "Registrer kurs"
         Label1.Text = "Kursinstruktør"
@@ -58,11 +58,11 @@ Public Class Kurs
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Panel1.Visible = False
-        Panel2.Visible = False
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnLeggTilKursdeltager.Click
+        panelKursLabels.Visible = False
+        PanelKursTextboxes.Visible = False
         Button3.Visible = False
-        DataGridView2.Visible = False
+        dgvKursdeltagere.Visible = False
 
 
         Dim cmd As New MySqlCommand("SELECT kurs_id, kurs_type FROM registrere_kurs", con)
@@ -80,15 +80,15 @@ Public Class Kurs
             End While
             rd.Close()
             con.Close()
-            Me.ComboBox1.Items.Clear()
-            Me.ComboBox1.Items.AddRange(kurs.ToArray)
+            Me.cmbVelgKurs.Items.Clear()
+            Me.cmbVelgKurs.Items.AddRange(kurs.ToArray)
 
         Catch ex As System.Exception
 
             MessageBox.Show(ex.Message)
 
         End Try
-        ComboBox1.Visible = True
+        cmbVelgKurs.Visible = True
         'Dim query As String
         'query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer where person_type = 'Kunde'"
         'Dim DGview As New Dataset
@@ -98,11 +98,11 @@ Public Class Kurs
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVelgKurs.SelectedIndexChanged
         Button4.Text = "Meld på"
         Button4.Visible = True
         Me.KursDataSet.pamelding_kurs.Clear()
-        kursid = ComboBox1.Text.Split(" ")
+        kursid = cmbVelgKurs.Text.Split(" ")
 
         DataGridView1.Visible = True
 
@@ -110,7 +110,7 @@ Public Class Kurs
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        DataGridView2.Visible = False
+        dgvKursdeltagere.Visible = False
         Try
             Me.Pamelding_kursTableAdapter.Update(Me.KursDataSet.pamelding_kurs)
             MessageBox.Show("Påmelding vellykket")
@@ -135,12 +135,12 @@ Public Class Kurs
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        DataGridView2.Visible = True
-        ComboBox1.Visible = False
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnVisPameldteKurs.Click
+        dgvKursdeltagere.Visible = True
+        cmbVelgKurs.Visible = False
         DataGridView1.Visible = False
-        Panel1.Visible = False
-        Panel2.Visible = False
+        panelKursLabels.Visible = False
+        PanelKursTextboxes.Visible = False
         Button3.Visible = False
         Button4.Visible = False
 
@@ -148,7 +148,7 @@ Public Class Kurs
         query = "SELECT deltager_navn, deltager_tlf, kurs_id FROM pamelding_kurs order by kurs_id ASC"
         Dim DGview As New Dataset
         DGview.dataset(query)
-        DataGridView2.DataSource = DGview.dataset(query)
+        dgvKursdeltagere.DataSource = DGview.dataset(query)
 
     End Sub
 
