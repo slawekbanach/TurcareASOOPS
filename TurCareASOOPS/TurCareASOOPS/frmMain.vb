@@ -64,6 +64,10 @@ Public Class frmMain
         End Try
         '//
 
+        '// laster inn utleie //
+
+
+
         '//Laster inn kurs// 
         dgvKursdeltagereOversikt.Visible = False
         Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
@@ -188,6 +192,13 @@ Public Class frmMain
 
     '//pageSalg finito // 
 
+    '//pageUtleie// 
+
+
+
+
+
+
     '//pageKurs //
     Private Sub btnRegistrerKurs_click(sender As Object, e As EventArgs) Handles btnRegistrerKurs.Click
         panelKursLabels.Visible = True
@@ -195,6 +206,7 @@ Public Class frmMain
         dgvKursdeltagereOversikt.Visible = False
         PanelKursTextboxes.Visible = True
         btnLagreKurs.Visible = True
+        btnMeldPaDeltagerKurs.Visible = False
         cmbVelgKurs.Visible = False
         btnLagreKurs.Text = "Registrer kurs"
         lblKursinstruktor.Text = "Kursinstruktør"
@@ -278,8 +290,9 @@ Public Class frmMain
 
         panelKursLabels.Visible = False
         PanelKursTextboxes.Visible = False
-
         dgvKursdeltagereOversikt.Visible = False
+        btnMeldPaDeltagerKurs.Visible = True
+        btnLagreKurs.Visible = False
 
 
         Dim cmd As New MySqlCommand("SELECT kurs_id, kurs_type FROM registrere_kurs", con)
@@ -316,5 +329,6 @@ Public Class frmMain
         End Try
 
     End Sub
+    '//pageKurs finito// 
 
 End Class

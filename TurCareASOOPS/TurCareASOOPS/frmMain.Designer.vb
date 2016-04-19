@@ -141,6 +141,22 @@ Partial Class frmMain
         Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PersonerTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.personerTableAdapter()
         Me.Pamelding_kursTableAdapter = New TurCareASOOPS.kursDataSetTableAdapters.pamelding_kursTableAdapter()
+        Me.pageUtleie = New System.Windows.Forms.TabPage()
+        Me.cmbVarer = New System.Windows.Forms.ComboBox()
+        Me.cmbKunder = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtTotalpris = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Pris = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtPris = New System.Windows.Forms.TextBox()
+        Me.txtSelger = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,6 +180,7 @@ Partial Class frmMain
         Me.TabControl1.SuspendLayout()
         Me.pageLager.SuspendLayout()
         CType(Me.dgvLager, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pageUtleie.SuspendLayout()
         Me.SuspendLayout()
         '
         'VareTableAdapter
@@ -191,6 +208,7 @@ Partial Class frmMain
         Me.ImageList1.Images.SetKeyName(5, "Vare.png")
         Me.ImageList1.Images.SetKeyName(6, "Logout.png")
         Me.ImageList1.Images.SetKeyName(7, "Hjem.png")
+        Me.ImageList1.Images.SetKeyName(8, "Utleie.png")
         '
         'DatabaseDataSet
         '
@@ -892,6 +910,7 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.pageLager)
         Me.TabControl1.Controls.Add(Me.pagePerson)
         Me.TabControl1.Controls.Add(Me.pageSalg)
+        Me.TabControl1.Controls.Add(Me.pageUtleie)
         Me.TabControl1.Controls.Add(Me.pageKurs)
         Me.TabControl1.Controls.Add(Me.pageStatitikk)
         Me.TabControl1.Controls.Add(Me.pageLogut)
@@ -1046,6 +1065,165 @@ Partial Class frmMain
         '
         Me.Pamelding_kursTableAdapter.ClearBeforeFill = True
         '
+        'pageUtleie
+        '
+        Me.pageUtleie.Controls.Add(Me.cmbVarer)
+        Me.pageUtleie.Controls.Add(Me.cmbKunder)
+        Me.pageUtleie.Controls.Add(Me.Label6)
+        Me.pageUtleie.Controls.Add(Me.txtTotalpris)
+        Me.pageUtleie.Controls.Add(Me.DateTimePicker2)
+        Me.pageUtleie.Controls.Add(Me.DateTimePicker1)
+        Me.pageUtleie.Controls.Add(Me.Label5)
+        Me.pageUtleie.Controls.Add(Me.Pris)
+        Me.pageUtleie.Controls.Add(Me.Label4)
+        Me.pageUtleie.Controls.Add(Me.Label3)
+        Me.pageUtleie.Controls.Add(Me.Label2)
+        Me.pageUtleie.Controls.Add(Me.Label1)
+        Me.pageUtleie.Controls.Add(Me.Button1)
+        Me.pageUtleie.Controls.Add(Me.txtPris)
+        Me.pageUtleie.Controls.Add(Me.txtSelger)
+        Me.pageUtleie.ImageKey = "Utleie.png"
+        Me.pageUtleie.Location = New System.Drawing.Point(52, 4)
+        Me.pageUtleie.Name = "pageUtleie"
+        Me.pageUtleie.Size = New System.Drawing.Size(1222, 686)
+        Me.pageUtleie.TabIndex = 8
+        Me.pageUtleie.UseVisualStyleBackColor = True
+        '
+        'cmbVarer
+        '
+        Me.cmbVarer.FormattingEnabled = True
+        Me.cmbVarer.Location = New System.Drawing.Point(537, 233)
+        Me.cmbVarer.Name = "cmbVarer"
+        Me.cmbVarer.Size = New System.Drawing.Size(184, 28)
+        Me.cmbVarer.TabIndex = 53
+        Me.cmbVarer.Text = "Velg vare fra listen"
+        '
+        'cmbKunder
+        '
+        Me.cmbKunder.FormattingEnabled = True
+        Me.cmbKunder.Location = New System.Drawing.Point(537, 178)
+        Me.cmbKunder.Name = "cmbKunder"
+        Me.cmbKunder.Size = New System.Drawing.Size(182, 28)
+        Me.cmbKunder.TabIndex = 52
+        Me.cmbKunder.Text = "Velg kunde fra listen"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(395, 351)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(60, 20)
+        Me.Label6.TabIndex = 51
+        Me.Label6.Text = "Til dato"
+        '
+        'txtTotalpris
+        '
+        Me.txtTotalpris.Location = New System.Drawing.Point(538, 458)
+        Me.txtTotalpris.Name = "txtTotalpris"
+        Me.txtTotalpris.Size = New System.Drawing.Size(181, 26)
+        Me.txtTotalpris.TabIndex = 50
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(537, 342)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(298, 26)
+        Me.DateTimePicker2.TabIndex = 49
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(537, 299)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(298, 26)
+        Me.DateTimePicker1.TabIndex = 48
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(407, 468)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(69, 20)
+        Me.Label5.TabIndex = 47
+        Me.Label5.Text = "Totalpris"
+        '
+        'Pris
+        '
+        Me.Pris.AutoSize = True
+        Me.Pris.Location = New System.Drawing.Point(388, 407)
+        Me.Pris.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Pris.Name = "Pris"
+        Me.Pris.Size = New System.Drawing.Size(88, 20)
+        Me.Pris.TabIndex = 46
+        Me.Pris.Text = "Pris pr. dag"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(435, 241)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(43, 20)
+        Me.Label4.TabIndex = 45
+        Me.Label4.Text = "Vare"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(395, 308)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 20)
+        Me.Label3.TabIndex = 44
+        Me.Label3.Text = "Utleiedato"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(423, 185)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 20)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "Kunde"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(423, 130)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 20)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "Selger"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(538, 518)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(182, 43)
+        Me.Button1.TabIndex = 41
+        Me.Button1.Text = "Registrer Utleie"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txtPris
+        '
+        Me.txtPris.Location = New System.Drawing.Point(538, 402)
+        Me.txtPris.Name = "txtPris"
+        Me.txtPris.ReadOnly = True
+        Me.txtPris.Size = New System.Drawing.Size(181, 26)
+        Me.txtPris.TabIndex = 40
+        '
+        'txtSelger
+        '
+        Me.txtSelger.Location = New System.Drawing.Point(537, 125)
+        Me.txtSelger.Name = "txtSelger"
+        Me.txtSelger.Size = New System.Drawing.Size(181, 26)
+        Me.txtSelger.TabIndex = 39
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
@@ -1084,6 +1262,8 @@ Partial Class frmMain
         Me.pageLager.ResumeLayout(False)
         Me.pageLager.PerformLayout()
         CType(Me.dgvLager, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pageUtleie.ResumeLayout(False)
+        Me.pageUtleie.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1184,4 +1364,20 @@ Partial Class frmMain
     Friend WithEvents lblKursdato As Label
     Friend WithEvents btnLagreKurs As Button
     Friend WithEvents Pamelding_kursTableAdapter As kursDataSetTableAdapters.pamelding_kursTableAdapter
+    Friend WithEvents pageUtleie As TabPage
+    Friend WithEvents cmbVarer As ComboBox
+    Friend WithEvents cmbKunder As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtTotalpris As TextBox
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Pris As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents txtPris As TextBox
+    Friend WithEvents txtSelger As TextBox
 End Class
