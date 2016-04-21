@@ -24,31 +24,43 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.VareBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
         Me.pageLogut = New System.Windows.Forms.TabPage()
+        Me.btnLoggUt = New System.Windows.Forms.Button()
         Me.pageStatitikk = New System.Windows.Forms.TabPage()
+        Me.btnVarePopularStatistikk = New System.Windows.Forms.Button()
+        Me.btnTotalInntektStatistikk = New System.Windows.Forms.Button()
+        Me.btnUtleieInntektStatistikk = New System.Windows.Forms.Button()
+        Me.btnSalgInntektStatistikk = New System.Windows.Forms.Button()
+        Me.btnUtleiePrSelgerStatistikk = New System.Windows.Forms.Button()
+        Me.btnAntallUtleieStatistikk = New System.Windows.Forms.Button()
+        Me.btnSalgPrSelgerStatistikk = New System.Windows.Forms.Button()
+        Me.btnAntallSalgStatistikk = New System.Windows.Forms.Button()
+        Me.dgvStatistikk = New System.Windows.Forms.DataGridView()
         Me.pageKurs = New System.Windows.Forms.TabPage()
         Me.dgvKursdeltagereOversikt = New System.Windows.Forms.DataGridView()
         Me.DeltagernavnDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -104,10 +116,23 @@ Partial Class frmMain
         Me.btnSokPerson = New System.Windows.Forms.Button()
         Me.txtSoekPerson = New System.Windows.Forms.TextBox()
         Me.dgvPerson = New System.Windows.Forms.DataGridView()
+        Me.PersonfornavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonetternavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonepostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersontlfDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonadresseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonpostnrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonpoststedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersontypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonbrukernavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonpassordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonerBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnTilbakePerson = New System.Windows.Forms.Button()
         Me.btnListUtAnsatte = New System.Windows.Forms.Button()
         Me.btnListUtKunder = New System.Windows.Forms.Button()
         Me.PersonerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet1 = New TurCareASOOPS.DatabaseDataSet()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.pageHjem = New System.Windows.Forms.TabPage()
         Me.pageLager = New System.Windows.Forms.TabPage()
@@ -116,6 +141,13 @@ Partial Class frmMain
         Me.btnSok = New System.Windows.Forms.Button()
         Me.btnListUt = New System.Windows.Forms.Button()
         Me.dgvLager = New System.Windows.Forms.DataGridView()
+        Me.VarenavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VaresalgutleieDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VaretilstandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VareprisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VaretilbudDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VarestatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pageUtleie = New System.Windows.Forms.TabPage()
         Me.cmbVarerUtleie = New System.Windows.Forms.ComboBox()
         Me.cmbKunderUtleie = New System.Windows.Forms.ComboBox()
@@ -133,34 +165,16 @@ Partial Class frmMain
         Me.txtPris = New System.Windows.Forms.TextBox()
         Me.txtSelger = New System.Windows.Forms.TextBox()
         Me.Pamelding_kursTableAdapter = New TurCareASOOPS.kursDataSetTableAdapters.pamelding_kursTableAdapter()
-        Me.VarenavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VaresalgutleieDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VaretilstandDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VareprisDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VaretilbudDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VarestatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New TurCareASOOPS.DatabaseDataSet()
-        Me.PersonfornavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonetternavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonepostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersontlfDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonadresseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonpostnrDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonpoststedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersontypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonbrukernavnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonpassordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonerBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.VareTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.vareTableAdapter()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet1 = New TurCareASOOPS.DatabaseDataSet()
         Me.PersonerTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.personerTableAdapter()
-        Me.btnLoggUt = New System.Windows.Forms.Button()
+        Me.salgBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pageLogut.SuspendLayout()
+        Me.pageStatitikk.SuspendLayout()
+        CType(Me.dgvStatistikk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pageKurs.SuspendLayout()
         CType(Me.dgvKursdeltagereOversikt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PameldingkursBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -173,16 +187,15 @@ Partial Class frmMain
         Me.pageSalg.SuspendLayout()
         Me.pagePerson.SuspendLayout()
         CType(Me.dgvPerson, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PersonerBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.pageLager.SuspendLayout()
         CType(Me.dgvLager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pageUtleie.SuspendLayout()
-        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PersonerBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.salgBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -213,6 +226,16 @@ Partial Class frmMain
         Me.VareBindingSource.DataMember = "vare"
         Me.VareBindingSource.DataSource = Me.DatabaseDataSetBindingSource
         '
+        'DatabaseDataSetBindingSource
+        '
+        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
+        Me.DatabaseDataSetBindingSource.Position = 0
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'pageLogut
         '
         Me.pageLogut.Controls.Add(Me.btnLoggUt)
@@ -223,14 +246,122 @@ Partial Class frmMain
         Me.pageLogut.TabIndex = 6
         Me.pageLogut.UseVisualStyleBackColor = True
         '
+        'btnLoggUt
+        '
+        Me.btnLoggUt.Location = New System.Drawing.Point(352, 142)
+        Me.btnLoggUt.Name = "btnLoggUt"
+        Me.btnLoggUt.Size = New System.Drawing.Size(286, 108)
+        Me.btnLoggUt.TabIndex = 0
+        Me.btnLoggUt.Text = "Logg ut"
+        Me.btnLoggUt.UseVisualStyleBackColor = True
+        '
         'pageStatitikk
         '
+        Me.pageStatitikk.Controls.Add(Me.btnVarePopularStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnTotalInntektStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnUtleieInntektStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnSalgInntektStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnUtleiePrSelgerStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnAntallUtleieStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnSalgPrSelgerStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.btnAntallSalgStatistikk)
+        Me.pageStatitikk.Controls.Add(Me.dgvStatistikk)
         Me.pageStatitikk.ImageKey = "Statistikk.png"
         Me.pageStatitikk.Location = New System.Drawing.Point(52, 4)
         Me.pageStatitikk.Name = "pageStatitikk"
         Me.pageStatitikk.Size = New System.Drawing.Size(1222, 686)
         Me.pageStatitikk.TabIndex = 5
         Me.pageStatitikk.UseVisualStyleBackColor = True
+        '
+        'btnVarePopularStatistikk
+        '
+        Me.btnVarePopularStatistikk.Location = New System.Drawing.Point(955, 467)
+        Me.btnVarePopularStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnVarePopularStatistikk.Name = "btnVarePopularStatistikk"
+        Me.btnVarePopularStatistikk.Size = New System.Drawing.Size(112, 62)
+        Me.btnVarePopularStatistikk.TabIndex = 19
+        Me.btnVarePopularStatistikk.Text = "Vare Populæritet"
+        Me.btnVarePopularStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnTotalInntektStatistikk
+        '
+        Me.btnTotalInntektStatistikk.Location = New System.Drawing.Point(833, 467)
+        Me.btnTotalInntektStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTotalInntektStatistikk.Name = "btnTotalInntektStatistikk"
+        Me.btnTotalInntektStatistikk.Size = New System.Drawing.Size(112, 62)
+        Me.btnTotalInntektStatistikk.TabIndex = 18
+        Me.btnTotalInntektStatistikk.Text = "Total Inntekt"
+        Me.btnTotalInntektStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnUtleieInntektStatistikk
+        '
+        Me.btnUtleieInntektStatistikk.Location = New System.Drawing.Point(709, 464)
+        Me.btnUtleieInntektStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnUtleieInntektStatistikk.Name = "btnUtleieInntektStatistikk"
+        Me.btnUtleieInntektStatistikk.Size = New System.Drawing.Size(112, 65)
+        Me.btnUtleieInntektStatistikk.TabIndex = 17
+        Me.btnUtleieInntektStatistikk.Text = "Utleie Inntekt"
+        Me.btnUtleieInntektStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnSalgInntektStatistikk
+        '
+        Me.btnSalgInntektStatistikk.Location = New System.Drawing.Point(588, 464)
+        Me.btnSalgInntektStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSalgInntektStatistikk.Name = "btnSalgInntektStatistikk"
+        Me.btnSalgInntektStatistikk.Size = New System.Drawing.Size(112, 65)
+        Me.btnSalgInntektStatistikk.TabIndex = 16
+        Me.btnSalgInntektStatistikk.Text = "Salg Inntekt"
+        Me.btnSalgInntektStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnUtleiePrSelgerStatistikk
+        '
+        Me.btnUtleiePrSelgerStatistikk.Location = New System.Drawing.Point(463, 464)
+        Me.btnUtleiePrSelgerStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnUtleiePrSelgerStatistikk.Name = "btnUtleiePrSelgerStatistikk"
+        Me.btnUtleiePrSelgerStatistikk.Size = New System.Drawing.Size(112, 66)
+        Me.btnUtleiePrSelgerStatistikk.TabIndex = 15
+        Me.btnUtleiePrSelgerStatistikk.Text = "Utleie pr Selger"
+        Me.btnUtleiePrSelgerStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnAntallUtleieStatistikk
+        '
+        Me.btnAntallUtleieStatistikk.Location = New System.Drawing.Point(342, 465)
+        Me.btnAntallUtleieStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnAntallUtleieStatistikk.Name = "btnAntallUtleieStatistikk"
+        Me.btnAntallUtleieStatistikk.Size = New System.Drawing.Size(112, 66)
+        Me.btnAntallUtleieStatistikk.TabIndex = 14
+        Me.btnAntallUtleieStatistikk.Text = "Hvor mange utleie"
+        Me.btnAntallUtleieStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnSalgPrSelgerStatistikk
+        '
+        Me.btnSalgPrSelgerStatistikk.Location = New System.Drawing.Point(221, 464)
+        Me.btnSalgPrSelgerStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSalgPrSelgerStatistikk.Name = "btnSalgPrSelgerStatistikk"
+        Me.btnSalgPrSelgerStatistikk.Size = New System.Drawing.Size(112, 68)
+        Me.btnSalgPrSelgerStatistikk.TabIndex = 13
+        Me.btnSalgPrSelgerStatistikk.Text = "Salg pr Selger"
+        Me.btnSalgPrSelgerStatistikk.UseVisualStyleBackColor = True
+        '
+        'btnAntallSalgStatistikk
+        '
+        Me.btnAntallSalgStatistikk.Location = New System.Drawing.Point(99, 464)
+        Me.btnAntallSalgStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnAntallSalgStatistikk.Name = "btnAntallSalgStatistikk"
+        Me.btnAntallSalgStatistikk.Size = New System.Drawing.Size(112, 68)
+        Me.btnAntallSalgStatistikk.TabIndex = 12
+        Me.btnAntallSalgStatistikk.Text = "Hvor mange salg"
+        Me.btnAntallSalgStatistikk.UseVisualStyleBackColor = True
+        '
+        'dgvStatistikk
+        '
+        Me.dgvStatistikk.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.dgvStatistikk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvStatistikk.Location = New System.Drawing.Point(84, 67)
+        Me.dgvStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvStatistikk.Name = "dgvStatistikk"
+        Me.dgvStatistikk.Size = New System.Drawing.Size(1054, 389)
+        Me.dgvStatistikk.TabIndex = 10
         '
         'pageKurs
         '
@@ -353,24 +484,24 @@ Partial Class frmMain
         'DeltagernavnDataGridViewTextBoxColumn
         '
         Me.DeltagernavnDataGridViewTextBoxColumn.DataPropertyName = "deltager_navn"
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.DeltagernavnDataGridViewTextBoxColumn.HeaderText = "Navn"
         Me.DeltagernavnDataGridViewTextBoxColumn.Name = "DeltagernavnDataGridViewTextBoxColumn"
         '
         'DeltagertlfDataGridViewTextBoxColumn
         '
         Me.DeltagertlfDataGridViewTextBoxColumn.DataPropertyName = "deltager_tlf"
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.DeltagertlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
         Me.DeltagertlfDataGridViewTextBoxColumn.Name = "DeltagertlfDataGridViewTextBoxColumn"
         '
         'KursidDataGridViewTextBoxColumn
         '
         Me.KursidDataGridViewTextBoxColumn.DataPropertyName = "kurs_id"
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
         Me.KursidDataGridViewTextBoxColumn.HeaderText = "Kurs ID"
         Me.KursidDataGridViewTextBoxColumn.Name = "KursidDataGridViewTextBoxColumn"
         '
@@ -762,6 +893,91 @@ Partial Class frmMain
         Me.dgvPerson.Size = New System.Drawing.Size(1216, 488)
         Me.dgvPerson.TabIndex = 11
         '
+        'PersonfornavnDataGridViewTextBoxColumn
+        '
+        Me.PersonfornavnDataGridViewTextBoxColumn.DataPropertyName = "person_fornavn"
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonfornavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        Me.PersonfornavnDataGridViewTextBoxColumn.HeaderText = "Fornavn"
+        Me.PersonfornavnDataGridViewTextBoxColumn.Name = "PersonfornavnDataGridViewTextBoxColumn"
+        '
+        'PersonetternavnDataGridViewTextBoxColumn
+        '
+        Me.PersonetternavnDataGridViewTextBoxColumn.DataPropertyName = "person_etternavn"
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonetternavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
+        Me.PersonetternavnDataGridViewTextBoxColumn.HeaderText = "Etternavn"
+        Me.PersonetternavnDataGridViewTextBoxColumn.Name = "PersonetternavnDataGridViewTextBoxColumn"
+        '
+        'PersonepostDataGridViewTextBoxColumn
+        '
+        Me.PersonepostDataGridViewTextBoxColumn.DataPropertyName = "person_epost"
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonepostDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
+        Me.PersonepostDataGridViewTextBoxColumn.HeaderText = "Epost"
+        Me.PersonepostDataGridViewTextBoxColumn.Name = "PersonepostDataGridViewTextBoxColumn"
+        '
+        'PersontlfDataGridViewTextBoxColumn
+        '
+        Me.PersontlfDataGridViewTextBoxColumn.DataPropertyName = "person_tlf"
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersontlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
+        Me.PersontlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
+        Me.PersontlfDataGridViewTextBoxColumn.Name = "PersontlfDataGridViewTextBoxColumn"
+        '
+        'PersonadresseDataGridViewTextBoxColumn
+        '
+        Me.PersonadresseDataGridViewTextBoxColumn.DataPropertyName = "person_adresse"
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonadresseDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle8
+        Me.PersonadresseDataGridViewTextBoxColumn.HeaderText = "Adresse"
+        Me.PersonadresseDataGridViewTextBoxColumn.Name = "PersonadresseDataGridViewTextBoxColumn"
+        '
+        'PersonpostnrDataGridViewTextBoxColumn
+        '
+        Me.PersonpostnrDataGridViewTextBoxColumn.DataPropertyName = "person_postnr"
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonpostnrDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
+        Me.PersonpostnrDataGridViewTextBoxColumn.HeaderText = "Postnummer"
+        Me.PersonpostnrDataGridViewTextBoxColumn.Name = "PersonpostnrDataGridViewTextBoxColumn"
+        '
+        'PersonpoststedDataGridViewTextBoxColumn
+        '
+        Me.PersonpoststedDataGridViewTextBoxColumn.DataPropertyName = "person_poststed"
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonpoststedDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
+        Me.PersonpoststedDataGridViewTextBoxColumn.HeaderText = "Poststed"
+        Me.PersonpoststedDataGridViewTextBoxColumn.Name = "PersonpoststedDataGridViewTextBoxColumn"
+        '
+        'PersontypeDataGridViewTextBoxColumn
+        '
+        Me.PersontypeDataGridViewTextBoxColumn.DataPropertyName = "person_type"
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersontypeDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
+        Me.PersontypeDataGridViewTextBoxColumn.HeaderText = "Ansatt/kunde"
+        Me.PersontypeDataGridViewTextBoxColumn.Name = "PersontypeDataGridViewTextBoxColumn"
+        '
+        'PersonbrukernavnDataGridViewTextBoxColumn
+        '
+        Me.PersonbrukernavnDataGridViewTextBoxColumn.DataPropertyName = "person_brukernavn"
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonbrukernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
+        Me.PersonbrukernavnDataGridViewTextBoxColumn.HeaderText = "Brukernavn - ansatte"
+        Me.PersonbrukernavnDataGridViewTextBoxColumn.Name = "PersonbrukernavnDataGridViewTextBoxColumn"
+        '
+        'PersonpassordDataGridViewTextBoxColumn
+        '
+        Me.PersonpassordDataGridViewTextBoxColumn.DataPropertyName = "person_passord"
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonpassordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle13
+        Me.PersonpassordDataGridViewTextBoxColumn.HeaderText = "Passord - ansatte"
+        Me.PersonpassordDataGridViewTextBoxColumn.Name = "PersonpassordDataGridViewTextBoxColumn"
+        '
+        'PersonerBindingSource1
+        '
+        Me.PersonerBindingSource1.DataMember = "personer"
+        Me.PersonerBindingSource1.DataSource = Me.DatabaseDataSet
+        '
         'btnTilbakePerson
         '
         Me.btnTilbakePerson.Location = New System.Drawing.Point(18, 622)
@@ -796,6 +1012,16 @@ Partial Class frmMain
         '
         Me.PersonerBindingSource.DataMember = "personer"
         Me.PersonerBindingSource.DataSource = Me.BindingSource1
+        '
+        'BindingSource1
+        '
+        Me.BindingSource1.DataSource = Me.DatabaseDataSet1
+        Me.BindingSource1.Position = 0
+        '
+        'DatabaseDataSet1
+        '
+        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TabControl1
         '
@@ -894,6 +1120,62 @@ Partial Class frmMain
         Me.dgvLager.Name = "dgvLager"
         Me.dgvLager.Size = New System.Drawing.Size(1216, 508)
         Me.dgvLager.TabIndex = 14
+        '
+        'VarenavnDataGridViewTextBoxColumn
+        '
+        Me.VarenavnDataGridViewTextBoxColumn.DataPropertyName = "vare_navn"
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VarenavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle14
+        Me.VarenavnDataGridViewTextBoxColumn.HeaderText = "Varenavn"
+        Me.VarenavnDataGridViewTextBoxColumn.Name = "VarenavnDataGridViewTextBoxColumn"
+        '
+        'VaresalgutleieDataGridViewTextBoxColumn
+        '
+        Me.VaresalgutleieDataGridViewTextBoxColumn.DataPropertyName = "vare_salg_utleie"
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaresalgutleieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle15
+        Me.VaresalgutleieDataGridViewTextBoxColumn.HeaderText = "Salg/Utleie"
+        Me.VaresalgutleieDataGridViewTextBoxColumn.Name = "VaresalgutleieDataGridViewTextBoxColumn"
+        '
+        'VaretilstandDataGridViewTextBoxColumn
+        '
+        Me.VaretilstandDataGridViewTextBoxColumn.DataPropertyName = "vare_tilstand"
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaretilstandDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle16
+        Me.VaretilstandDataGridViewTextBoxColumn.HeaderText = "Tilstand"
+        Me.VaretilstandDataGridViewTextBoxColumn.Name = "VaretilstandDataGridViewTextBoxColumn"
+        '
+        'VareprisDataGridViewTextBoxColumn
+        '
+        Me.VareprisDataGridViewTextBoxColumn.DataPropertyName = "vare_pris"
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VareprisDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle17
+        Me.VareprisDataGridViewTextBoxColumn.HeaderText = "Enhetspris/Pris per døgn"
+        Me.VareprisDataGridViewTextBoxColumn.Name = "VareprisDataGridViewTextBoxColumn"
+        '
+        'VaretilbudDataGridViewTextBoxColumn
+        '
+        Me.VaretilbudDataGridViewTextBoxColumn.DataPropertyName = "vare_tilbud"
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaretilbudDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle18
+        Me.VaretilbudDataGridViewTextBoxColumn.HeaderText = "Tilbud"
+        Me.VaretilbudDataGridViewTextBoxColumn.Name = "VaretilbudDataGridViewTextBoxColumn"
+        '
+        'VarestatusDataGridViewTextBoxColumn
+        '
+        Me.VarestatusDataGridViewTextBoxColumn.DataPropertyName = "vare_status"
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VarestatusDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle19
+        Me.VarestatusDataGridViewTextBoxColumn.HeaderText = "Status"
+        Me.VarestatusDataGridViewTextBoxColumn.Name = "VarestatusDataGridViewTextBoxColumn"
+        '
+        'VareantallDataGridViewTextBoxColumn
+        '
+        Me.VareantallDataGridViewTextBoxColumn.DataPropertyName = "vare_antall"
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VareantallDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle20
+        Me.VareantallDataGridViewTextBoxColumn.HeaderText = "Antall på lager"
+        Me.VareantallDataGridViewTextBoxColumn.Name = "VareantallDataGridViewTextBoxColumn"
         '
         'pageUtleie
         '
@@ -1058,183 +1340,17 @@ Partial Class frmMain
         '
         Me.Pamelding_kursTableAdapter.ClearBeforeFill = True
         '
-        'VarenavnDataGridViewTextBoxColumn
-        '
-        Me.VarenavnDataGridViewTextBoxColumn.DataPropertyName = "vare_navn"
-        DataGridViewCellStyle24.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VarenavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle24
-        Me.VarenavnDataGridViewTextBoxColumn.HeaderText = "Varenavn"
-        Me.VarenavnDataGridViewTextBoxColumn.Name = "VarenavnDataGridViewTextBoxColumn"
-        '
-        'VaresalgutleieDataGridViewTextBoxColumn
-        '
-        Me.VaresalgutleieDataGridViewTextBoxColumn.DataPropertyName = "vare_salg_utleie"
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VaresalgutleieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle25
-        Me.VaresalgutleieDataGridViewTextBoxColumn.HeaderText = "Salg/Utleie"
-        Me.VaresalgutleieDataGridViewTextBoxColumn.Name = "VaresalgutleieDataGridViewTextBoxColumn"
-        '
-        'VaretilstandDataGridViewTextBoxColumn
-        '
-        Me.VaretilstandDataGridViewTextBoxColumn.DataPropertyName = "vare_tilstand"
-        DataGridViewCellStyle26.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VaretilstandDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle26
-        Me.VaretilstandDataGridViewTextBoxColumn.HeaderText = "Tilstand"
-        Me.VaretilstandDataGridViewTextBoxColumn.Name = "VaretilstandDataGridViewTextBoxColumn"
-        '
-        'VareprisDataGridViewTextBoxColumn
-        '
-        Me.VareprisDataGridViewTextBoxColumn.DataPropertyName = "vare_pris"
-        DataGridViewCellStyle27.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VareprisDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle27
-        Me.VareprisDataGridViewTextBoxColumn.HeaderText = "Enhetspris/Pris per døgn"
-        Me.VareprisDataGridViewTextBoxColumn.Name = "VareprisDataGridViewTextBoxColumn"
-        '
-        'VaretilbudDataGridViewTextBoxColumn
-        '
-        Me.VaretilbudDataGridViewTextBoxColumn.DataPropertyName = "vare_tilbud"
-        DataGridViewCellStyle28.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VaretilbudDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle28
-        Me.VaretilbudDataGridViewTextBoxColumn.HeaderText = "Tilbud"
-        Me.VaretilbudDataGridViewTextBoxColumn.Name = "VaretilbudDataGridViewTextBoxColumn"
-        '
-        'VarestatusDataGridViewTextBoxColumn
-        '
-        Me.VarestatusDataGridViewTextBoxColumn.DataPropertyName = "vare_status"
-        DataGridViewCellStyle29.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VarestatusDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle29
-        Me.VarestatusDataGridViewTextBoxColumn.HeaderText = "Status"
-        Me.VarestatusDataGridViewTextBoxColumn.Name = "VarestatusDataGridViewTextBoxColumn"
-        '
-        'VareantallDataGridViewTextBoxColumn
-        '
-        Me.VareantallDataGridViewTextBoxColumn.DataPropertyName = "vare_antall"
-        DataGridViewCellStyle30.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VareantallDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle30
-        Me.VareantallDataGridViewTextBoxColumn.HeaderText = "Antall på lager"
-        Me.VareantallDataGridViewTextBoxColumn.Name = "VareantallDataGridViewTextBoxColumn"
-        '
-        'DatabaseDataSetBindingSource
-        '
-        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
-        Me.DatabaseDataSetBindingSource.Position = 0
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PersonfornavnDataGridViewTextBoxColumn
-        '
-        Me.PersonfornavnDataGridViewTextBoxColumn.DataPropertyName = "person_fornavn"
-        DataGridViewCellStyle31.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonfornavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle31
-        Me.PersonfornavnDataGridViewTextBoxColumn.HeaderText = "Fornavn"
-        Me.PersonfornavnDataGridViewTextBoxColumn.Name = "PersonfornavnDataGridViewTextBoxColumn"
-        '
-        'PersonetternavnDataGridViewTextBoxColumn
-        '
-        Me.PersonetternavnDataGridViewTextBoxColumn.DataPropertyName = "person_etternavn"
-        DataGridViewCellStyle32.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonetternavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle32
-        Me.PersonetternavnDataGridViewTextBoxColumn.HeaderText = "Etternavn"
-        Me.PersonetternavnDataGridViewTextBoxColumn.Name = "PersonetternavnDataGridViewTextBoxColumn"
-        '
-        'PersonepostDataGridViewTextBoxColumn
-        '
-        Me.PersonepostDataGridViewTextBoxColumn.DataPropertyName = "person_epost"
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonepostDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle33
-        Me.PersonepostDataGridViewTextBoxColumn.HeaderText = "Epost"
-        Me.PersonepostDataGridViewTextBoxColumn.Name = "PersonepostDataGridViewTextBoxColumn"
-        '
-        'PersontlfDataGridViewTextBoxColumn
-        '
-        Me.PersontlfDataGridViewTextBoxColumn.DataPropertyName = "person_tlf"
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersontlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle34
-        Me.PersontlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
-        Me.PersontlfDataGridViewTextBoxColumn.Name = "PersontlfDataGridViewTextBoxColumn"
-        '
-        'PersonadresseDataGridViewTextBoxColumn
-        '
-        Me.PersonadresseDataGridViewTextBoxColumn.DataPropertyName = "person_adresse"
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonadresseDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle35
-        Me.PersonadresseDataGridViewTextBoxColumn.HeaderText = "Adresse"
-        Me.PersonadresseDataGridViewTextBoxColumn.Name = "PersonadresseDataGridViewTextBoxColumn"
-        '
-        'PersonpostnrDataGridViewTextBoxColumn
-        '
-        Me.PersonpostnrDataGridViewTextBoxColumn.DataPropertyName = "person_postnr"
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonpostnrDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle36
-        Me.PersonpostnrDataGridViewTextBoxColumn.HeaderText = "Postnummer"
-        Me.PersonpostnrDataGridViewTextBoxColumn.Name = "PersonpostnrDataGridViewTextBoxColumn"
-        '
-        'PersonpoststedDataGridViewTextBoxColumn
-        '
-        Me.PersonpoststedDataGridViewTextBoxColumn.DataPropertyName = "person_poststed"
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonpoststedDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle37
-        Me.PersonpoststedDataGridViewTextBoxColumn.HeaderText = "Poststed"
-        Me.PersonpoststedDataGridViewTextBoxColumn.Name = "PersonpoststedDataGridViewTextBoxColumn"
-        '
-        'PersontypeDataGridViewTextBoxColumn
-        '
-        Me.PersontypeDataGridViewTextBoxColumn.DataPropertyName = "person_type"
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersontypeDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle38
-        Me.PersontypeDataGridViewTextBoxColumn.HeaderText = "Ansatt/kunde"
-        Me.PersontypeDataGridViewTextBoxColumn.Name = "PersontypeDataGridViewTextBoxColumn"
-        '
-        'PersonbrukernavnDataGridViewTextBoxColumn
-        '
-        Me.PersonbrukernavnDataGridViewTextBoxColumn.DataPropertyName = "person_brukernavn"
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonbrukernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle39
-        Me.PersonbrukernavnDataGridViewTextBoxColumn.HeaderText = "Brukernavn - ansatte"
-        Me.PersonbrukernavnDataGridViewTextBoxColumn.Name = "PersonbrukernavnDataGridViewTextBoxColumn"
-        '
-        'PersonpassordDataGridViewTextBoxColumn
-        '
-        Me.PersonpassordDataGridViewTextBoxColumn.DataPropertyName = "person_passord"
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonpassordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle40
-        Me.PersonpassordDataGridViewTextBoxColumn.HeaderText = "Passord - ansatte"
-        Me.PersonpassordDataGridViewTextBoxColumn.Name = "PersonpassordDataGridViewTextBoxColumn"
-        '
-        'PersonerBindingSource1
-        '
-        Me.PersonerBindingSource1.DataMember = "personer"
-        Me.PersonerBindingSource1.DataSource = Me.DatabaseDataSet
-        '
         'VareTableAdapter
         '
         Me.VareTableAdapter.ClearBeforeFill = True
-        '
-        'BindingSource1
-        '
-        Me.BindingSource1.DataSource = Me.DatabaseDataSet1
-        Me.BindingSource1.Position = 0
-        '
-        'DatabaseDataSet1
-        '
-        Me.DatabaseDataSet1.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PersonerTableAdapter
         '
         Me.PersonerTableAdapter.ClearBeforeFill = True
         '
-        'btnLoggUt
+        'salgBindingSource
         '
-        Me.btnLoggUt.Location = New System.Drawing.Point(352, 142)
-        Me.btnLoggUt.Name = "btnLoggUt"
-        Me.btnLoggUt.Size = New System.Drawing.Size(286, 108)
-        Me.btnLoggUt.TabIndex = 0
-        Me.btnLoggUt.Text = "Logg ut"
-        Me.btnLoggUt.UseVisualStyleBackColor = True
+        Me.salgBindingSource.DataMember = "salg"
         '
         'frmMain
         '
@@ -1248,7 +1364,11 @@ Partial Class frmMain
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pageLogut.ResumeLayout(False)
+        Me.pageStatitikk.ResumeLayout(False)
+        CType(Me.dgvStatistikk, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pageKurs.ResumeLayout(False)
         CType(Me.dgvKursdeltagereOversikt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PameldingkursBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1265,18 +1385,17 @@ Partial Class frmMain
         Me.pagePerson.ResumeLayout(False)
         Me.pagePerson.PerformLayout()
         CType(Me.dgvPerson, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonerBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.pageLager.ResumeLayout(False)
         Me.pageLager.PerformLayout()
         CType(Me.dgvLager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pageUtleie.ResumeLayout(False)
         Me.pageUtleie.PerformLayout()
-        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonerBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.salgBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1394,4 +1513,14 @@ Partial Class frmMain
     Friend WithEvents txtPris As TextBox
     Friend WithEvents txtSelger As TextBox
     Friend WithEvents btnLoggUt As Button
+    Friend WithEvents btnVarePopularStatistikk As Button
+    Friend WithEvents btnTotalInntektStatistikk As Button
+    Friend WithEvents btnUtleieInntektStatistikk As Button
+    Friend WithEvents btnSalgInntektStatistikk As Button
+    Friend WithEvents btnUtleiePrSelgerStatistikk As Button
+    Friend WithEvents btnAntallUtleieStatistikk As Button
+    Friend WithEvents btnSalgPrSelgerStatistikk As Button
+    Friend WithEvents btnAntallSalgStatistikk As Button
+    Friend WithEvents dgvStatistikk As DataGridView
+    Friend WithEvents salgBindingSource As BindingSource
 End Class

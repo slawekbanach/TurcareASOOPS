@@ -133,6 +133,10 @@ Public Class frmMain
         btnMeldPaDeltagerKurs.Visible = False
         '//
 
+        '//laster inn statistikk//
+        dgvStatistikk.DefaultCellStyle.BackColor = Color.LightSkyBlue
+        '//
+
 
     End Sub
 
@@ -426,7 +430,84 @@ Public Class frmMain
 
     '//pageKurs finito// 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
+    '//pageStatistikk// 
+    Private Sub btnAntallSalgStatistikk_Click(sender As Object, e As EventArgs) Handles btnAntallSalgStatistikk.Click
+        Dim query As String
+        query = "SELECT COUNT( * ) as 'antall_salg' FROM  salg"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnSalgPrSelgerStatistikk_Click(sender As Object, e As EventArgs) Handles btnSalgPrSelgerStatistikk.Click
+        Dim query As String
+        query = "SELECT salg_selger_id as 'Selger', COUNT( * ) as 'Antall_Salg' , SUM( salg_antall * salg_pris ) as 'Salgsinntekt'
+FROM salg
+GROUP BY salg_selger_id"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnAntallUtleieStatistikk_Click(sender As Object, e As EventArgs) Handles btnAntallUtleieStatistikk.Click
+        Dim query As String
+        query = "SELECT COUNT(*) AS 'Utleie_Antall' FROM utleie"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnUtleiePrSelgerStatistikk_Click(sender As Object, e As EventArgs) Handles btnUtleiePrSelgerStatistikk.Click
+        Dim query As String
+        query = "SELECT utleie_selger_id as 'Selger', COUNT(*) 'Utleie_Antall', sum(utleie_pris) as 'Utleieinntekt' FROM utleie
+group by utleie_selger_id"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnSalgInntektStatistikk_Click(sender As Object, e As EventArgs) Handles btnSalgInntektStatistikk.Click
+        Dim query As String
+        query = "SELECT SUM( salg_antall * salg_pris ) as 'Salgsinntekt_Totalt' FROM  salg"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnUtleieInntektStatistikk_Click(sender As Object, e As EventArgs) Handles btnUtleieInntektStatistikk.Click
+        Dim query As String
+        query = "SELECT SUM( utleie_pris ) as 'Utleieinntekt_Totalt' FROM  `utleie`"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnTotalInntektStatistikk_Click(sender As Object, e As EventArgs) Handles btnTotalInntektStatistikk.Click
+        Dim query As String
+        query = "SELECT SUM( salg_antall * salg_pris ) + SUM( utleie_pris ) as 'Totalinntekt'
+FROM  `utleie` 
+JOIN  `salg` ON salg_selger_id = utleie_selger_id"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    Private Sub btnVarePopularStatistikk_Click(sender As Object, e As EventArgs) Handles btnVarePopularStatistikk.Click
+        Dim query As String
+        query = "SELECT salg_vare as 'Vare' , COUNT( * ) as 'Antall_Solgte'
+FROM salg
+GROUP BY salg_vare"
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvStatistikk.DataSource = DGview.dataset(query)
+    End Sub
+
+    '//pageStatistikk finito//
+
+
+
+    '//pageLoggut//
+    Private Sub btnLoggUt_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
 
         Try
             Dim c As Form = Form.ActiveForm
@@ -443,6 +524,5 @@ Public Class frmMain
         End Try
 
     End Sub
-
-
+    '//pageloggut finito//
 End Class
