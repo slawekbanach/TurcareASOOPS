@@ -250,6 +250,8 @@ Public Class frmMain
     Private Sub btnRegistrerSalg_Click(sender As Object, e As EventArgs) Handles btnRegistrerSalg.Click
         Dim sporring As New Query
 
+
+
         Dim selgerid As String = txtSelgerSalg.Text
         Dim kundeid = cmbKundeSalg.Text.Split(" ")
 
@@ -261,11 +263,13 @@ Public Class frmMain
         Try
 
             sporring.sporring("INSERT INTO salg (salg_selger_id, salg_kunde_id, salg_dato, salg_vare, salg_antall, salg_pris) VALUES ('" & selgerid & "', '" & CInt(kundeid(0)) & "', '" & txtDatoSalg.Text & "', '" & vare(0) & "', '" & antall & "', '" & pris & "');")
+            sporring.sporring("UPDATE vare SET vare_antall = (vare_antall - '" & antall & "')  WHERE vare_navn = '" & vare(0) & "';")
+            MessageBox.Show("Registrering av salg vellykket!")
 
         Catch ex As Exception
             MessageBox.Show("Feil: " & ex.Message)
         End Try
-        MessageBox.Show("Registrering av salg vellykket!")
+
 
     End Sub
 
