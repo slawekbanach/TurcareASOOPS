@@ -615,5 +615,29 @@ Public Class frmMain
         End Try
 
     End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        If TabControl1.SelectedIndex = 7 Then
+
+            Try
+
+                Dim c As Form = Form.ActiveForm
+
+                con.Close()
+                con.Dispose()
+
+                LoginUser.Show()
+
+                c.Close()
+                MessageBox.Show("Du er nå logget ut!")
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+        End If
+
+
+    End Sub
     '//pageloggut finito//
 End Class
