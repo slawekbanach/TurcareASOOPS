@@ -6,6 +6,10 @@ Public Class frmMain
     Public vareid() As Integer
     Public kursid() As String
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If con.State = ConnectionState.Closed Then
+            con.Open()
+        End If
+
         '// laster inn lager // 
         Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
         '//////////
@@ -418,6 +422,27 @@ Public Class frmMain
         End Try
 
     End Sub
+
+
     '//pageKurs finito// 
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
+
+        Try
+            Dim c As Form = Form.ActiveForm
+
+            con.Close()
+            con.Dispose()
+
+            LoginUser.Show()
+
+            c.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
 
 End Class

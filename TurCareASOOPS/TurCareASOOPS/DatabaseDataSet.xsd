@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="tilkoblingDataSet" IsAppSettingsProperty="true" Modifier="Assembly" Name="tilkoblingDataSet (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TurCareASOOPS.My.MySettings.GlobalReference.Default.tilkoblingDataSet" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="tilkoblingDataSet" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="tilkoblingDataSet (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TurCareASOOPS.My.MySettings.GlobalReference.Default.tilkoblingDataSet" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personerTableAdapter" GeneratorDataComponentClassName="personerTableAdapter" Name="personer" UserDataComponentName="personerTableAdapter">
@@ -350,7 +350,7 @@ ORDER BY  `vare_navn`</CommandText>
   <xs:element name="DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DatabaseDataSet" msprop:Generator_UserDSName="DatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="personer" msprop:Generator_TableClassName="personerDataTable" msprop:Generator_TableVarName="tablepersoner" msprop:Generator_RowChangedName="personerRowChanged" msprop:Generator_TablePropName="personer" msprop:Generator_RowDeletingName="personerRowDeleting" msprop:Generator_RowChangingName="personerRowChanging" msprop:Generator_RowEvHandlerName="personerRowChangeEventHandler" msprop:Generator_RowDeletedName="personerRowDeleted" msprop:Generator_RowClassName="personerRow" msprop:Generator_UserTableName="personer" msprop:Generator_RowEvArgName="personerRowChangeEvent">
+        <xs:element name="personer" msprop:Generator_TableClassName="personerDataTable" msprop:Generator_TableVarName="tablepersoner" msprop:Generator_TablePropName="personer" msprop:Generator_RowDeletingName="personerRowDeleting" msprop:Generator_RowChangingName="personerRowChanging" msprop:Generator_RowEvHandlerName="personerRowChangeEventHandler" msprop:Generator_RowDeletedName="personerRowDeleted" msprop:Generator_UserTableName="personer" msprop:Generator_RowChangedName="personerRowChanged" msprop:Generator_RowEvArgName="personerRowChangeEvent" msprop:Generator_RowClassName="personerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="person_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnperson_id" msprop:Generator_ColumnPropNameInRow="person_id" msprop:Generator_ColumnPropNameInTable="person_idColumn" msprop:Generator_UserColumnName="person_id" type="xs:int" />
@@ -427,7 +427,7 @@ ORDER BY  `vare_navn`</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="salg" msprop:Generator_TableClassName="salgDataTable" msprop:Generator_TableVarName="tablesalg" msprop:Generator_RowChangedName="salgRowChanged" msprop:Generator_TablePropName="salg" msprop:Generator_RowDeletingName="salgRowDeleting" msprop:Generator_RowChangingName="salgRowChanging" msprop:Generator_RowEvHandlerName="salgRowChangeEventHandler" msprop:Generator_RowDeletedName="salgRowDeleted" msprop:Generator_RowClassName="salgRow" msprop:Generator_UserTableName="salg" msprop:Generator_RowEvArgName="salgRowChangeEvent">
+        <xs:element name="salg" msprop:Generator_TableClassName="salgDataTable" msprop:Generator_TableVarName="tablesalg" msprop:Generator_TablePropName="salg" msprop:Generator_RowDeletingName="salgRowDeleting" msprop:Generator_RowChangingName="salgRowChanging" msprop:Generator_RowEvHandlerName="salgRowChangeEventHandler" msprop:Generator_RowDeletedName="salgRowDeleted" msprop:Generator_UserTableName="salg" msprop:Generator_RowChangedName="salgRowChanged" msprop:Generator_RowEvArgName="salgRowChangeEvent" msprop:Generator_RowClassName="salgRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="salg_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsalg_id" msprop:Generator_ColumnPropNameInRow="salg_id" msprop:Generator_ColumnPropNameInTable="salg_idColumn" msprop:Generator_UserColumnName="salg_id" type="xs:int" />
@@ -458,7 +458,7 @@ ORDER BY  `vare_navn`</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="utleie" msprop:Generator_TableClassName="utleieDataTable" msprop:Generator_TableVarName="tableutleie" msprop:Generator_RowChangedName="utleieRowChanged" msprop:Generator_TablePropName="utleie" msprop:Generator_RowDeletingName="utleieRowDeleting" msprop:Generator_RowChangingName="utleieRowChanging" msprop:Generator_RowEvHandlerName="utleieRowChangeEventHandler" msprop:Generator_RowDeletedName="utleieRowDeleted" msprop:Generator_RowClassName="utleieRow" msprop:Generator_UserTableName="utleie" msprop:Generator_RowEvArgName="utleieRowChangeEvent">
+        <xs:element name="utleie" msprop:Generator_TableClassName="utleieDataTable" msprop:Generator_TableVarName="tableutleie" msprop:Generator_TablePropName="utleie" msprop:Generator_RowDeletingName="utleieRowDeleting" msprop:Generator_RowChangingName="utleieRowChanging" msprop:Generator_RowEvHandlerName="utleieRowChangeEventHandler" msprop:Generator_RowDeletedName="utleieRowDeleted" msprop:Generator_UserTableName="utleie" msprop:Generator_RowChangedName="utleieRowChanged" msprop:Generator_RowEvArgName="utleieRowChangeEvent" msprop:Generator_RowClassName="utleieRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="utleie_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnutleie_id" msprop:Generator_ColumnPropNameInRow="utleie_id" msprop:Generator_ColumnPropNameInTable="utleie_idColumn" msprop:Generator_UserColumnName="utleie_id" type="xs:int" />
@@ -495,7 +495,7 @@ ORDER BY  `vare_navn`</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vare" msprop:Generator_TableClassName="vareDataTable" msprop:Generator_TableVarName="tablevare" msprop:Generator_RowChangedName="vareRowChanged" msprop:Generator_TablePropName="vare" msprop:Generator_RowDeletingName="vareRowDeleting" msprop:Generator_RowChangingName="vareRowChanging" msprop:Generator_RowEvHandlerName="vareRowChangeEventHandler" msprop:Generator_RowDeletedName="vareRowDeleted" msprop:Generator_RowClassName="vareRow" msprop:Generator_UserTableName="vare" msprop:Generator_RowEvArgName="vareRowChangeEvent">
+        <xs:element name="vare" msprop:Generator_TableClassName="vareDataTable" msprop:Generator_TableVarName="tablevare" msprop:Generator_TablePropName="vare" msprop:Generator_RowDeletingName="vareRowDeleting" msprop:Generator_RowChangingName="vareRowChanging" msprop:Generator_RowEvHandlerName="vareRowChangeEventHandler" msprop:Generator_RowDeletedName="vareRowDeleted" msprop:Generator_UserTableName="vare" msprop:Generator_RowChangedName="vareRowChanged" msprop:Generator_RowEvArgName="vareRowChangeEvent" msprop:Generator_RowClassName="vareRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="vare_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnvare_id" msprop:Generator_ColumnPropNameInRow="vare_id" msprop:Generator_ColumnPropNameInTable="vare_idColumn" msprop:Generator_UserColumnName="vare_id" type="xs:int" />
