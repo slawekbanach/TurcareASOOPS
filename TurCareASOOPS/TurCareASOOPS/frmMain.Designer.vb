@@ -24,26 +24,26 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.VareBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -149,6 +149,13 @@ Partial Class frmMain
         Me.VarestatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VareantallDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pageUtleie = New System.Windows.Forms.TabPage()
+        Me.btnOppdaterOversiktUtleie = New System.Windows.Forms.Button()
+        Me.dgvUtleieOversikt = New System.Windows.Forms.DataGridView()
+        Me.btnLeverTilbake = New System.Windows.Forms.Button()
+        Me.lblUtleieOversikt = New System.Windows.Forms.Label()
+        Me.cmbUtleieTilbakelevering = New System.Windows.Forms.ComboBox()
+        Me.lblUtleieTilbakelevering = New System.Windows.Forms.Label()
+        Me.lblRegistrerUtleie = New System.Windows.Forms.Label()
         Me.cmbVarerUtleie = New System.Windows.Forms.ComboBox()
         Me.cmbKunderUtleie = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -195,6 +202,7 @@ Partial Class frmMain
         Me.pageLager.SuspendLayout()
         CType(Me.dgvLager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pageUtleie.SuspendLayout()
+        CType(Me.dgvUtleieOversikt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.salgBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -202,8 +210,9 @@ Partial Class frmMain
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1278, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(1285, 33)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -241,16 +250,18 @@ Partial Class frmMain
         Me.pageLogut.Controls.Add(Me.btnLoggUt)
         Me.pageLogut.ImageKey = "Logout.png"
         Me.pageLogut.Location = New System.Drawing.Point(52, 4)
+        Me.pageLogut.Margin = New System.Windows.Forms.Padding(2)
         Me.pageLogut.Name = "pageLogut"
-        Me.pageLogut.Size = New System.Drawing.Size(1222, 686)
+        Me.pageLogut.Size = New System.Drawing.Size(1229, 808)
         Me.pageLogut.TabIndex = 6
         Me.pageLogut.UseVisualStyleBackColor = True
         '
         'btnLoggUt
         '
-        Me.btnLoggUt.Location = New System.Drawing.Point(352, 142)
+        Me.btnLoggUt.Location = New System.Drawing.Point(235, 95)
+        Me.btnLoggUt.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLoggUt.Name = "btnLoggUt"
-        Me.btnLoggUt.Size = New System.Drawing.Size(286, 108)
+        Me.btnLoggUt.Size = New System.Drawing.Size(191, 72)
         Me.btnLoggUt.TabIndex = 0
         Me.btnLoggUt.Text = "Logg ut"
         Me.btnLoggUt.UseVisualStyleBackColor = True
@@ -268,87 +279,80 @@ Partial Class frmMain
         Me.pageStatitikk.Controls.Add(Me.dgvStatistikk)
         Me.pageStatitikk.ImageKey = "Statistikk.png"
         Me.pageStatitikk.Location = New System.Drawing.Point(52, 4)
+        Me.pageStatitikk.Margin = New System.Windows.Forms.Padding(2)
         Me.pageStatitikk.Name = "pageStatitikk"
-        Me.pageStatitikk.Size = New System.Drawing.Size(1222, 686)
+        Me.pageStatitikk.Size = New System.Drawing.Size(1229, 808)
         Me.pageStatitikk.TabIndex = 5
         Me.pageStatitikk.UseVisualStyleBackColor = True
         '
         'btnVarePopularStatistikk
         '
-        Me.btnVarePopularStatistikk.Location = New System.Drawing.Point(955, 467)
-        Me.btnVarePopularStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnVarePopularStatistikk.Location = New System.Drawing.Point(637, 311)
         Me.btnVarePopularStatistikk.Name = "btnVarePopularStatistikk"
-        Me.btnVarePopularStatistikk.Size = New System.Drawing.Size(112, 62)
+        Me.btnVarePopularStatistikk.Size = New System.Drawing.Size(75, 41)
         Me.btnVarePopularStatistikk.TabIndex = 19
         Me.btnVarePopularStatistikk.Text = "Vare Populæritet"
         Me.btnVarePopularStatistikk.UseVisualStyleBackColor = True
         '
         'btnTotalInntektStatistikk
         '
-        Me.btnTotalInntektStatistikk.Location = New System.Drawing.Point(833, 467)
-        Me.btnTotalInntektStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTotalInntektStatistikk.Location = New System.Drawing.Point(555, 311)
         Me.btnTotalInntektStatistikk.Name = "btnTotalInntektStatistikk"
-        Me.btnTotalInntektStatistikk.Size = New System.Drawing.Size(112, 62)
+        Me.btnTotalInntektStatistikk.Size = New System.Drawing.Size(75, 41)
         Me.btnTotalInntektStatistikk.TabIndex = 18
         Me.btnTotalInntektStatistikk.Text = "Total Inntekt"
         Me.btnTotalInntektStatistikk.UseVisualStyleBackColor = True
         '
         'btnUtleieInntektStatistikk
         '
-        Me.btnUtleieInntektStatistikk.Location = New System.Drawing.Point(709, 464)
-        Me.btnUtleieInntektStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnUtleieInntektStatistikk.Location = New System.Drawing.Point(473, 309)
         Me.btnUtleieInntektStatistikk.Name = "btnUtleieInntektStatistikk"
-        Me.btnUtleieInntektStatistikk.Size = New System.Drawing.Size(112, 65)
+        Me.btnUtleieInntektStatistikk.Size = New System.Drawing.Size(75, 43)
         Me.btnUtleieInntektStatistikk.TabIndex = 17
         Me.btnUtleieInntektStatistikk.Text = "Utleie Inntekt"
         Me.btnUtleieInntektStatistikk.UseVisualStyleBackColor = True
         '
         'btnSalgInntektStatistikk
         '
-        Me.btnSalgInntektStatistikk.Location = New System.Drawing.Point(588, 464)
-        Me.btnSalgInntektStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSalgInntektStatistikk.Location = New System.Drawing.Point(392, 309)
         Me.btnSalgInntektStatistikk.Name = "btnSalgInntektStatistikk"
-        Me.btnSalgInntektStatistikk.Size = New System.Drawing.Size(112, 65)
+        Me.btnSalgInntektStatistikk.Size = New System.Drawing.Size(75, 43)
         Me.btnSalgInntektStatistikk.TabIndex = 16
         Me.btnSalgInntektStatistikk.Text = "Salg Inntekt"
         Me.btnSalgInntektStatistikk.UseVisualStyleBackColor = True
         '
         'btnUtleiePrSelgerStatistikk
         '
-        Me.btnUtleiePrSelgerStatistikk.Location = New System.Drawing.Point(463, 464)
-        Me.btnUtleiePrSelgerStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnUtleiePrSelgerStatistikk.Location = New System.Drawing.Point(309, 309)
         Me.btnUtleiePrSelgerStatistikk.Name = "btnUtleiePrSelgerStatistikk"
-        Me.btnUtleiePrSelgerStatistikk.Size = New System.Drawing.Size(112, 66)
+        Me.btnUtleiePrSelgerStatistikk.Size = New System.Drawing.Size(75, 44)
         Me.btnUtleiePrSelgerStatistikk.TabIndex = 15
         Me.btnUtleiePrSelgerStatistikk.Text = "Utleie pr Selger"
         Me.btnUtleiePrSelgerStatistikk.UseVisualStyleBackColor = True
         '
         'btnAntallUtleieStatistikk
         '
-        Me.btnAntallUtleieStatistikk.Location = New System.Drawing.Point(342, 465)
-        Me.btnAntallUtleieStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnAntallUtleieStatistikk.Location = New System.Drawing.Point(228, 310)
         Me.btnAntallUtleieStatistikk.Name = "btnAntallUtleieStatistikk"
-        Me.btnAntallUtleieStatistikk.Size = New System.Drawing.Size(112, 66)
+        Me.btnAntallUtleieStatistikk.Size = New System.Drawing.Size(75, 44)
         Me.btnAntallUtleieStatistikk.TabIndex = 14
         Me.btnAntallUtleieStatistikk.Text = "Hvor mange utleie"
         Me.btnAntallUtleieStatistikk.UseVisualStyleBackColor = True
         '
         'btnSalgPrSelgerStatistikk
         '
-        Me.btnSalgPrSelgerStatistikk.Location = New System.Drawing.Point(221, 464)
-        Me.btnSalgPrSelgerStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSalgPrSelgerStatistikk.Location = New System.Drawing.Point(147, 309)
         Me.btnSalgPrSelgerStatistikk.Name = "btnSalgPrSelgerStatistikk"
-        Me.btnSalgPrSelgerStatistikk.Size = New System.Drawing.Size(112, 68)
+        Me.btnSalgPrSelgerStatistikk.Size = New System.Drawing.Size(75, 45)
         Me.btnSalgPrSelgerStatistikk.TabIndex = 13
         Me.btnSalgPrSelgerStatistikk.Text = "Salg pr Selger"
         Me.btnSalgPrSelgerStatistikk.UseVisualStyleBackColor = True
         '
         'btnAntallSalgStatistikk
         '
-        Me.btnAntallSalgStatistikk.Location = New System.Drawing.Point(99, 464)
-        Me.btnAntallSalgStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnAntallSalgStatistikk.Location = New System.Drawing.Point(66, 309)
         Me.btnAntallSalgStatistikk.Name = "btnAntallSalgStatistikk"
-        Me.btnAntallSalgStatistikk.Size = New System.Drawing.Size(112, 68)
+        Me.btnAntallSalgStatistikk.Size = New System.Drawing.Size(75, 45)
         Me.btnAntallSalgStatistikk.TabIndex = 12
         Me.btnAntallSalgStatistikk.Text = "Hvor mange salg"
         Me.btnAntallSalgStatistikk.UseVisualStyleBackColor = True
@@ -359,9 +363,8 @@ Partial Class frmMain
         Me.dgvStatistikk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvStatistikk.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvStatistikk.Location = New System.Drawing.Point(0, 0)
-        Me.dgvStatistikk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvStatistikk.Name = "dgvStatistikk"
-        Me.dgvStatistikk.Size = New System.Drawing.Size(1222, 454)
+        Me.dgvStatistikk.Size = New System.Drawing.Size(1229, 303)
         Me.dgvStatistikk.TabIndex = 10
         '
         'pageKurs
@@ -378,8 +381,9 @@ Partial Class frmMain
         Me.pageKurs.Controls.Add(Me.btnLagreKurs)
         Me.pageKurs.ImageKey = "Kurs.png"
         Me.pageKurs.Location = New System.Drawing.Point(52, 4)
+        Me.pageKurs.Margin = New System.Windows.Forms.Padding(2)
         Me.pageKurs.Name = "pageKurs"
-        Me.pageKurs.Size = New System.Drawing.Size(1222, 686)
+        Me.pageKurs.Size = New System.Drawing.Size(1229, 808)
         Me.pageKurs.TabIndex = 4
         Me.pageKurs.UseVisualStyleBackColor = True
         '
@@ -390,10 +394,11 @@ Partial Class frmMain
         Me.dgvKursdeltagereOversikt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvKursdeltagereOversikt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DeltagernavnDataGridViewTextBoxColumn1, Me.DeltagertlfDataGridViewTextBoxColumn1, Me.KursidDataGridViewTextBoxColumn1})
         Me.dgvKursdeltagereOversikt.DataSource = Me.PameldingkursBindingSource1
-        Me.dgvKursdeltagereOversikt.Location = New System.Drawing.Point(839, 434)
+        Me.dgvKursdeltagereOversikt.Location = New System.Drawing.Point(559, 289)
+        Me.dgvKursdeltagereOversikt.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvKursdeltagereOversikt.Name = "dgvKursdeltagereOversikt"
         Me.dgvKursdeltagereOversikt.RowTemplate.Height = 28
-        Me.dgvKursdeltagereOversikt.Size = New System.Drawing.Size(414, 377)
+        Me.dgvKursdeltagereOversikt.Size = New System.Drawing.Size(276, 251)
         Me.dgvKursdeltagereOversikt.TabIndex = 24
         '
         'DeltagernavnDataGridViewTextBoxColumn1
@@ -431,10 +436,9 @@ Partial Class frmMain
         '
         'btnVisPameldteKurs
         '
-        Me.btnVisPameldteKurs.Location = New System.Drawing.Point(733, 6)
-        Me.btnVisPameldteKurs.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnVisPameldteKurs.Location = New System.Drawing.Point(489, 4)
         Me.btnVisPameldteKurs.Name = "btnVisPameldteKurs"
-        Me.btnVisPameldteKurs.Size = New System.Drawing.Size(218, 68)
+        Me.btnVisPameldteKurs.Size = New System.Drawing.Size(145, 45)
         Me.btnVisPameldteKurs.TabIndex = 23
         Me.btnVisPameldteKurs.Text = "Vis påmeldte "
         Me.btnVisPameldteKurs.UseVisualStyleBackColor = True
@@ -442,29 +446,26 @@ Partial Class frmMain
         'cmbVelgKurs
         '
         Me.cmbVelgKurs.FormattingEnabled = True
-        Me.cmbVelgKurs.Location = New System.Drawing.Point(444, 101)
-        Me.cmbVelgKurs.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmbVelgKurs.Location = New System.Drawing.Point(296, 67)
         Me.cmbVelgKurs.Name = "cmbVelgKurs"
-        Me.cmbVelgKurs.Size = New System.Drawing.Size(318, 28)
+        Me.cmbVelgKurs.Size = New System.Drawing.Size(213, 21)
         Me.cmbVelgKurs.TabIndex = 21
         Me.cmbVelgKurs.Text = "Velg kurs fra listen"
         '
         'btnLeggTilKursdeltager
         '
-        Me.btnLeggTilKursdeltager.Location = New System.Drawing.Point(444, 6)
-        Me.btnLeggTilKursdeltager.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLeggTilKursdeltager.Location = New System.Drawing.Point(296, 4)
         Me.btnLeggTilKursdeltager.Name = "btnLeggTilKursdeltager"
-        Me.btnLeggTilKursdeltager.Size = New System.Drawing.Size(218, 68)
+        Me.btnLeggTilKursdeltager.Size = New System.Drawing.Size(145, 45)
         Me.btnLeggTilKursdeltager.TabIndex = 16
         Me.btnLeggTilKursdeltager.Text = "Legg til kursdeltagere"
         Me.btnLeggTilKursdeltager.UseVisualStyleBackColor = True
         '
         'btnRegistrerKurs
         '
-        Me.btnRegistrerKurs.Location = New System.Drawing.Point(163, 6)
-        Me.btnRegistrerKurs.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnRegistrerKurs.Location = New System.Drawing.Point(109, 4)
         Me.btnRegistrerKurs.Name = "btnRegistrerKurs"
-        Me.btnRegistrerKurs.Size = New System.Drawing.Size(218, 68)
+        Me.btnRegistrerKurs.Size = New System.Drawing.Size(145, 45)
         Me.btnRegistrerKurs.TabIndex = 15
         Me.btnRegistrerKurs.Text = "Registrer nytt kurs"
         Me.btnRegistrerKurs.UseVisualStyleBackColor = True
@@ -476,33 +477,32 @@ Partial Class frmMain
         Me.dgvKursMeldPa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvKursMeldPa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DeltagernavnDataGridViewTextBoxColumn, Me.DeltagertlfDataGridViewTextBoxColumn, Me.KursidDataGridViewTextBoxColumn})
         Me.dgvKursMeldPa.DataSource = Me.PameldingkursBindingSource
-        Me.dgvKursMeldPa.Location = New System.Drawing.Point(839, 101)
-        Me.dgvKursMeldPa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvKursMeldPa.Location = New System.Drawing.Point(559, 67)
         Me.dgvKursMeldPa.Name = "dgvKursMeldPa"
-        Me.dgvKursMeldPa.Size = New System.Drawing.Size(379, 297)
+        Me.dgvKursMeldPa.Size = New System.Drawing.Size(253, 198)
         Me.dgvKursMeldPa.TabIndex = 20
         '
         'DeltagernavnDataGridViewTextBoxColumn
         '
         Me.DeltagernavnDataGridViewTextBoxColumn.DataPropertyName = "deltager_navn"
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.DeltagernavnDataGridViewTextBoxColumn.HeaderText = "Navn"
         Me.DeltagernavnDataGridViewTextBoxColumn.Name = "DeltagernavnDataGridViewTextBoxColumn"
         '
         'DeltagertlfDataGridViewTextBoxColumn
         '
         Me.DeltagertlfDataGridViewTextBoxColumn.DataPropertyName = "deltager_tlf"
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.DeltagertlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.DeltagertlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
         Me.DeltagertlfDataGridViewTextBoxColumn.Name = "DeltagertlfDataGridViewTextBoxColumn"
         '
         'KursidDataGridViewTextBoxColumn
         '
         Me.KursidDataGridViewTextBoxColumn.DataPropertyName = "kurs_id"
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.KursidDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
         Me.KursidDataGridViewTextBoxColumn.HeaderText = "Kurs ID"
         Me.KursidDataGridViewTextBoxColumn.Name = "KursidDataGridViewTextBoxColumn"
         '
@@ -519,66 +519,58 @@ Partial Class frmMain
         Me.PanelKursTextboxes.Controls.Add(Me.txtKursSted)
         Me.PanelKursTextboxes.Controls.Add(Me.txtKursPlasser)
         Me.PanelKursTextboxes.Controls.Add(Me.dtpKursDato)
-        Me.PanelKursTextboxes.Location = New System.Drawing.Point(447, 160)
-        Me.PanelKursTextboxes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PanelKursTextboxes.Location = New System.Drawing.Point(298, 107)
         Me.PanelKursTextboxes.Name = "PanelKursTextboxes"
-        Me.PanelKursTextboxes.Size = New System.Drawing.Size(362, 397)
+        Me.PanelKursTextboxes.Size = New System.Drawing.Size(241, 265)
         Me.PanelKursTextboxes.TabIndex = 17
         '
         'txtKursPris
         '
-        Me.txtKursPris.Location = New System.Drawing.Point(4, 348)
-        Me.txtKursPris.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtKursPris.Location = New System.Drawing.Point(3, 232)
         Me.txtKursPris.Name = "txtKursPris"
-        Me.txtKursPris.Size = New System.Drawing.Size(310, 26)
+        Me.txtKursPris.Size = New System.Drawing.Size(208, 20)
         Me.txtKursPris.TabIndex = 3
         '
         'txtKursType
         '
-        Me.txtKursType.Location = New System.Drawing.Point(4, 289)
-        Me.txtKursType.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtKursType.Location = New System.Drawing.Point(3, 193)
         Me.txtKursType.Name = "txtKursType"
-        Me.txtKursType.Size = New System.Drawing.Size(310, 26)
+        Me.txtKursType.Size = New System.Drawing.Size(208, 20)
         Me.txtKursType.TabIndex = 3
         '
         'txtKursinstruktor
         '
-        Me.txtKursinstruktor.Location = New System.Drawing.Point(4, 14)
-        Me.txtKursinstruktor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtKursinstruktor.Location = New System.Drawing.Point(3, 9)
         Me.txtKursinstruktor.Name = "txtKursinstruktor"
-        Me.txtKursinstruktor.Size = New System.Drawing.Size(310, 26)
+        Me.txtKursinstruktor.Size = New System.Drawing.Size(208, 20)
         Me.txtKursinstruktor.TabIndex = 2
         '
         'txtKursSted
         '
-        Me.txtKursSted.Location = New System.Drawing.Point(4, 225)
-        Me.txtKursSted.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtKursSted.Location = New System.Drawing.Point(3, 150)
         Me.txtKursSted.Name = "txtKursSted"
-        Me.txtKursSted.Size = New System.Drawing.Size(310, 26)
+        Me.txtKursSted.Size = New System.Drawing.Size(208, 20)
         Me.txtKursSted.TabIndex = 3
         '
         'txtKursPlasser
         '
-        Me.txtKursPlasser.Location = New System.Drawing.Point(4, 154)
-        Me.txtKursPlasser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtKursPlasser.Location = New System.Drawing.Point(3, 103)
         Me.txtKursPlasser.Name = "txtKursPlasser"
-        Me.txtKursPlasser.Size = New System.Drawing.Size(310, 26)
+        Me.txtKursPlasser.Size = New System.Drawing.Size(208, 20)
         Me.txtKursPlasser.TabIndex = 3
         '
         'dtpKursDato
         '
-        Me.dtpKursDato.Location = New System.Drawing.Point(4, 85)
-        Me.dtpKursDato.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpKursDato.Location = New System.Drawing.Point(3, 57)
         Me.dtpKursDato.Name = "dtpKursDato"
-        Me.dtpKursDato.Size = New System.Drawing.Size(310, 26)
+        Me.dtpKursDato.Size = New System.Drawing.Size(208, 20)
         Me.dtpKursDato.TabIndex = 4
         '
         'btnMeldPaDeltagerKurs
         '
-        Me.btnMeldPaDeltagerKurs.Location = New System.Drawing.Point(92, 597)
-        Me.btnMeldPaDeltagerKurs.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnMeldPaDeltagerKurs.Location = New System.Drawing.Point(61, 398)
         Me.btnMeldPaDeltagerKurs.Name = "btnMeldPaDeltagerKurs"
-        Me.btnMeldPaDeltagerKurs.Size = New System.Drawing.Size(322, 83)
+        Me.btnMeldPaDeltagerKurs.Size = New System.Drawing.Size(215, 55)
         Me.btnMeldPaDeltagerKurs.TabIndex = 22
         Me.btnMeldPaDeltagerKurs.Text = "Button4"
         Me.btnMeldPaDeltagerKurs.UseVisualStyleBackColor = True
@@ -591,78 +583,70 @@ Partial Class frmMain
         Me.panelKursLabels.Controls.Add(Me.lblKursType)
         Me.panelKursLabels.Controls.Add(Me.lblKursSted)
         Me.panelKursLabels.Controls.Add(Me.lblKursdato)
-        Me.panelKursLabels.Location = New System.Drawing.Point(330, 154)
-        Me.panelKursLabels.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.panelKursLabels.Location = New System.Drawing.Point(220, 103)
         Me.panelKursLabels.Name = "panelKursLabels"
-        Me.panelKursLabels.Size = New System.Drawing.Size(112, 403)
+        Me.panelKursLabels.Size = New System.Drawing.Size(75, 269)
         Me.panelKursLabels.TabIndex = 19
         '
         'lblKursPris
         '
         Me.lblKursPris.AutoSize = True
-        Me.lblKursPris.Location = New System.Drawing.Point(4, 363)
-        Me.lblKursPris.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKursPris.Location = New System.Drawing.Point(3, 242)
         Me.lblKursPris.Name = "lblKursPris"
-        Me.lblKursPris.Size = New System.Drawing.Size(57, 20)
+        Me.lblKursPris.Size = New System.Drawing.Size(39, 13)
         Me.lblKursPris.TabIndex = 5
         Me.lblKursPris.Text = "Label1"
         '
         'lblKursinstruktor
         '
         Me.lblKursinstruktor.AutoSize = True
-        Me.lblKursinstruktor.Location = New System.Drawing.Point(4, 29)
-        Me.lblKursinstruktor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKursinstruktor.Location = New System.Drawing.Point(3, 19)
         Me.lblKursinstruktor.Name = "lblKursinstruktor"
-        Me.lblKursinstruktor.Size = New System.Drawing.Size(57, 20)
+        Me.lblKursinstruktor.Size = New System.Drawing.Size(39, 13)
         Me.lblKursinstruktor.TabIndex = 5
         Me.lblKursinstruktor.Text = "Label1"
         '
         'lblKursPlasser
         '
         Me.lblKursPlasser.AutoSize = True
-        Me.lblKursPlasser.Location = New System.Drawing.Point(4, 168)
-        Me.lblKursPlasser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKursPlasser.Location = New System.Drawing.Point(3, 112)
         Me.lblKursPlasser.Name = "lblKursPlasser"
-        Me.lblKursPlasser.Size = New System.Drawing.Size(57, 20)
+        Me.lblKursPlasser.Size = New System.Drawing.Size(39, 13)
         Me.lblKursPlasser.TabIndex = 5
         Me.lblKursPlasser.Text = "Label1"
         '
         'lblKursType
         '
         Me.lblKursType.AutoSize = True
-        Me.lblKursType.Location = New System.Drawing.Point(4, 305)
-        Me.lblKursType.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKursType.Location = New System.Drawing.Point(3, 203)
         Me.lblKursType.Name = "lblKursType"
-        Me.lblKursType.Size = New System.Drawing.Size(57, 20)
+        Me.lblKursType.Size = New System.Drawing.Size(39, 13)
         Me.lblKursType.TabIndex = 5
         Me.lblKursType.Text = "Label1"
         '
         'lblKursSted
         '
         Me.lblKursSted.AutoSize = True
-        Me.lblKursSted.Location = New System.Drawing.Point(4, 238)
-        Me.lblKursSted.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKursSted.Location = New System.Drawing.Point(3, 159)
         Me.lblKursSted.Name = "lblKursSted"
-        Me.lblKursSted.Size = New System.Drawing.Size(57, 20)
+        Me.lblKursSted.Size = New System.Drawing.Size(39, 13)
         Me.lblKursSted.TabIndex = 5
         Me.lblKursSted.Text = "Label1"
         '
         'lblKursdato
         '
         Me.lblKursdato.AutoSize = True
-        Me.lblKursdato.Location = New System.Drawing.Point(4, 105)
-        Me.lblKursdato.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKursdato.Location = New System.Drawing.Point(3, 70)
         Me.lblKursdato.Name = "lblKursdato"
-        Me.lblKursdato.Size = New System.Drawing.Size(57, 20)
+        Me.lblKursdato.Size = New System.Drawing.Size(39, 13)
         Me.lblKursdato.TabIndex = 5
         Me.lblKursdato.Text = "Label1"
         '
         'btnLagreKurs
         '
-        Me.btnLagreKurs.Location = New System.Drawing.Point(462, 597)
-        Me.btnLagreKurs.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLagreKurs.Location = New System.Drawing.Point(308, 398)
         Me.btnLagreKurs.Name = "btnLagreKurs"
-        Me.btnLagreKurs.Size = New System.Drawing.Size(322, 83)
+        Me.btnLagreKurs.Size = New System.Drawing.Size(215, 55)
         Me.btnLagreKurs.TabIndex = 18
         Me.btnLagreKurs.Text = "Button3"
         Me.btnLagreKurs.UseVisualStyleBackColor = True
@@ -686,141 +670,143 @@ Partial Class frmMain
         Me.pageSalg.Controls.Add(Me.txtSelgerSalg)
         Me.pageSalg.ImageKey = "Salg.png"
         Me.pageSalg.Location = New System.Drawing.Point(52, 4)
+        Me.pageSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.pageSalg.Name = "pageSalg"
-        Me.pageSalg.Size = New System.Drawing.Size(1222, 686)
+        Me.pageSalg.Size = New System.Drawing.Size(1229, 808)
         Me.pageSalg.TabIndex = 3
         Me.pageSalg.UseVisualStyleBackColor = True
         '
         'cmbVareSalg
         '
         Me.cmbVareSalg.FormattingEnabled = True
-        Me.cmbVareSalg.Location = New System.Drawing.Point(518, 296)
+        Me.cmbVareSalg.Location = New System.Drawing.Point(345, 197)
+        Me.cmbVareSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbVareSalg.Name = "cmbVareSalg"
-        Me.cmbVareSalg.Size = New System.Drawing.Size(181, 28)
+        Me.cmbVareSalg.Size = New System.Drawing.Size(122, 21)
         Me.cmbVareSalg.TabIndex = 29
         Me.cmbVareSalg.Text = "Velg vare fra listen"
         '
         'cmbKundeSalg
         '
         Me.cmbKundeSalg.FormattingEnabled = True
-        Me.cmbKundeSalg.Location = New System.Drawing.Point(518, 188)
+        Me.cmbKundeSalg.Location = New System.Drawing.Point(345, 125)
+        Me.cmbKundeSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbKundeSalg.Name = "cmbKundeSalg"
-        Me.cmbKundeSalg.Size = New System.Drawing.Size(181, 28)
+        Me.cmbKundeSalg.Size = New System.Drawing.Size(122, 21)
         Me.cmbKundeSalg.TabIndex = 28
         Me.cmbKundeSalg.Text = "Velg kunde fra listen"
         '
         'lblEnhetsprisSalg
         '
         Me.lblEnhetsprisSalg.AutoSize = True
-        Me.lblEnhetsprisSalg.Location = New System.Drawing.Point(380, 352)
-        Me.lblEnhetsprisSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEnhetsprisSalg.Location = New System.Drawing.Point(253, 235)
         Me.lblEnhetsprisSalg.Name = "lblEnhetsprisSalg"
-        Me.lblEnhetsprisSalg.Size = New System.Drawing.Size(85, 20)
+        Me.lblEnhetsprisSalg.Size = New System.Drawing.Size(56, 13)
         Me.lblEnhetsprisSalg.TabIndex = 27
         Me.lblEnhetsprisSalg.Text = "Enhetspris"
         '
         'lblAntallSalg
         '
         Me.lblAntallSalg.AutoSize = True
-        Me.lblAntallSalg.Location = New System.Drawing.Point(416, 408)
-        Me.lblAntallSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAntallSalg.Location = New System.Drawing.Point(277, 272)
         Me.lblAntallSalg.Name = "lblAntallSalg"
-        Me.lblAntallSalg.Size = New System.Drawing.Size(49, 20)
+        Me.lblAntallSalg.Size = New System.Drawing.Size(33, 13)
         Me.lblAntallSalg.TabIndex = 27
         Me.lblAntallSalg.Text = "Antall"
         '
         'txtEnhetsprisSalg
         '
-        Me.txtEnhetsprisSalg.Location = New System.Drawing.Point(519, 352)
+        Me.txtEnhetsprisSalg.Location = New System.Drawing.Point(346, 235)
+        Me.txtEnhetsprisSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEnhetsprisSalg.Name = "txtEnhetsprisSalg"
-        Me.txtEnhetsprisSalg.Size = New System.Drawing.Size(181, 26)
+        Me.txtEnhetsprisSalg.Size = New System.Drawing.Size(122, 20)
         Me.txtEnhetsprisSalg.TabIndex = 26
         '
         'txtAntallSalg
         '
-        Me.txtAntallSalg.Location = New System.Drawing.Point(519, 405)
+        Me.txtAntallSalg.Location = New System.Drawing.Point(346, 270)
+        Me.txtAntallSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAntallSalg.Name = "txtAntallSalg"
-        Me.txtAntallSalg.Size = New System.Drawing.Size(181, 26)
+        Me.txtAntallSalg.Size = New System.Drawing.Size(122, 20)
         Me.txtAntallSalg.TabIndex = 26
         '
         'lblPrisSalg
         '
         Me.lblPrisSalg.AutoSize = True
-        Me.lblPrisSalg.Location = New System.Drawing.Point(423, 464)
-        Me.lblPrisSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPrisSalg.Location = New System.Drawing.Point(282, 309)
         Me.lblPrisSalg.Name = "lblPrisSalg"
-        Me.lblPrisSalg.Size = New System.Drawing.Size(35, 20)
+        Me.lblPrisSalg.Size = New System.Drawing.Size(24, 13)
         Me.lblPrisSalg.TabIndex = 25
         Me.lblPrisSalg.Text = "Pris"
         '
         'lblVareSalg
         '
         Me.lblVareSalg.AutoSize = True
-        Me.lblVareSalg.Location = New System.Drawing.Point(422, 304)
-        Me.lblVareSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblVareSalg.Location = New System.Drawing.Point(281, 203)
         Me.lblVareSalg.Name = "lblVareSalg"
-        Me.lblVareSalg.Size = New System.Drawing.Size(43, 20)
+        Me.lblVareSalg.Size = New System.Drawing.Size(29, 13)
         Me.lblVareSalg.TabIndex = 24
         Me.lblVareSalg.Text = "Vare"
         '
         'lblSalgsdatoSalg
         '
         Me.lblSalgsdatoSalg.AutoSize = True
-        Me.lblSalgsdatoSalg.Location = New System.Drawing.Point(384, 244)
-        Me.lblSalgsdatoSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSalgsdatoSalg.Location = New System.Drawing.Point(256, 163)
         Me.lblSalgsdatoSalg.Name = "lblSalgsdatoSalg"
-        Me.lblSalgsdatoSalg.Size = New System.Drawing.Size(81, 20)
+        Me.lblSalgsdatoSalg.Size = New System.Drawing.Size(54, 13)
         Me.lblSalgsdatoSalg.TabIndex = 23
         Me.lblSalgsdatoSalg.Text = "Salgsdato"
         '
         'lblKundeSalg
         '
         Me.lblKundeSalg.AutoSize = True
-        Me.lblKundeSalg.Location = New System.Drawing.Point(404, 190)
-        Me.lblKundeSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblKundeSalg.Location = New System.Drawing.Point(269, 127)
         Me.lblKundeSalg.Name = "lblKundeSalg"
-        Me.lblKundeSalg.Size = New System.Drawing.Size(55, 20)
+        Me.lblKundeSalg.Size = New System.Drawing.Size(38, 13)
         Me.lblKundeSalg.TabIndex = 22
         Me.lblKundeSalg.Text = "Kunde"
         '
         'lblSelgerSalg
         '
         Me.lblSelgerSalg.AutoSize = True
-        Me.lblSelgerSalg.Location = New System.Drawing.Point(410, 136)
-        Me.lblSelgerSalg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSelgerSalg.Location = New System.Drawing.Point(273, 91)
         Me.lblSelgerSalg.Name = "lblSelgerSalg"
-        Me.lblSelgerSalg.Size = New System.Drawing.Size(55, 20)
+        Me.lblSelgerSalg.Size = New System.Drawing.Size(37, 13)
         Me.lblSelgerSalg.TabIndex = 21
         Me.lblSelgerSalg.Text = "Selger"
         '
         'btnRegistrerSalg
         '
-        Me.btnRegistrerSalg.Location = New System.Drawing.Point(518, 513)
+        Me.btnRegistrerSalg.Location = New System.Drawing.Point(345, 342)
+        Me.btnRegistrerSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegistrerSalg.Name = "btnRegistrerSalg"
-        Me.btnRegistrerSalg.Size = New System.Drawing.Size(182, 44)
+        Me.btnRegistrerSalg.Size = New System.Drawing.Size(121, 29)
         Me.btnRegistrerSalg.TabIndex = 20
         Me.btnRegistrerSalg.Text = "Registrer Salg"
         Me.btnRegistrerSalg.UseVisualStyleBackColor = True
         '
         'txtPrisSalg
         '
-        Me.txtPrisSalg.Location = New System.Drawing.Point(518, 460)
+        Me.txtPrisSalg.Location = New System.Drawing.Point(345, 307)
+        Me.txtPrisSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrisSalg.Name = "txtPrisSalg"
-        Me.txtPrisSalg.Size = New System.Drawing.Size(181, 26)
+        Me.txtPrisSalg.Size = New System.Drawing.Size(122, 20)
         Me.txtPrisSalg.TabIndex = 19
         '
         'txtDatoSalg
         '
-        Me.txtDatoSalg.Location = New System.Drawing.Point(518, 242)
+        Me.txtDatoSalg.Location = New System.Drawing.Point(345, 161)
+        Me.txtDatoSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDatoSalg.Name = "txtDatoSalg"
-        Me.txtDatoSalg.Size = New System.Drawing.Size(181, 26)
+        Me.txtDatoSalg.Size = New System.Drawing.Size(122, 20)
         Me.txtDatoSalg.TabIndex = 17
         '
         'txtSelgerSalg
         '
-        Me.txtSelgerSalg.Location = New System.Drawing.Point(518, 130)
+        Me.txtSelgerSalg.Location = New System.Drawing.Point(345, 87)
+        Me.txtSelgerSalg.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSelgerSalg.Name = "txtSelgerSalg"
-        Me.txtSelgerSalg.Size = New System.Drawing.Size(181, 26)
+        Me.txtSelgerSalg.Size = New System.Drawing.Size(122, 20)
         Me.txtSelgerSalg.TabIndex = 15
         '
         'pagePerson
@@ -835,48 +821,45 @@ Partial Class frmMain
         Me.pagePerson.Controls.Add(Me.btnListUtKunder)
         Me.pagePerson.ImageKey = "Person.png"
         Me.pagePerson.Location = New System.Drawing.Point(52, 4)
+        Me.pagePerson.Margin = New System.Windows.Forms.Padding(2)
         Me.pagePerson.Name = "pagePerson"
-        Me.pagePerson.Padding = New System.Windows.Forms.Padding(3)
-        Me.pagePerson.Size = New System.Drawing.Size(1222, 686)
+        Me.pagePerson.Padding = New System.Windows.Forms.Padding(2)
+        Me.pagePerson.Size = New System.Drawing.Size(1229, 808)
         Me.pagePerson.TabIndex = 1
         Me.pagePerson.UseVisualStyleBackColor = True
         '
         'btnLeggTilKunde
         '
-        Me.btnLeggTilKunde.Location = New System.Drawing.Point(178, 579)
-        Me.btnLeggTilKunde.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnLeggTilKunde.Location = New System.Drawing.Point(119, 386)
         Me.btnLeggTilKunde.Name = "btnLeggTilKunde"
-        Me.btnLeggTilKunde.Size = New System.Drawing.Size(138, 34)
+        Me.btnLeggTilKunde.Size = New System.Drawing.Size(92, 23)
         Me.btnLeggTilKunde.TabIndex = 16
         Me.btnLeggTilKunde.Text = "Legg til Kunde"
         Me.btnLeggTilKunde.UseVisualStyleBackColor = True
         '
         'btnLeggTilAnsatt
         '
-        Me.btnLeggTilAnsatt.Location = New System.Drawing.Point(18, 578)
-        Me.btnLeggTilAnsatt.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnLeggTilAnsatt.Location = New System.Drawing.Point(12, 385)
         Me.btnLeggTilAnsatt.Name = "btnLeggTilAnsatt"
-        Me.btnLeggTilAnsatt.Size = New System.Drawing.Size(138, 34)
+        Me.btnLeggTilAnsatt.Size = New System.Drawing.Size(92, 23)
         Me.btnLeggTilAnsatt.TabIndex = 14
         Me.btnLeggTilAnsatt.Text = "Legg til Ansatt"
         Me.btnLeggTilAnsatt.UseVisualStyleBackColor = True
         '
         'btnSokPerson
         '
-        Me.btnSokPerson.Location = New System.Drawing.Point(705, 562)
-        Me.btnSokPerson.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSokPerson.Location = New System.Drawing.Point(470, 375)
         Me.btnSokPerson.Name = "btnSokPerson"
-        Me.btnSokPerson.Size = New System.Drawing.Size(112, 34)
+        Me.btnSokPerson.Size = New System.Drawing.Size(75, 23)
         Me.btnSokPerson.TabIndex = 13
         Me.btnSokPerson.Text = "Button2"
         Me.btnSokPerson.UseVisualStyleBackColor = True
         '
         'txtSoekPerson
         '
-        Me.txtSoekPerson.Location = New System.Drawing.Point(705, 520)
-        Me.txtSoekPerson.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSoekPerson.Location = New System.Drawing.Point(470, 347)
         Me.txtSoekPerson.Name = "txtSoekPerson"
-        Me.txtSoekPerson.Size = New System.Drawing.Size(148, 26)
+        Me.txtSoekPerson.Size = New System.Drawing.Size(100, 20)
         Me.txtSoekPerson.TabIndex = 12
         '
         'dgvPerson
@@ -888,89 +871,90 @@ Partial Class frmMain
         Me.dgvPerson.DataSource = Me.PersonerBindingSource1
         Me.dgvPerson.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvPerson.GridColor = System.Drawing.SystemColors.ButtonFace
-        Me.dgvPerson.Location = New System.Drawing.Point(3, 3)
+        Me.dgvPerson.Location = New System.Drawing.Point(2, 2)
+        Me.dgvPerson.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvPerson.Name = "dgvPerson"
         Me.dgvPerson.RowTemplate.Height = 28
-        Me.dgvPerson.Size = New System.Drawing.Size(1216, 488)
+        Me.dgvPerson.Size = New System.Drawing.Size(1225, 325)
         Me.dgvPerson.TabIndex = 11
         '
         'PersonfornavnDataGridViewTextBoxColumn
         '
         Me.PersonfornavnDataGridViewTextBoxColumn.DataPropertyName = "person_fornavn"
-        DataGridViewCellStyle24.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonfornavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonfornavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
         Me.PersonfornavnDataGridViewTextBoxColumn.HeaderText = "Fornavn"
         Me.PersonfornavnDataGridViewTextBoxColumn.Name = "PersonfornavnDataGridViewTextBoxColumn"
         '
         'PersonetternavnDataGridViewTextBoxColumn
         '
         Me.PersonetternavnDataGridViewTextBoxColumn.DataPropertyName = "person_etternavn"
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonetternavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonetternavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
         Me.PersonetternavnDataGridViewTextBoxColumn.HeaderText = "Etternavn"
         Me.PersonetternavnDataGridViewTextBoxColumn.Name = "PersonetternavnDataGridViewTextBoxColumn"
         '
         'PersonepostDataGridViewTextBoxColumn
         '
         Me.PersonepostDataGridViewTextBoxColumn.DataPropertyName = "person_epost"
-        DataGridViewCellStyle26.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonepostDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonepostDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
         Me.PersonepostDataGridViewTextBoxColumn.HeaderText = "Epost"
         Me.PersonepostDataGridViewTextBoxColumn.Name = "PersonepostDataGridViewTextBoxColumn"
         '
         'PersontlfDataGridViewTextBoxColumn
         '
         Me.PersontlfDataGridViewTextBoxColumn.DataPropertyName = "person_tlf"
-        DataGridViewCellStyle27.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersontlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersontlfDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
         Me.PersontlfDataGridViewTextBoxColumn.HeaderText = "Telefon"
         Me.PersontlfDataGridViewTextBoxColumn.Name = "PersontlfDataGridViewTextBoxColumn"
         '
         'PersonadresseDataGridViewTextBoxColumn
         '
         Me.PersonadresseDataGridViewTextBoxColumn.DataPropertyName = "person_adresse"
-        DataGridViewCellStyle28.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonadresseDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonadresseDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle8
         Me.PersonadresseDataGridViewTextBoxColumn.HeaderText = "Adresse"
         Me.PersonadresseDataGridViewTextBoxColumn.Name = "PersonadresseDataGridViewTextBoxColumn"
         '
         'PersonpostnrDataGridViewTextBoxColumn
         '
         Me.PersonpostnrDataGridViewTextBoxColumn.DataPropertyName = "person_postnr"
-        DataGridViewCellStyle29.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonpostnrDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonpostnrDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
         Me.PersonpostnrDataGridViewTextBoxColumn.HeaderText = "Postnummer"
         Me.PersonpostnrDataGridViewTextBoxColumn.Name = "PersonpostnrDataGridViewTextBoxColumn"
         '
         'PersonpoststedDataGridViewTextBoxColumn
         '
         Me.PersonpoststedDataGridViewTextBoxColumn.DataPropertyName = "person_poststed"
-        DataGridViewCellStyle30.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonpoststedDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonpoststedDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
         Me.PersonpoststedDataGridViewTextBoxColumn.HeaderText = "Poststed"
         Me.PersonpoststedDataGridViewTextBoxColumn.Name = "PersonpoststedDataGridViewTextBoxColumn"
         '
         'PersontypeDataGridViewTextBoxColumn
         '
         Me.PersontypeDataGridViewTextBoxColumn.DataPropertyName = "person_type"
-        DataGridViewCellStyle31.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersontypeDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersontypeDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
         Me.PersontypeDataGridViewTextBoxColumn.HeaderText = "Ansatt/kunde"
         Me.PersontypeDataGridViewTextBoxColumn.Name = "PersontypeDataGridViewTextBoxColumn"
         '
         'PersonbrukernavnDataGridViewTextBoxColumn
         '
         Me.PersonbrukernavnDataGridViewTextBoxColumn.DataPropertyName = "person_brukernavn"
-        DataGridViewCellStyle32.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonbrukernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonbrukernavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
         Me.PersonbrukernavnDataGridViewTextBoxColumn.HeaderText = "Brukernavn - ansatte"
         Me.PersonbrukernavnDataGridViewTextBoxColumn.Name = "PersonbrukernavnDataGridViewTextBoxColumn"
         '
         'PersonpassordDataGridViewTextBoxColumn
         '
         Me.PersonpassordDataGridViewTextBoxColumn.DataPropertyName = "person_passord"
-        DataGridViewCellStyle33.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.PersonpassordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.PersonpassordDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle13
         Me.PersonpassordDataGridViewTextBoxColumn.HeaderText = "Passord - ansatte"
         Me.PersonpassordDataGridViewTextBoxColumn.Name = "PersonpassordDataGridViewTextBoxColumn"
         '
@@ -981,30 +965,27 @@ Partial Class frmMain
         '
         'btnTilbakePerson
         '
-        Me.btnTilbakePerson.Location = New System.Drawing.Point(18, 622)
-        Me.btnTilbakePerson.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnTilbakePerson.Location = New System.Drawing.Point(12, 415)
         Me.btnTilbakePerson.Name = "btnTilbakePerson"
-        Me.btnTilbakePerson.Size = New System.Drawing.Size(112, 34)
+        Me.btnTilbakePerson.Size = New System.Drawing.Size(75, 23)
         Me.btnTilbakePerson.TabIndex = 10
         Me.btnTilbakePerson.Text = "Tilbake"
         Me.btnTilbakePerson.UseVisualStyleBackColor = True
         '
         'btnListUtAnsatte
         '
-        Me.btnListUtAnsatte.Location = New System.Drawing.Point(18, 534)
-        Me.btnListUtAnsatte.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnListUtAnsatte.Location = New System.Drawing.Point(12, 356)
         Me.btnListUtAnsatte.Name = "btnListUtAnsatte"
-        Me.btnListUtAnsatte.Size = New System.Drawing.Size(138, 34)
+        Me.btnListUtAnsatte.Size = New System.Drawing.Size(92, 23)
         Me.btnListUtAnsatte.TabIndex = 9
         Me.btnListUtAnsatte.Text = "List ut ansatte"
         Me.btnListUtAnsatte.UseVisualStyleBackColor = True
         '
         'btnListUtKunder
         '
-        Me.btnListUtKunder.Location = New System.Drawing.Point(178, 534)
-        Me.btnListUtKunder.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnListUtKunder.Location = New System.Drawing.Point(119, 356)
         Me.btnListUtKunder.Name = "btnListUtKunder"
-        Me.btnListUtKunder.Size = New System.Drawing.Size(138, 34)
+        Me.btnListUtKunder.Size = New System.Drawing.Size(92, 23)
         Me.btnListUtKunder.TabIndex = 15
         Me.btnListUtKunder.Text = "List ut kunder"
         Me.btnListUtKunder.UseVisualStyleBackColor = True
@@ -1038,20 +1019,22 @@ Partial Class frmMain
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.ImageList = Me.ImageList1
         Me.TabControl1.ItemSize = New System.Drawing.Size(48, 48)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 50)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 33)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1278, 694)
+        Me.TabControl1.Size = New System.Drawing.Size(1285, 816)
         Me.TabControl1.TabIndex = 0
         '
         'pageHjem
         '
         Me.pageHjem.ImageKey = "Hjem.png"
         Me.pageHjem.Location = New System.Drawing.Point(52, 4)
+        Me.pageHjem.Margin = New System.Windows.Forms.Padding(2)
         Me.pageHjem.Name = "pageHjem"
-        Me.pageHjem.Padding = New System.Windows.Forms.Padding(3)
-        Me.pageHjem.Size = New System.Drawing.Size(1222, 686)
+        Me.pageHjem.Padding = New System.Windows.Forms.Padding(2)
+        Me.pageHjem.Size = New System.Drawing.Size(1229, 808)
         Me.pageHjem.TabIndex = 7
         Me.pageHjem.UseVisualStyleBackColor = True
         '
@@ -1064,45 +1047,44 @@ Partial Class frmMain
         Me.pageLager.Controls.Add(Me.dgvLager)
         Me.pageLager.ImageIndex = 1
         Me.pageLager.Location = New System.Drawing.Point(52, 4)
+        Me.pageLager.Margin = New System.Windows.Forms.Padding(2)
         Me.pageLager.Name = "pageLager"
-        Me.pageLager.Padding = New System.Windows.Forms.Padding(3)
-        Me.pageLager.Size = New System.Drawing.Size(1222, 686)
+        Me.pageLager.Padding = New System.Windows.Forms.Padding(2)
+        Me.pageLager.Size = New System.Drawing.Size(1229, 808)
         Me.pageLager.TabIndex = 0
         Me.pageLager.UseVisualStyleBackColor = True
         '
         'btnLagreLager
         '
-        Me.btnLagreLager.Location = New System.Drawing.Point(262, 555)
+        Me.btnLagreLager.Location = New System.Drawing.Point(175, 370)
+        Me.btnLagreLager.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLagreLager.Name = "btnLagreLager"
-        Me.btnLagreLager.Size = New System.Drawing.Size(295, 34)
+        Me.btnLagreLager.Size = New System.Drawing.Size(197, 23)
         Me.btnLagreLager.TabIndex = 16
         Me.btnLagreLager.Text = "Oppdater tabellen / lagre ny vare"
         Me.btnLagreLager.UseVisualStyleBackColor = True
         '
         'txtsoek
         '
-        Me.txtsoek.Location = New System.Drawing.Point(854, 638)
-        Me.txtsoek.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtsoek.Location = New System.Drawing.Point(569, 425)
         Me.txtsoek.Name = "txtsoek"
-        Me.txtsoek.Size = New System.Drawing.Size(148, 26)
+        Me.txtsoek.Size = New System.Drawing.Size(100, 20)
         Me.txtsoek.TabIndex = 15
         '
         'btnSok
         '
-        Me.btnSok.Location = New System.Drawing.Point(724, 634)
-        Me.btnSok.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSok.Location = New System.Drawing.Point(483, 423)
         Me.btnSok.Name = "btnSok"
-        Me.btnSok.Size = New System.Drawing.Size(112, 34)
+        Me.btnSok.Size = New System.Drawing.Size(75, 23)
         Me.btnSok.TabIndex = 12
         Me.btnSok.Text = "Søk på vare"
         Me.btnSok.UseVisualStyleBackColor = True
         '
         'btnListUt
         '
-        Me.btnListUt.Location = New System.Drawing.Point(30, 555)
-        Me.btnListUt.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnListUt.Location = New System.Drawing.Point(20, 370)
         Me.btnListUt.Name = "btnListUt"
-        Me.btnListUt.Size = New System.Drawing.Size(208, 34)
+        Me.btnListUt.Size = New System.Drawing.Size(139, 23)
         Me.btnListUt.TabIndex = 11
         Me.btnListUt.Text = "List ut alle varer"
         Me.btnListUt.UseVisualStyleBackColor = True
@@ -1116,70 +1098,76 @@ Partial Class frmMain
         Me.dgvLager.DataSource = Me.VareBindingSource
         Me.dgvLager.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvLager.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.dgvLager.Location = New System.Drawing.Point(3, 3)
-        Me.dgvLager.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvLager.Location = New System.Drawing.Point(2, 2)
         Me.dgvLager.Name = "dgvLager"
-        Me.dgvLager.Size = New System.Drawing.Size(1216, 508)
+        Me.dgvLager.Size = New System.Drawing.Size(1225, 339)
         Me.dgvLager.TabIndex = 14
         '
         'VarenavnDataGridViewTextBoxColumn
         '
         Me.VarenavnDataGridViewTextBoxColumn.DataPropertyName = "vare_navn"
-        DataGridViewCellStyle34.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VarenavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VarenavnDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle14
         Me.VarenavnDataGridViewTextBoxColumn.HeaderText = "Varenavn"
         Me.VarenavnDataGridViewTextBoxColumn.Name = "VarenavnDataGridViewTextBoxColumn"
         '
         'VaresalgutleieDataGridViewTextBoxColumn
         '
         Me.VaresalgutleieDataGridViewTextBoxColumn.DataPropertyName = "vare_salg_utleie"
-        DataGridViewCellStyle35.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VaresalgutleieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaresalgutleieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle15
         Me.VaresalgutleieDataGridViewTextBoxColumn.HeaderText = "Salg/Utleie"
         Me.VaresalgutleieDataGridViewTextBoxColumn.Name = "VaresalgutleieDataGridViewTextBoxColumn"
         '
         'VaretilstandDataGridViewTextBoxColumn
         '
         Me.VaretilstandDataGridViewTextBoxColumn.DataPropertyName = "vare_tilstand"
-        DataGridViewCellStyle36.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VaretilstandDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaretilstandDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle16
         Me.VaretilstandDataGridViewTextBoxColumn.HeaderText = "Tilstand"
         Me.VaretilstandDataGridViewTextBoxColumn.Name = "VaretilstandDataGridViewTextBoxColumn"
         '
         'VareprisDataGridViewTextBoxColumn
         '
         Me.VareprisDataGridViewTextBoxColumn.DataPropertyName = "vare_pris"
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VareprisDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VareprisDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle17
         Me.VareprisDataGridViewTextBoxColumn.HeaderText = "Enhetspris/Pris per døgn"
         Me.VareprisDataGridViewTextBoxColumn.Name = "VareprisDataGridViewTextBoxColumn"
         '
         'VaretilbudDataGridViewTextBoxColumn
         '
         Me.VaretilbudDataGridViewTextBoxColumn.DataPropertyName = "vare_tilbud"
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VaretilbudDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VaretilbudDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle18
         Me.VaretilbudDataGridViewTextBoxColumn.HeaderText = "Tilbud"
         Me.VaretilbudDataGridViewTextBoxColumn.Name = "VaretilbudDataGridViewTextBoxColumn"
         '
         'VarestatusDataGridViewTextBoxColumn
         '
         Me.VarestatusDataGridViewTextBoxColumn.DataPropertyName = "vare_status"
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VarestatusDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VarestatusDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle19
         Me.VarestatusDataGridViewTextBoxColumn.HeaderText = "Status"
         Me.VarestatusDataGridViewTextBoxColumn.Name = "VarestatusDataGridViewTextBoxColumn"
         '
         'VareantallDataGridViewTextBoxColumn
         '
         Me.VareantallDataGridViewTextBoxColumn.DataPropertyName = "vare_antall"
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.VareantallDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.VareantallDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle20
         Me.VareantallDataGridViewTextBoxColumn.HeaderText = "Antall på lager"
         Me.VareantallDataGridViewTextBoxColumn.Name = "VareantallDataGridViewTextBoxColumn"
         '
         'pageUtleie
         '
+        Me.pageUtleie.Controls.Add(Me.btnOppdaterOversiktUtleie)
+        Me.pageUtleie.Controls.Add(Me.dgvUtleieOversikt)
+        Me.pageUtleie.Controls.Add(Me.btnLeverTilbake)
+        Me.pageUtleie.Controls.Add(Me.lblUtleieOversikt)
+        Me.pageUtleie.Controls.Add(Me.cmbUtleieTilbakelevering)
+        Me.pageUtleie.Controls.Add(Me.lblUtleieTilbakelevering)
+        Me.pageUtleie.Controls.Add(Me.lblRegistrerUtleie)
         Me.pageUtleie.Controls.Add(Me.cmbVarerUtleie)
         Me.pageUtleie.Controls.Add(Me.cmbKunderUtleie)
         Me.pageUtleie.Controls.Add(Me.Label6)
@@ -1197,144 +1185,208 @@ Partial Class frmMain
         Me.pageUtleie.Controls.Add(Me.txtSelger)
         Me.pageUtleie.ImageKey = "Utleie.png"
         Me.pageUtleie.Location = New System.Drawing.Point(52, 4)
+        Me.pageUtleie.Margin = New System.Windows.Forms.Padding(2)
         Me.pageUtleie.Name = "pageUtleie"
-        Me.pageUtleie.Size = New System.Drawing.Size(1222, 686)
+        Me.pageUtleie.Size = New System.Drawing.Size(1229, 808)
         Me.pageUtleie.TabIndex = 8
         Me.pageUtleie.UseVisualStyleBackColor = True
+        '
+        'btnOppdaterOversiktUtleie
+        '
+        Me.btnOppdaterOversiktUtleie.Location = New System.Drawing.Point(156, 528)
+        Me.btnOppdaterOversiktUtleie.Name = "btnOppdaterOversiktUtleie"
+        Me.btnOppdaterOversiktUtleie.Size = New System.Drawing.Size(75, 23)
+        Me.btnOppdaterOversiktUtleie.TabIndex = 61
+        Me.btnOppdaterOversiktUtleie.Text = "Oppdater"
+        Me.btnOppdaterOversiktUtleie.UseVisualStyleBackColor = True
+        '
+        'dgvUtleieOversikt
+        '
+        Me.dgvUtleieOversikt.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.dgvUtleieOversikt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvUtleieOversikt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUtleieOversikt.Location = New System.Drawing.Point(58, 557)
+        Me.dgvUtleieOversikt.Name = "dgvUtleieOversikt"
+        Me.dgvUtleieOversikt.Size = New System.Drawing.Size(1145, 243)
+        Me.dgvUtleieOversikt.TabIndex = 60
+        '
+        'btnLeverTilbake
+        '
+        Me.btnLeverTilbake.Location = New System.Drawing.Point(845, 161)
+        Me.btnLeverTilbake.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnLeverTilbake.Name = "btnLeverTilbake"
+        Me.btnLeverTilbake.Size = New System.Drawing.Size(121, 29)
+        Me.btnLeverTilbake.TabIndex = 59
+        Me.btnLeverTilbake.Text = "Lever tilbake"
+        Me.btnLeverTilbake.UseVisualStyleBackColor = True
+        '
+        'lblUtleieOversikt
+        '
+        Me.lblUtleieOversikt.AutoSize = True
+        Me.lblUtleieOversikt.Location = New System.Drawing.Point(55, 538)
+        Me.lblUtleieOversikt.Name = "lblUtleieOversikt"
+        Me.lblUtleieOversikt.Size = New System.Drawing.Size(80, 13)
+        Me.lblUtleieOversikt.TabIndex = 58
+        Me.lblUtleieOversikt.Text = "Utleie - oversikt"
+        '
+        'cmbUtleieTilbakelevering
+        '
+        Me.cmbUtleieTilbakelevering.FormattingEnabled = True
+        Me.cmbUtleieTilbakelevering.Location = New System.Drawing.Point(726, 126)
+        Me.cmbUtleieTilbakelevering.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbUtleieTilbakelevering.Name = "cmbUtleieTilbakelevering"
+        Me.cmbUtleieTilbakelevering.Size = New System.Drawing.Size(417, 21)
+        Me.cmbUtleieTilbakelevering.TabIndex = 57
+        Me.cmbUtleieTilbakelevering.Text = "Velg utleie fra listen"
+        '
+        'lblUtleieTilbakelevering
+        '
+        Me.lblUtleieTilbakelevering.AutoSize = True
+        Me.lblUtleieTilbakelevering.Location = New System.Drawing.Point(723, 77)
+        Me.lblUtleieTilbakelevering.Name = "lblUtleieTilbakelevering"
+        Me.lblUtleieTilbakelevering.Size = New System.Drawing.Size(111, 13)
+        Me.lblUtleieTilbakelevering.TabIndex = 56
+        Me.lblUtleieTilbakelevering.Text = "Utleie - tilbakelevering"
+        '
+        'lblRegistrerUtleie
+        '
+        Me.lblRegistrerUtleie.AutoSize = True
+        Me.lblRegistrerUtleie.Location = New System.Drawing.Point(152, 77)
+        Me.lblRegistrerUtleie.Name = "lblRegistrerUtleie"
+        Me.lblRegistrerUtleie.Size = New System.Drawing.Size(79, 13)
+        Me.lblRegistrerUtleie.TabIndex = 55
+        Me.lblRegistrerUtleie.Text = "Registrer Utleie"
         '
         'cmbVarerUtleie
         '
         Me.cmbVarerUtleie.FormattingEnabled = True
-        Me.cmbVarerUtleie.Location = New System.Drawing.Point(570, 189)
+        Me.cmbVarerUtleie.Location = New System.Drawing.Point(154, 198)
+        Me.cmbVarerUtleie.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbVarerUtleie.Name = "cmbVarerUtleie"
-        Me.cmbVarerUtleie.Size = New System.Drawing.Size(184, 28)
+        Me.cmbVarerUtleie.Size = New System.Drawing.Size(124, 21)
         Me.cmbVarerUtleie.TabIndex = 54
         Me.cmbVarerUtleie.Text = "Velg vare fra listen"
         '
         'cmbKunderUtleie
         '
         Me.cmbKunderUtleie.FormattingEnabled = True
-        Me.cmbKunderUtleie.Location = New System.Drawing.Point(570, 134)
+        Me.cmbKunderUtleie.Location = New System.Drawing.Point(154, 161)
+        Me.cmbKunderUtleie.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbKunderUtleie.Name = "cmbKunderUtleie"
-        Me.cmbKunderUtleie.Size = New System.Drawing.Size(182, 28)
+        Me.cmbKunderUtleie.Size = New System.Drawing.Size(123, 21)
         Me.cmbKunderUtleie.TabIndex = 53
         Me.cmbKunderUtleie.Text = "Velg kunde fra listen"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(428, 307)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(72, 277)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 20)
+        Me.Label6.Size = New System.Drawing.Size(42, 13)
         Me.Label6.TabIndex = 52
         Me.Label6.Text = "Til dato"
         '
         'txtTotalpris
         '
-        Me.txtTotalpris.Location = New System.Drawing.Point(571, 414)
+        Me.txtTotalpris.Location = New System.Drawing.Point(155, 348)
+        Me.txtTotalpris.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTotalpris.Name = "txtTotalpris"
-        Me.txtTotalpris.Size = New System.Drawing.Size(181, 26)
+        Me.txtTotalpris.Size = New System.Drawing.Size(122, 20)
         Me.txtTotalpris.TabIndex = 51
         '
         'dtpTilDatoUtleie
         '
-        Me.dtpTilDatoUtleie.Location = New System.Drawing.Point(570, 298)
-        Me.dtpTilDatoUtleie.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpTilDatoUtleie.Location = New System.Drawing.Point(154, 271)
         Me.dtpTilDatoUtleie.Name = "dtpTilDatoUtleie"
-        Me.dtpTilDatoUtleie.Size = New System.Drawing.Size(298, 26)
+        Me.dtpTilDatoUtleie.Size = New System.Drawing.Size(200, 20)
         Me.dtpTilDatoUtleie.TabIndex = 50
         '
         'dtpFraDatoUtleie
         '
-        Me.dtpFraDatoUtleie.Location = New System.Drawing.Point(570, 255)
-        Me.dtpFraDatoUtleie.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpFraDatoUtleie.Location = New System.Drawing.Point(154, 242)
         Me.dtpFraDatoUtleie.Name = "dtpFraDatoUtleie"
-        Me.dtpFraDatoUtleie.Size = New System.Drawing.Size(298, 26)
+        Me.dtpFraDatoUtleie.Size = New System.Drawing.Size(200, 20)
         Me.dtpFraDatoUtleie.TabIndex = 49
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(440, 424)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(67, 355)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 20)
+        Me.Label5.Size = New System.Drawing.Size(47, 13)
         Me.Label5.TabIndex = 48
         Me.Label5.Text = "Totalpris"
         '
         'Pris
         '
         Me.Pris.AutoSize = True
-        Me.Pris.Location = New System.Drawing.Point(421, 363)
-        Me.Pris.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Pris.Location = New System.Drawing.Point(55, 314)
         Me.Pris.Name = "Pris"
-        Me.Pris.Size = New System.Drawing.Size(88, 20)
+        Me.Pris.Size = New System.Drawing.Size(60, 13)
         Me.Pris.TabIndex = 47
         Me.Pris.Text = "Pris pr. dag"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(468, 197)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(85, 201)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 20)
+        Me.Label4.Size = New System.Drawing.Size(29, 13)
         Me.Label4.TabIndex = 46
         Me.Label4.Text = "Vare"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(428, 264)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(59, 248)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 20)
+        Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "Utleiedato"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(456, 141)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(77, 164)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 20)
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "Kunde"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(456, 86)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(78, 129)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 20)
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Selger"
         '
         'btnRegistrerUtleie
         '
-        Me.btnRegistrerUtleie.Location = New System.Drawing.Point(571, 474)
+        Me.btnRegistrerUtleie.Location = New System.Drawing.Point(155, 388)
+        Me.btnRegistrerUtleie.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegistrerUtleie.Name = "btnRegistrerUtleie"
-        Me.btnRegistrerUtleie.Size = New System.Drawing.Size(182, 43)
+        Me.btnRegistrerUtleie.Size = New System.Drawing.Size(121, 29)
         Me.btnRegistrerUtleie.TabIndex = 41
         Me.btnRegistrerUtleie.Text = "Registrer Utleie"
         Me.btnRegistrerUtleie.UseVisualStyleBackColor = True
         '
         'txtPris
         '
-        Me.txtPris.Location = New System.Drawing.Point(571, 358)
+        Me.txtPris.Location = New System.Drawing.Point(155, 311)
+        Me.txtPris.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPris.Name = "txtPris"
         Me.txtPris.ReadOnly = True
-        Me.txtPris.Size = New System.Drawing.Size(181, 26)
+        Me.txtPris.Size = New System.Drawing.Size(122, 20)
         Me.txtPris.TabIndex = 40
         '
         'txtSelger
         '
-        Me.txtSelger.Location = New System.Drawing.Point(570, 81)
+        Me.txtSelger.Location = New System.Drawing.Point(154, 126)
+        Me.txtSelger.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSelger.Name = "txtSelger"
-        Me.txtSelger.Size = New System.Drawing.Size(181, 26)
+        Me.txtSelger.Size = New System.Drawing.Size(122, 20)
         Me.txtSelger.TabIndex = 39
         '
         'Pamelding_kursTableAdapter
@@ -1355,11 +1407,12 @@ Partial Class frmMain
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(1278, 744)
+        Me.ClientSize = New System.Drawing.Size(1285, 849)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMain"
         Me.Text = "TurCareAS - Datasystem"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -1396,6 +1449,7 @@ Partial Class frmMain
         CType(Me.dgvLager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pageUtleie.ResumeLayout(False)
         Me.pageUtleie.PerformLayout()
+        CType(Me.dgvUtleieOversikt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.salgBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1524,4 +1578,11 @@ Partial Class frmMain
     Friend WithEvents btnAntallSalgStatistikk As Button
     Friend WithEvents dgvStatistikk As DataGridView
     Friend WithEvents salgBindingSource As BindingSource
+    Friend WithEvents dgvUtleieOversikt As DataGridView
+    Friend WithEvents btnLeverTilbake As Button
+    Friend WithEvents lblUtleieOversikt As Label
+    Friend WithEvents cmbUtleieTilbakelevering As ComboBox
+    Friend WithEvents lblUtleieTilbakelevering As Label
+    Friend WithEvents lblRegistrerUtleie As Label
+    Friend WithEvents btnOppdaterOversiktUtleie As Button
 End Class

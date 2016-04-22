@@ -3,8 +3,9 @@ Public Class frmMain
     Dim tilkobling As New DBConnect
     Public kundeid() As String
     Public varepris As Integer
-    Public vareid() As Integer
+    'Public vareid() As Integer
     Public kursid() As String
+    Public utleieid() As String
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -134,7 +135,28 @@ Public Class frmMain
             MessageBox.Show(ex.Message)
         End Try
 
+        '// loadfunksjon for tilbakelevering av varer //
 
+        Dim cmdVareLeverTilbake As New MySqlCommand("SELECT utleie_id, utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris FROM utleie ORDER BY utleie_fra_dato ASC", con)
+        Dim vareLeverTilbake As New List(Of String)
+
+        Try
+
+            con.Open()
+            Dim rd As MySqlDataReader = cmdVareLeverTilbake.ExecuteReader(CommandBehavior.CloseConnection)
+
+            While rd.Read()
+                Dim utleidVare As String = rd("utleie_id") & "  |  " & rd("utleie_vare") & "  |  Utleid av: " & rd("utleie_selger_id") & " til kunde med ID: " & rd("utleie_kunde_id") & "  |  Utleiedato: " & rd("utleie_fra_dato")
+                vareLeverTilbake.Add(utleidVare)
+            End While
+
+            rd.Close()
+            con.Close()
+            Me.cmbUtleieTilbakelevering.Items.Clear()
+            Me.cmbUtleieTilbakelevering.Items.AddRange(vareLeverTilbake.ToArray)
+        Catch ex As System.Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
 
         '//Laster inn kurs// 
@@ -329,7 +351,7 @@ Public Class frmMain
         txtPris.Text = CInt(varepris)
 
     End Sub
-    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles dtpTilDatoUtleie.ValueChanged
+    Private Sub dtpTilDatoUtleie_ValueChanged(sender As Object, e As EventArgs) Handles dtpTilDatoUtleie.ValueChanged
         Dim fradato As Date = dtpFraDatoUtleie.Value
         Dim tildato As Date = dtpTilDatoUtleie.Value
         'Dim sluttpris As String = CInt(txtTotalpris.Text)
@@ -337,6 +359,34 @@ Public Class frmMain
         Dim antalldager As Int32 = tildato.Subtract(fradato).Days
         txtTotalpris.Text = CInt(antalldager.ToString) * pris
     End Sub
+
+    Private Sub btnLeverTilbake_Click(sender As Object, e As EventArgs) Handles btnLeverTilbake.Click
+
+        utleieid = cmbUtleieTilbakelevering.Text.Split(" ")
+
+        Dim sporring As New Query
+        Try
+            sporring.sporring("UPDATE utleie SET utleie_levert_tilbake= 'ja' WHERE utleie_id = '" & CInt(utleieid(0)) & "'")
+            MessageBox.Show("Vare registrert som levert tilbake")
+        Catch ex As Exception
+            MessageBox.Show("Feil: " & ex.Message)
+        End Try
+
+
+    End Sub
+
+    Private Sub btnOppdaterOversiktUtleie_Click(sender As Object, e As EventArgs) Handles btnOppdaterOversiktUtleie.Click
+
+        Dim query As String
+
+        query = "SELECT utleie_selger_id as 'Selger', utleie_kunde_id as 'Kunde', utleie_fra_dato as 'Fra', utleie_til_dato as 'Til', utleie_vare as 'Vare', utleie_pris as 'Pris', utleie_levert_tilbake as 'Returnert' FROM utleie ORDER BY utleie_fra_dato ASC"
+
+        Dim DGview As New Dataset
+        DGview.dataset(query)
+        dgvUtleieOversikt.DataSource = DGview.dataset(query)
+
+    End Sub
+
     '//pageUtleie finito//
 
     '//pageKurs //
@@ -639,5 +689,10 @@ Public Class frmMain
 
 
     End Sub
+
+
+
+
+
     '//pageloggut finito//
 End Class
