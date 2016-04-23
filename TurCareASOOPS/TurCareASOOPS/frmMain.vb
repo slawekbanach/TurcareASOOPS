@@ -602,7 +602,7 @@ Public Class frmMain
 
         Dim query As String
 
-        query = "SELECT salg_selger_id as 'Selger', COUNT( * ) as 'Antall_Salg' , SUM( salg_antall * salg_pris ) as 'Salgsinntekt'
+        query = "SELECT salg_selger_id as 'Selger', COUNT( * ) as 'Antall_Salg' , SUM( salg_pris ) as 'Salgsinntekt'
                 FROM salg
                 GROUP BY salg_selger_id"
 
@@ -641,9 +641,9 @@ Public Class frmMain
 
         Dim query As String
 
-        query = "SELECT SUM( salg_antall * salg_pris ) as 'Salgsinntekt_Totalt' FROM  salg"
+        query = "SELECT SUM(salg_pris) as 'Salgsinntekt', SUM(vare_innkjopspris) as 'Innkjopspris', SUM( salg_pris - vare_innkjopspris ) as 'Fortjeneste' FROM  salg, vare"
 
-        Dim DGview As New Dataset
+        Dim DGview = New Dataset
         DGview.dataset(query)
         dgvStatistikk.DataSource = DGview.dataset(query)
 
@@ -665,7 +665,7 @@ Public Class frmMain
 
         Dim query As String
 
-        query = "SELECT SUM( salg_antall * salg_pris ) + SUM( utleie_pris ) as 'Totalinntekt'
+        query = "SELECT SUM(salg_pris ) + SUM( utleie_pris ) as 'Totalinntekt'
                     FROM  `utleie` 
                     JOIN  `salg` ON salg_selger_id = utleie_selger_id"
 
@@ -734,6 +734,8 @@ Public Class frmMain
 
 
     End Sub
+
+
 
 
 
