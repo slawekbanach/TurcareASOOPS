@@ -82,12 +82,12 @@
     <Compile Include="Classes\Database\DBconfig.vb" />
     <Compile Include="Classes\Database\DBConnect.vb" />
     <Compile Include="Classes\Database\Query.vb" />
-    <Compile Include="DatabaseDataSet.Designer.vb">
+    <Compile Include="Datasets\DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseDataSet.vb">
+    <Compile Include="Datasets\DatabaseDataSet.vb">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\Kurs.Designer.vb">
@@ -102,13 +102,13 @@
     <Compile Include="Forms\Utleie.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.vb">
+    <Compile Include="Forms\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.vb">
+    <Compile Include="Forms\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kursDataSet.Designer.vb">
+    <Compile Include="Datasets\kursDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>kursDataSet.xsd</DependentUpon>
@@ -223,7 +223,7 @@
     <EmbeddedResource Include="Forms\Utleie.resx">
       <DependentUpon>Utleie.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -247,26 +247,26 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DatabaseDataSet.xsc">
+    <None Include="Datasets\DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DatabaseDataSet.xsd">
+    <None Include="Datasets\DatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DatabaseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DatabaseDataSet.xss">
+    <None Include="Datasets\DatabaseDataSet.xss">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="kursDataSet.xsc">
+    <None Include="Datasets\kursDataSet.xsc">
       <DependentUpon>kursDataSet.xsd</DependentUpon>
     </None>
-    <None Include="kursDataSet.xsd">
+    <None Include="Datasets\kursDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>kursDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="kursDataSet.xss">
+    <None Include="Datasets\kursDataSet.xss">
       <DependentUpon>kursDataSet.xsd</DependentUpon>
     </None>
     <None Include="Reports\g_oops_t4DataSet.xsc">

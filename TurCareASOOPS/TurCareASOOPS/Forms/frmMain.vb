@@ -13,11 +13,11 @@ Public Class frmMain
             con.Open()
         End If
 
-        '// laster inn lager // 
+        '// laster inn lager //
         Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
         '//////////
 
-        '// laster inn pagePerson // 
+        '// laster inn pagePerson //
         btnLeggTilAnsatt.Visible = False
         btnLeggTilKunde.Visible = False
         '///
@@ -158,8 +158,7 @@ Public Class frmMain
             MessageBox.Show(ex.Message)
         End Try
 
-
-        '//Laster inn kurs// 
+        '//Laster inn kurs//
         dgvKursdeltagereOversikt.Visible = False
         Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
         con.Dispose()
@@ -178,9 +177,7 @@ Public Class frmMain
         dgvStatistikk.DefaultCellStyle.BackColor = Color.LightSkyBlue
         '//
 
-
     End Sub
-
 
     '//pageLager//
     Private Sub btnListUt_Click(sender As Object, e As EventArgs) Handles btnListUt.Click
@@ -234,7 +231,6 @@ Public Class frmMain
         DGview.dataset(query)
         dgvPerson.DataSource = DGview.dataset(query)
 
-
     End Sub
 
     Private Sub btnListUtKunder_Click(sender As Object, e As EventArgs) Handles btnListUtKunder.Click
@@ -272,7 +268,6 @@ Public Class frmMain
 
     '//pageSalg//
 
-
     Private Sub txtAntallSalg_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAntallSalg.KeyPress
 
         If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
@@ -281,8 +276,6 @@ Public Class frmMain
 
     Private Sub btnRegistrerSalg_Click(sender As Object, e As EventArgs) Handles btnRegistrerSalg.Click
         Dim sporring As New Query
-
-
 
         Dim selgerid As String = txtSelgerSalg.Text
         Dim kundeid = cmbKundeSalg.Text.Split(" ")
@@ -309,7 +302,6 @@ Public Class frmMain
         Dim prisen As String() = cmbVareSalg.Text.Split(": ")
         txtEnhetsprisSalg.Text = CInt(prisen(1))
 
-
     End Sub
 
     Private Sub txtAntallSalg_TextChanged(sender As Object, e As EventArgs) Handles txtAntallSalg.TextChanged
@@ -318,9 +310,9 @@ Public Class frmMain
 
     End Sub
 
-    '//pageSalg finito // 
+    '//pageSalg finito //
 
-    '//pageUtleie// 
+    '//pageUtleie//
 
     Private Sub btnRegistrerUtleie_Click(sender As Object, e As EventArgs) Handles btnRegistrerUtleie.Click
 
@@ -379,7 +371,6 @@ Public Class frmMain
         Catch ex As Exception
             MessageBox.Show("Feil: " & ex.Message)
         End Try
-
 
     End Sub
 
@@ -487,7 +478,6 @@ Public Class frmMain
 
         query = "SELECT pamelding_kurs.deltager_navn, pamelding_kurs.deltager_tlf, pamelding_kurs.kurs_id, registrere_kurs.kurs_type FROM pamelding_kurs, registrere_kurs where registrere_kurs.kurs_id = pamelding_kurs.kurs_id order by pamelding_kurs.kurs_id ASC"
 
-
         Dim DGview = New Dataset
         DGview.dataset(query)
         dgvKursdeltagereOversikt.DataSource = DGview.dataset(query)
@@ -501,7 +491,6 @@ Public Class frmMain
         dgvKursdeltagereOversikt.Visible = False
         btnMeldPaDeltagerKurs.Visible = True
         btnLagreKurs.Visible = False
-
 
         Dim cmd As New MySqlCommand("SELECT kurs_id, kurs_type FROM registrere_kurs", con)
         Dim kurs As New List(Of String)
@@ -547,7 +536,7 @@ Public Class frmMain
 
     End Sub
 
-    '--kurs validering-- 
+    '--kurs validering--
     Private Sub txtKursinstruktor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursinstruktor.KeyPress
 
         If Not ((Asc(e.KeyChar) = 8 OrElse e.KeyChar = " ") OrElse (e.KeyChar >= "A" AndAlso e.KeyChar <= "ø")) Then
@@ -576,7 +565,6 @@ Public Class frmMain
         End If
     End Sub
 
-
     Private Sub txtKursPris_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursPris.KeyPress
         If Asc(e.KeyChar) <> 8 Then
             If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
@@ -585,10 +573,9 @@ Public Class frmMain
         End If
     End Sub
 
+    '//pageKurs finito//
 
-    '//pageKurs finito// 
-
-    '//pageStatistikk// 
+    '//pageStatistikk//
 
     Private Sub btnAntallSalgStatistikk_Click(sender As Object, e As EventArgs) Handles btnAntallSalgStatistikk.Click
 
@@ -665,7 +652,6 @@ Public Class frmMain
 
     End Sub
 
-
     Private Sub btnVarePopularStatistikk_Click(sender As Object, e As EventArgs) Handles btnVarePopularStatistikk.Click
 
         Dim query As String
@@ -679,8 +665,6 @@ Public Class frmMain
     End Sub
 
     '//pageStatistikk finito//
-
-
 
     '//pageLoggut//
     Private Sub btnLoggUt_Click(sender As Object, e As EventArgs) Handles btnLoggUt.Click
@@ -723,24 +707,7 @@ Public Class frmMain
 
         End If
 
-
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     '//pageloggut finito//
 End Class
