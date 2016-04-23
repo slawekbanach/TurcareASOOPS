@@ -171,6 +171,7 @@ Public Class frmMain
         PanelKursTextboxes.Visible = False
         btnLagreKurs.Visible = False
         btnMeldPaDeltagerKurs.Visible = False
+        dgvKursdeltagereOversikt.DefaultCellStyle.BackColor = Color.LightSkyBlue
         '//
 
         '//laster inn statistikk//
@@ -269,6 +270,14 @@ Public Class frmMain
     '//pagePerson finito//
 
     '//pageSalg//
+
+
+    Private Sub txtAntallSalg_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAntallSalg.KeyPress
+
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+
+    End Sub
+
     Private Sub btnRegistrerSalg_Click(sender As Object, e As EventArgs) Handles btnRegistrerSalg.Click
         Dim sporring As New Query
 
@@ -292,7 +301,6 @@ Public Class frmMain
             MessageBox.Show("Feil: " & ex.Message)
         End Try
 
-
     End Sub
 
     Private Sub cmbVareSalg_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVareSalg.SelectedIndexChanged
@@ -305,9 +313,7 @@ Public Class frmMain
 
     Private Sub txtAntallSalg_TextChanged(sender As Object, e As EventArgs) Handles txtAntallSalg.TextChanged
 
-        Dim enhetspris As Integer = CInt(txtEnhetsprisSalg.Text)
-        Dim antall As Integer = CInt(txtAntallSalg.Text)
-        txtPrisSalg.Text = CInt(enhetspris * antall)
+        txtPrisSalg.Text = CInt(txtEnhetsprisSalg.Text * txtAntallSalg.Text)
 
     End Sub
 
@@ -328,7 +334,7 @@ Public Class frmMain
         Dim totalpris As Integer = txtTotalpris.Text
 
         Try
-            sporring.sporring("INSERT INTO utleie (utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & fradato.ToShortDateString.ToString & "', '" & tildato.ToShortDateString.ToString & "', '" & vare & "', '" & totalpris & "');")
+            sporring.sporring("INSERT INTO utleie (utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris, utleie_levert_tilbake) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & fradato.ToShortDateString.ToString & "', '" & tildato.ToShortDateString.ToString & "', '" & vare & "', '" & totalpris & "', 'nei'" & "');")
             MessageBox.Show("Registrering av utleie vellykket!")
 
         Catch ex As Exception
@@ -476,9 +482,10 @@ Public Class frmMain
 
         Dim query As String
 
-        query = "SELECT deltager_navn, deltager_tlf, kurs_id FROM pamelding_kurs order by kurs_id ASC"
+        query = "SELECT pamelding_kurs.deltager_navn, pamelding_kurs.deltager_tlf, pamelding_kurs.kurs_id, registrere_kurs.kurs_type FROM pamelding_kurs, registrere_kurs where registrere_kurs.kurs_id = pamelding_kurs.kurs_id order by pamelding_kurs.kurs_id ASC"
 
-        Dim DGview As New Dataset
+
+        Dim DGview = New Dataset
         DGview.dataset(query)
         dgvKursdeltagereOversikt.DataSource = DGview.dataset(query)
 
@@ -535,6 +542,44 @@ Public Class frmMain
             MsgBox(ex.Message & vbCrLf & "Error in ClaimFlag10 - Line number:" & trace.GetFrame(0).GetFileLineNumber().ToString)
         End Try
 
+    End Sub
+
+    '--kurs validering-- 
+    Private Sub txtKursinstruktor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursinstruktor.KeyPress
+
+        If Not ((Asc(e.KeyChar) = 8 OrElse e.KeyChar = " ") OrElse (e.KeyChar >= "A" AndAlso e.KeyChar <= "ø")) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtKursPlasser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursPlasser.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtKursSted_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursSted.KeyPress
+
+        If Not ((Asc(e.KeyChar) = 8 OrElse e.KeyChar = " ") OrElse (e.KeyChar >= "A" AndAlso e.KeyChar <= "ø")) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtKursType_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursType.KeyPress
+        If Not ((Asc(e.KeyChar) = 8 OrElse e.KeyChar = " ") OrElse (e.KeyChar >= "A" AndAlso e.KeyChar <= "ø")) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
+    Private Sub txtKursPris_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKursPris.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
     End Sub
 
 
@@ -689,6 +734,16 @@ Public Class frmMain
 
 
     End Sub
+
+
+
+
+
+
+
+
+
+
 
 
 

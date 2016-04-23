@@ -69,6 +69,7 @@ Public Class Utleie
         Dim vare As String = cmbVarer.Text
         'Dim pris As Integer = txtPris.Text
         Dim totalpris As Integer = txtTotalpris.Text
+
         Try
             sporring.sporring("INSERT INTO utleie (utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & fradato.ToShortDateString.ToString & "', '" & tildato.ToShortDateString.ToString & "', '" & vare & "', '" & totalpris & "');")
             MessageBox.Show("Registrering av utleie vellykket!")
