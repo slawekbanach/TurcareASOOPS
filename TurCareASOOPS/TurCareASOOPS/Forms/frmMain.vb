@@ -252,6 +252,11 @@ Public Class frmMain
 
         If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
 
+        'If Not Char.IsNumber(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+        '    e.KeyChar = ""
+        'End If
+
+
     End Sub
 
     Private Sub btnRegistrerSalg_Click(sender As Object, e As EventArgs) Handles btnRegistrerSalg.Click
@@ -286,8 +291,24 @@ Public Class frmMain
 
     Private Sub txtAntallSalg_TextChanged(sender As Object, e As EventArgs) Handles txtAntallSalg.TextChanged
 
-        txtPrisSalg.Text = CInt(txtEnhetsprisSalg.Text * txtAntallSalg.Text)
+        If txtEnhetsprisSalg.Text = "" Then
 
+            MsgBox("Vennligst velg vare først", MsgBoxStyle.Critical, "Penis")
+
+        Else
+            If txtAntallSalg.Text IsNot Nothing Then
+                Try
+                    txtPrisSalg.Text = CDbl(txtEnhetsprisSalg.Text * txtAntallSalg.Text)
+                Catch ex As Exception
+                End Try
+
+            ElseIf txtAntallSalg Is Nothing Then
+
+                'Do stuff
+
+            End If
+
+        End If
     End Sub
 
     '//pageSalg finito //
