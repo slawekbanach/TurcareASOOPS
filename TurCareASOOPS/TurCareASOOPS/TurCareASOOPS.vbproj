@@ -101,13 +101,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kursDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LoginUser.designer.vb">
+    <Compile Include="Forms\LoginUser.designer.vb">
       <DependentUpon>LoginUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="LoginUser.vb">
+    <Compile Include="Forms\LoginUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OppdatertDataset.Designer.vb">
+    <Compile Include="Datasets\OppdatertDataset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OppdatertDataset.xsd</DependentUpon>
@@ -135,12 +135,18 @@
     <Compile Include="Reports\g_oops_t4DataSet.vb">
       <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TurCareSplash.Designer.vb">
+      <DependentUpon>TurCareSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TurCareSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginUser.resx">
+    <EmbeddedResource Include="Forms\LoginUser.resx">
       <DependentUpon>LoginUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -150,6 +156,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Forms\TurCareSplash.resx">
+      <DependentUpon>TurCareSplash.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Datasets\DatabaseDataSet.xsc">
@@ -174,15 +183,15 @@
     <None Include="Datasets\kursDataSet.xss">
       <DependentUpon>kursDataSet.xsd</DependentUpon>
     </None>
-    <None Include="OppdatertDataset.xsc">
+    <None Include="Datasets\OppdatertDataset.xsc">
       <DependentUpon>OppdatertDataset.xsd</DependentUpon>
     </None>
-    <None Include="OppdatertDataset.xsd">
+    <None Include="Datasets\OppdatertDataset.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>OppdatertDataset.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="OppdatertDataset.xss">
+    <None Include="Datasets\OppdatertDataset.xss">
       <DependentUpon>OppdatertDataset.xsd</DependentUpon>
     </None>
     <None Include="Reports\g_oops_t4DataSet.xsc">
@@ -207,9 +216,18 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\book.png" />
+    <Content Include="Resources\Hjem.png" />
+    <Content Include="Resources\Kurs.png" />
+    <Content Include="Resources\Lager.png" />
+    <Content Include="Resources\Logout.png" />
+    <Content Include="Resources\Person.png" />
+    <Content Include="Resources\Salg.png" />
+    <Content Include="Resources\Statistikk.png" />
+    <Content Include="Resources\turcarelogo3.png" />
+    <None Include="Resources\turcareSplash.png" />
+    <Content Include="Resources\Utleie.png" />
+    <Content Include="Resources\Vare.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
