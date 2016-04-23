@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DatabaseDataSet" targetNamespace="http://tempuri.org/DatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/DatabaseDataSet.xsd" xmlns="http://tempuri.org/DatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="OppdatertDataset" targetNamespace="http://tempuri.org/OppdatertDataset.xsd" xmlns:mstns="http://tempuri.org/OppdatertDataset.xsd" xmlns="http://tempuri.org/OppdatertDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="tilkoblingDataSet" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="tilkoblingDataSet (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TurCareASOOPS.My.MySettings.GlobalReference.Default.tilkoblingDataSet" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="tilkoblingDataSet" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="tilkoblingDataSet (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TurCareASOOPS.My.MySettings.GlobalReference.Default.g_oops_t4ConnectionString" Provider="MySql.Data.MySqlClient" />
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="g_oops_t4ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="g_oops_t4ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TurCareASOOPS.My.MySettings.GlobalReference.Default.g_oops_t4ConnectionString" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personerTableAdapter" GeneratorDataComponentClassName="personerTableAdapter" Name="personer" UserDataComponentName="personerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="tilkoblingDataSet (MySettings)" DbObjectName="g_oops_t4.personer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillAnsatt" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataAnsatt" GeneratorSourceName="FillAnsatt" GetMethodModifier="Public" GetMethodName="GetDataAnsatt" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataAnsatt" UserSourceName="FillAnsatt">
+              <DbSource ConnectionRef="tilkoblingDataSet (MySettings)" DbObjectName="g_oops_t4.personer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `personer` WHERE ((`person_id` = @p1) AND ((@p2 = 1 AND `person_fornavn` IS NULL) OR (`person_fornavn` = @p3)) AND ((@p4 = 1 AND `person_etternavn` IS NULL) OR (`person_etternavn` = @p5)) AND ((@p6 = 1 AND `person_epost` IS NULL) OR (`person_epost` = @p7)) AND ((@p8 = 1 AND `person_tlf` IS NULL) OR (`person_tlf` = @p9)) AND ((@p10 = 1 AND `person_adresse` IS NULL) OR (`person_adresse` = @p11)) AND ((@p12 = 1 AND `person_postnr` IS NULL) OR (`person_postnr` = @p13)) AND ((@p14 = 1 AND `person_poststed` IS NULL) OR (`person_poststed` = @p15)) AND ((@p16 = 1 AND `person_type` IS NULL) OR (`person_type` = @p17)) AND ((@p18 = 1 AND `person_passord` IS NULL) OR (`person_passord` = @p19)) AND ((@p20 = 1 AND `person_brukernavn` IS NULL) OR (`person_brukernavn` = @p21)))</CommandText>
@@ -57,9 +57,8 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `person_id`, `person_fornavn`, `person_etternavn`, `person_epost`, `person_tlf`, `person_adresse`, `person_postnr`, `person_poststed`, `person_type`, `person_passord`, `person_brukernavn` FROM `personer`
-WHERE `person_type` = 'ansatt'</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `person_id`, `person_fornavn`, `person_etternavn`, `person_epost`, `person_tlf`, `person_adresse`, `person_postnr`, `person_poststed`, `person_type`, `person_passord`, `person_brukernavn` FROM `personer`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -116,17 +115,7 @@ WHERE `person_type` = 'ansatt'</CommandText>
               <Mapping SourceColumn="person_passord" DataSetColumn="person_passord" />
               <Mapping SourceColumn="person_brukernavn" DataSetColumn="person_brukernavn" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="tilkoblingDataSet (MySettings)" DbObjectName="g_oops_t4.personer" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillKunde" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataKunde" GeneratorSourceName="FillKunde" GetMethodModifier="Public" GetMethodName="GetDataKunde" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataKunde" UserSourceName="FillKunde">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `person_id`, `person_fornavn`, `person_etternavn`, `person_epost`, `person_tlf`, `person_adresse`, `person_postnr`, `person_poststed`, `person_type`, `person_passord`, `person_brukernavn` FROM `personer`
-WHERE `person_type` = 'kunde'</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="salgTableAdapter" GeneratorDataComponentClassName="salgTableAdapter" Name="salg" UserDataComponentName="salgTableAdapter">
             <MainSource>
@@ -138,7 +127,7 @@ WHERE `person_type` = 'kunde'</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_selger_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_kunde_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_vare" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_antall" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_antall" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -152,7 +141,7 @@ WHERE `person_type` = 'kunde'</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_selger_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_kunde_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_vare" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_antall" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_pris" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -171,14 +160,14 @@ WHERE `person_type` = 'kunde'</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_selger_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_kunde_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_vare" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_antall" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_pris" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_selger_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_kunde_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="salg_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="salg_vare" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_antall" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="salg_antall" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -204,7 +193,7 @@ WHERE `person_type` = 'kunde'</CommandText>
               <DbSource ConnectionRef="tilkoblingDataSet (MySettings)" DbObjectName="g_oops_t4.utleie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `utleie` WHERE ((`utleie_id` = @p1) AND (`utleie_selger_id` = @p2) AND (`utleie_kunde_id` = @p3) AND (`utleie_fra_dato` = @p4) AND (`utleie_til_dato` = @p5) AND (`utleie_vare` = @p6) AND (`utleie_pris` = @p7))</CommandText>
+                    <CommandText>DELETE FROM `utleie` WHERE ((`utleie_id` = @p1) AND (`utleie_selger_id` = @p2) AND (`utleie_kunde_id` = @p3) AND (`utleie_fra_dato` = @p4) AND (`utleie_til_dato` = @p5) AND (`utleie_vare` = @p6) AND (`utleie_pris` = @p7) AND (`utleie_levert_tilbake` = @p8))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_selger_id" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -213,12 +202,13 @@ WHERE `person_type` = 'kunde'</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_til_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_vare" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_pris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_levert_tilbake" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `utleie` (`utleie_selger_id`, `utleie_kunde_id`, `utleie_fra_dato`, `utleie_til_dato`, `utleie_vare`, `utleie_pris`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)</CommandText>
+                    <CommandText>INSERT INTO `utleie` (`utleie_selger_id`, `utleie_kunde_id`, `utleie_fra_dato`, `utleie_til_dato`, `utleie_vare`, `utleie_pris`, `utleie_levert_tilbake`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_selger_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_kunde_id" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -226,18 +216,19 @@ WHERE `person_type` = 'kunde'</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_til_dato" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_vare" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_pris" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_levert_tilbake" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `utleie_id`, `utleie_selger_id`, `utleie_kunde_id`, `utleie_fra_dato`, `utleie_til_dato`, `utleie_vare`, `utleie_pris` FROM `utleie`</CommandText>
+                    <CommandText>SELECT `utleie_id`, `utleie_selger_id`, `utleie_kunde_id`, `utleie_fra_dato`, `utleie_til_dato`, `utleie_vare`, `utleie_pris`, `utleie_levert_tilbake` FROM `utleie`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `utleie` SET `utleie_selger_id` = @p1, `utleie_kunde_id` = @p2, `utleie_fra_dato` = @p3, `utleie_til_dato` = @p4, `utleie_vare` = @p5, `utleie_pris` = @p6 WHERE ((`utleie_id` = @p7) AND (`utleie_selger_id` = @p8) AND (`utleie_kunde_id` = @p9) AND (`utleie_fra_dato` = @p10) AND (`utleie_til_dato` = @p11) AND (`utleie_vare` = @p12) AND (`utleie_pris` = @p13))</CommandText>
+                    <CommandText>UPDATE `utleie` SET `utleie_selger_id` = @p1, `utleie_kunde_id` = @p2, `utleie_fra_dato` = @p3, `utleie_til_dato` = @p4, `utleie_vare` = @p5, `utleie_pris` = @p6, `utleie_levert_tilbake` = @p7 WHERE ((`utleie_id` = @p8) AND (`utleie_selger_id` = @p9) AND (`utleie_kunde_id` = @p10) AND (`utleie_fra_dato` = @p11) AND (`utleie_til_dato` = @p12) AND (`utleie_vare` = @p13) AND (`utleie_pris` = @p14) AND (`utleie_levert_tilbake` = @p15))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_selger_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_kunde_id" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -245,13 +236,15 @@ WHERE `person_type` = 'kunde'</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_til_dato" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_vare" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_pris" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_selger_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_kunde_id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_fra_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_til_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_vare" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_pris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_levert_tilbake" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_selger_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_kunde_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_fra_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_til_dato" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_vare" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="utleie_pris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="utleie_levert_tilbake" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -265,6 +258,86 @@ WHERE `person_type` = 'kunde'</CommandText>
               <Mapping SourceColumn="utleie_til_dato" DataSetColumn="utleie_til_dato" />
               <Mapping SourceColumn="utleie_vare" DataSetColumn="utleie_vare" />
               <Mapping SourceColumn="utleie_pris" DataSetColumn="utleie_pris" />
+              <Mapping SourceColumn="utleie_levert_tilbake" DataSetColumn="utleie_levert_tilbake" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vareTableAdapter" GeneratorDataComponentClassName="vareTableAdapter" Name="vare" UserDataComponentName="vareTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="g_oops_t4ConnectionString (MySettings)" DbObjectName="g_oops_t4.vare" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `vare` WHERE ((`vare_id` = @p1) AND (`vare_navn` = @p2) AND (`vare_salg_utleie` = @p3) AND (`vare_tilstand` = @p4) AND (`vare_pris` = @p5) AND (`vare_innkjopspris` = @p6) AND (`vare_status` = @p7) AND (`vare_antall` = @p8) AND (`antall_utleid` = @p9))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_navn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_salg_utleie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_tilstand" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_pris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_innkjopspris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_antall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="antall_utleid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `vare` (`vare_navn`, `vare_salg_utleie`, `vare_tilstand`, `vare_pris`, `vare_innkjopspris`, `vare_status`, `vare_antall`, `antall_utleid`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_navn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_salg_utleie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_tilstand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_pris" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_innkjopspris" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_antall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="antall_utleid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `vare_id`, `vare_navn`, `vare_salg_utleie`, `vare_tilstand`, `vare_pris`, `vare_innkjopspris`, `vare_status`, `vare_antall`, `antall_utleid` FROM `vare`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `vare` SET `vare_navn` = @p1, `vare_salg_utleie` = @p2, `vare_tilstand` = @p3, `vare_pris` = @p4, `vare_innkjopspris` = @p5, `vare_status` = @p6, `vare_antall` = @p7, `antall_utleid` = @p8 WHERE ((`vare_id` = @p9) AND (`vare_navn` = @p10) AND (`vare_salg_utleie` = @p11) AND (`vare_tilstand` = @p12) AND (`vare_pris` = @p13) AND (`vare_innkjopspris` = @p14) AND (`vare_status` = @p15) AND (`vare_antall` = @p16) AND (`antall_utleid` = @p17))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_navn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_salg_utleie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_tilstand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_pris" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_innkjopspris" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_antall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="antall_utleid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_navn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_salg_utleie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_tilstand" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_pris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_innkjopspris" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vare_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vare_antall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="antall_utleid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vare_id" DataSetColumn="vare_id" />
+              <Mapping SourceColumn="vare_navn" DataSetColumn="vare_navn" />
+              <Mapping SourceColumn="vare_salg_utleie" DataSetColumn="vare_salg_utleie" />
+              <Mapping SourceColumn="vare_tilstand" DataSetColumn="vare_tilstand" />
+              <Mapping SourceColumn="vare_pris" DataSetColumn="vare_pris" />
+              <Mapping SourceColumn="vare_innkjopspris" DataSetColumn="vare_innkjopspris" />
+              <Mapping SourceColumn="vare_status" DataSetColumn="vare_status" />
+              <Mapping SourceColumn="vare_antall" DataSetColumn="vare_antall" />
+              <Mapping SourceColumn="antall_utleid" DataSetColumn="antall_utleid" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -273,7 +346,7 @@ WHERE `person_type` = 'kunde'</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DatabaseDataSet" msprop:Generator_UserDSName="DatabaseDataSet">
+  <xs:element name="OppdatertDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OppdatertDataset" msprop:Generator_UserDSName="OppdatertDataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="personer" msprop:Generator_TableClassName="personerDataTable" msprop:Generator_TableVarName="tablepersoner" msprop:Generator_RowChangedName="personerRowChanged" msprop:Generator_TablePropName="personer" msprop:Generator_RowDeletingName="personerRowDeleting" msprop:Generator_RowChangingName="personerRowChanging" msprop:Generator_RowEvHandlerName="personerRowChangeEventHandler" msprop:Generator_RowDeletedName="personerRowDeleted" msprop:Generator_RowClassName="personerRow" msprop:Generator_UserTableName="personer" msprop:Generator_RowEvArgName="personerRowChangeEvent">
@@ -365,13 +438,7 @@ WHERE `person_type` = 'kunde'</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="salg_kunde_id" msprop:Generator_ColumnVarNameInTable="columnsalg_kunde_id" msprop:Generator_ColumnPropNameInRow="salg_kunde_id" msprop:Generator_ColumnPropNameInTable="salg_kunde_idColumn" msprop:Generator_UserColumnName="salg_kunde_id" type="xs:int" />
-              <xs:element name="salg_dato" msprop:Generator_ColumnVarNameInTable="columnsalg_dato" msprop:Generator_ColumnPropNameInRow="salg_dato" msprop:Generator_ColumnPropNameInTable="salg_datoColumn" msprop:Generator_UserColumnName="salg_dato">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="salg_dato" msprop:Generator_ColumnVarNameInTable="columnsalg_dato" msprop:Generator_ColumnPropNameInRow="salg_dato" msprop:Generator_ColumnPropNameInTable="salg_datoColumn" msprop:Generator_UserColumnName="salg_dato" type="xs:dateTime" />
               <xs:element name="salg_vare" msprop:Generator_ColumnVarNameInTable="columnsalg_vare" msprop:Generator_ColumnPropNameInRow="salg_vare" msprop:Generator_ColumnPropNameInTable="salg_vareColumn" msprop:Generator_UserColumnName="salg_vare">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -418,6 +485,13 @@ WHERE `person_type` = 'kunde'</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="utleie_pris" msprop:Generator_ColumnVarNameInTable="columnutleie_pris" msprop:Generator_ColumnPropNameInRow="utleie_pris" msprop:Generator_ColumnPropNameInTable="utleie_prisColumn" msprop:Generator_UserColumnName="utleie_pris" type="xs:int" />
+              <xs:element name="utleie_levert_tilbake" msprop:Generator_ColumnVarNameInTable="columnutleie_levert_tilbake" msprop:Generator_ColumnPropNameInRow="utleie_levert_tilbake" msprop:Generator_ColumnPropNameInTable="utleie_levert_tilbakeColumn" msprop:Generator_UserColumnName="utleie_levert_tilbake">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -447,6 +521,7 @@ WHERE `person_type` = 'kunde'</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="vare_pris" msprop:Generator_ColumnVarNameInTable="columnvare_pris" msprop:Generator_ColumnPropNameInRow="vare_pris" msprop:Generator_ColumnPropNameInTable="vare_prisColumn" msprop:Generator_UserColumnName="vare_pris" type="xs:int" />
+              <xs:element name="vare_innkjopspris" msprop:Generator_ColumnVarNameInTable="columnvare_innkjopspris" msprop:Generator_ColumnPropNameInRow="vare_innkjopspris" msprop:Generator_ColumnPropNameInTable="vare_innkjopsprisColumn" msprop:Generator_UserColumnName="vare_innkjopspris" type="xs:int" />
               <xs:element name="vare_status" msprop:Generator_ColumnVarNameInTable="columnvare_status" msprop:Generator_ColumnPropNameInRow="vare_status" msprop:Generator_ColumnPropNameInTable="vare_statusColumn" msprop:Generator_UserColumnName="vare_status">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -455,7 +530,7 @@ WHERE `person_type` = 'kunde'</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="vare_antall" msprop:Generator_ColumnVarNameInTable="columnvare_antall" msprop:Generator_ColumnPropNameInRow="vare_antall" msprop:Generator_ColumnPropNameInTable="vare_antallColumn" msprop:Generator_UserColumnName="vare_antall" type="xs:int" />
-              <xs:element name="vare_innkjopspris" msprop:Generator_ColumnVarNameInTable="columnvare_innkjopspris" msprop:Generator_ColumnPropNameInRow="vare_innkjopspris" msprop:Generator_ColumnPropNameInTable="vare_innkjopsprisColumn" msprop:Generator_UserColumnName="vare_innkjopspris" type="xs:int" />
+              <xs:element name="antall_utleid" msprop:Generator_ColumnVarNameInTable="columnantall_utleid" msprop:Generator_ColumnPropNameInRow="antall_utleid" msprop:Generator_ColumnPropNameInTable="antall_utleidColumn" msprop:Generator_UserColumnName="antall_utleid" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

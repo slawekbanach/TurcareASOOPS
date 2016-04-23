@@ -8,13 +8,15 @@ Public Class frmMain
     Public utleieid() As String
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'OppdatertDataset.vare' table. You can move, or remove it, as needed.
+        Me.VareTableAdapter.Fill(Me.OppdatertDataset.vare)
 
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
 
         '// laster inn lager //
-        Me.VareTableAdapter.Fill(Me.DatabaseDataSet.vare)
+        Me.VareTableAdapter.Fill(Me.OppdatertDataset.vare)
         '//////////
 
         '// laster inn pagePerson //
@@ -135,28 +137,6 @@ Public Class frmMain
             MessageBox.Show(ex.Message)
         End Try
 
-        '// loadfunksjon for tilbakelevering av varer //
-
-        Dim cmdVareLeverTilbake As New MySqlCommand("SELECT utleie_id, utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris FROM utleie ORDER BY utleie_fra_dato ASC", con)
-        Dim vareLeverTilbake As New List(Of String)
-
-        Try
-
-            con.Open()
-            Dim rd As MySqlDataReader = cmdVareLeverTilbake.ExecuteReader(CommandBehavior.CloseConnection)
-
-            While rd.Read()
-                Dim utleidVare As String = rd("utleie_id") & "  |  " & rd("utleie_vare") & "  |  Utleid av: " & rd("utleie_selger_id") & " til kunde med ID: " & rd("utleie_kunde_id") & "  |  Utleiedato: " & rd("utleie_fra_dato")
-                vareLeverTilbake.Add(utleidVare)
-            End While
-
-            rd.Close()
-            con.Close()
-            Me.cmbUtleieTilbakelevering.Items.Clear()
-            Me.cmbUtleieTilbakelevering.Items.AddRange(vareLeverTilbake.ToArray)
-        Catch ex As System.Exception
-            MessageBox.Show(ex.Message)
-        End Try
 
         '//Laster inn kurs//
         dgvKursdeltagereOversikt.Visible = False
@@ -205,7 +185,7 @@ Public Class frmMain
     End Sub
     Private Sub btnLagreLager_Click(sender As Object, e As EventArgs) Handles btnLagreLager.Click
 
-        Me.VareTableAdapter.Update(Me.DatabaseDataSet.vare)
+        Me.VareTableAdapter.Update(Me.OppdatertDataset.vare)
 
     End Sub
 
@@ -328,7 +308,7 @@ Public Class frmMain
         Dim totalpris As Integer = txtTotalpris.Text
 
         Try
-            sporring.sporring("INSERT INTO utleie (utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris, utleie_levert_tilbake) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & fradato.ToShortDateString.ToString & "', '" & tildato.ToShortDateString.ToString & "', '" & vare & "', '" & totalpris & "', 'nei'" & "');")
+            sporring.sporring("INSERT INTO utleie (utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris, utleie_levert_tilbake) VALUES ('" & selgerid & "', '" & kundeid(0) & "', '" & fradato.ToShortDateString.ToString & "', '" & tildato.ToShortDateString.ToString & "', '" & vare & "', '" & totalpris & "', 'nei');")
             MessageBox.Show("Registrering av utleie vellykket!")
 
         Catch ex As Exception
@@ -374,6 +354,31 @@ Public Class frmMain
 
     End Sub
 
+    Private Sub btnOppdaterTilbakelevering_Click(sender As Object, e As EventArgs) Handles btnOppdaterTilbakelevering.Click
+
+        Dim cmdVareLeverTilbake As New MySqlCommand("SELECT utleie_id, utleie_selger_id, utleie_kunde_id, utleie_fra_dato, utleie_til_dato, utleie_vare, utleie_pris FROM utleie ORDER BY utleie_id ASC", con)
+        Dim vareLeverTilbake As New List(Of String)
+
+        Try
+
+            con.Open()
+            Dim rd As MySqlDataReader = cmdVareLeverTilbake.ExecuteReader(CommandBehavior.CloseConnection)
+
+            While rd.Read()
+                Dim utleidVare As String = rd("utleie_id") & "  |  " & rd("utleie_vare") & "  |  Utleid av: " & rd("utleie_selger_id") & " til kunde med ID: " & rd("utleie_kunde_id") & "  |  Utleiedato: " & rd("utleie_fra_dato")
+                vareLeverTilbake.Add(utleidVare)
+            End While
+
+            rd.Close()
+            con.Close()
+            Me.cmbUtleieTilbakelevering.Items.Clear()
+            Me.cmbUtleieTilbakelevering.Items.AddRange(vareLeverTilbake.ToArray)
+        Catch ex As System.Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
     Private Sub btnOppdaterOversiktUtleie_Click(sender As Object, e As EventArgs) Handles btnOppdaterOversiktUtleie.Click
 
         Dim query As String
@@ -385,6 +390,7 @@ Public Class frmMain
         dgvUtleieOversikt.DataSource = DGview.dataset(query)
 
     End Sub
+
 
     '//pageUtleie finito//
 
@@ -632,7 +638,7 @@ Public Class frmMain
 
         Dim query As String
 
-        query = "SELECT SUM(salg_pris) as 'Salgsinntekt', SUM(vare_innkjopspris) as 'Innkjopspris', SUM( salg_pris - (vare_innkjopspris * salg_antall) ) as 'Fortjeneste' FROM  salg, vare where salg.salg_vare = vare.vare_navn"
+        query = "SELECT SUM(salg_pris) as 'Salgsinntekt', SUM(vare_innkjopspris * salg_antall) as 'Innkjopspris', SUM( salg_pris - (vare_innkjopspris * salg_antall) ) as 'Fortjeneste' FROM  salg, vare where salg.salg_vare = vare.vare_navn"
 
         Dim DGview = New Dataset
         DGview.dataset(query)
@@ -708,6 +714,8 @@ Public Class frmMain
         End If
 
     End Sub
+
+
 
     '//pageloggut finito//
 End Class

@@ -90,18 +90,6 @@
     <Compile Include="Datasets\DatabaseDataSet.vb">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Kurs.Designer.vb">
-      <DependentUpon>Kurs.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Kurs.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Utleie.Designer.vb">
-      <DependentUpon>Utleie.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Utleie.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -113,47 +101,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kursDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LoginUser.designer.vb">
+      <DependentUpon>LoginUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OppdatertDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OppdatertDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\g_oops_t4DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\LeggTilVare.Designer.vb">
-      <DependentUpon>LeggTilVare.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\LeggTilVare.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ListUtAnsatte.Designer.vb">
-      <DependentUpon>ListUtAnsatte.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ListUtAnsatte.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ListUtKunder.Designer.vb">
-      <DependentUpon>ListUtKunder.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ListUtKunder.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginDB.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginDB.Designer.vb">
-      <DependentUpon>LoginDB.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginUser.Designer.vb">
-      <DependentUpon>LoginUser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\LoginUser.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\meny.Designer.vb">
-      <DependentUpon>meny.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\meny.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -170,61 +132,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Forms\RegistrerBruker.Designer.vb">
-      <DependentUpon>RegistrerBruker.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RegistrerBruker.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RegistrerSalg.Designer.vb">
-      <DependentUpon>RegistrerSalg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RegistrerSalg.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SjekkLager.Designer.vb">
-      <DependentUpon>SjekkLager.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SjekkLager.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Statistikk.Designer.vb">
-      <DependentUpon>Statistikk.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Statistikk.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Reports\g_oops_t4DataSet.vb">
       <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Kurs.resx">
-      <DependentUpon>Kurs.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LeggTilVare.resx">
-      <DependentUpon>LeggTilVare.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListUtAnsatte.resx">
-      <DependentUpon>ListUtAnsatte.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListUtKunder.resx">
-      <DependentUpon>ListUtKunder.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginDB.resx">
-      <DependentUpon>LoginDB.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginUser.resx">
-      <DependentUpon>LoginUser.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\meny.resx">
-      <DependentUpon>meny.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Utleie.resx">
-      <DependentUpon>Utleie.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginUser.resx">
+      <DependentUpon>LoginUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -232,19 +149,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegistrerBruker.resx">
-      <DependentUpon>RegistrerBruker.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegistrerSalg.resx">
-      <DependentUpon>RegistrerSalg.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.rdlc" />
-    <EmbeddedResource Include="Forms\SjekkLager.resx">
-      <DependentUpon>SjekkLager.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Statistikk.resx">
-      <DependentUpon>Statistikk.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Datasets\DatabaseDataSet.xsc">
@@ -268,6 +173,17 @@
     </None>
     <None Include="Datasets\kursDataSet.xss">
       <DependentUpon>kursDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OppdatertDataset.xsc">
+      <DependentUpon>OppdatertDataset.xsd</DependentUpon>
+    </None>
+    <None Include="OppdatertDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OppdatertDataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OppdatertDataset.xss">
+      <DependentUpon>OppdatertDataset.xsd</DependentUpon>
     </None>
     <None Include="Reports\g_oops_t4DataSet.xsc">
       <DependentUpon>g_oops_t4DataSet.xsd</DependentUpon>

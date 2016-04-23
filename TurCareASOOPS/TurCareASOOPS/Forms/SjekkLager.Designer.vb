@@ -46,7 +46,7 @@ Partial Class SjekkLager
         Me.btnSok = New System.Windows.Forms.Button()
         Me.btnListUt = New System.Windows.Forms.Button()
         Me.btnLagreLager = New System.Windows.Forms.Button()
-        Me.VareTableAdapter = New TurCareASOOPS.DatabaseDataSetTableAdapters.vareTableAdapter()
+        Me.VareTableAdapter = New TurCareASOOPS.OppdatertDatasetTableAdapters.vareTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VareBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,7 +222,6 @@ Partial Class SjekkLager
     Friend WithEvents DatabaseDataSetBindingSource As BindingSource
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents VareBindingSource As BindingSource
-    Friend WithEvents VareTableAdapter As DatabaseDataSetTableAdapters.vareTableAdapter
     Friend WithEvents VarenavnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents VaresalgutleieDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents VaretilstandDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
