@@ -215,6 +215,7 @@ Public Class frmMain
     '//pageLager finito//
 
     '//pagePerson//
+
     Private Sub btnListUtAnsatte_Click(sender As Object, e As EventArgs) Handles btnListUtAnsatte.Click
 
         Me.PersonerTableAdapter.FillAnsatt(Me.DatabaseDataSet.personer)
@@ -320,6 +321,7 @@ Public Class frmMain
     '//pageSalg finito // 
 
     '//pageUtleie// 
+
     Private Sub btnRegistrerUtleie_Click(sender As Object, e As EventArgs) Handles btnRegistrerUtleie.Click
 
         Dim sporring As New Query
@@ -396,6 +398,7 @@ Public Class frmMain
     '//pageUtleie finito//
 
     '//pageKurs //
+
     Private Sub btnRegistrerKurs_click(sender As Object, e As EventArgs) Handles btnRegistrerKurs.Click
 
         panelKursLabels.Visible = True
@@ -586,6 +589,7 @@ Public Class frmMain
     '//pageKurs finito// 
 
     '//pageStatistikk// 
+
     Private Sub btnAntallSalgStatistikk_Click(sender As Object, e As EventArgs) Handles btnAntallSalgStatistikk.Click
 
         Dim query As String
@@ -641,7 +645,7 @@ Public Class frmMain
 
         Dim query As String
 
-        query = "SELECT SUM(salg_pris) as 'Salgsinntekt', SUM(vare_innkjopspris) as 'Innkjopspris', SUM( salg_pris - vare_innkjopspris ) as 'Fortjeneste' FROM  salg, vare"
+        query = "SELECT SUM(salg_pris) as 'Salgsinntekt', SUM(vare_innkjopspris) as 'Innkjopspris', SUM( salg_pris - (vare_innkjopspris * salg_antall) ) as 'Fortjeneste' FROM  salg, vare where salg.salg_vare = vare.vare_navn"
 
         Dim DGview = New Dataset
         DGview.dataset(query)
@@ -661,19 +665,6 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub btnTotalInntektStatistikk_Click(sender As Object, e As EventArgs) Handles btnTotalInntektStatistikk.Click
-
-        Dim query As String
-
-        query = "SELECT SUM(salg_pris ) + SUM( utleie_pris ) as 'Totalinntekt'
-                    FROM  `utleie` 
-                    JOIN  `salg` ON salg_selger_id = utleie_selger_id"
-
-        Dim DGview As New Dataset
-        DGview.dataset(query)
-        dgvStatistikk.DataSource = DGview.dataset(query)
-
-    End Sub
 
     Private Sub btnVarePopularStatistikk_Click(sender As Object, e As EventArgs) Handles btnVarePopularStatistikk.Click
 
