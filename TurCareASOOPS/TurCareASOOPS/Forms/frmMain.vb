@@ -8,15 +8,13 @@ Public Class frmMain
     Public utleieid() As String
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'OppdatertDataset.vare' table. You can move, or remove it, as needed.
-        Me.VareTableAdapter.Fill(Me.OppdatertDataset.vare)
 
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
 
         '// laster inn lager //
-        Me.VareTableAdapter.Fill(Me.OppdatertDataset.vare)
+        'Me.VareTableAdapter1.Fill(Me.VareData.vare)
         '//////////
 
         '// laster inn pagePerson //
@@ -162,30 +160,31 @@ Public Class frmMain
     '//pageLager//
     Private Sub btnListUt_Click(sender As Object, e As EventArgs) Handles btnListUt.Click
 
-        Dim query As String
+        'Dim query As String
 
-        query = "SELECT vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_status, vare_antall FROM vare"
+        'query = "SELECT vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_innkjopspris, vare_status, vare_antall FROM vare"
 
-        Dim DGview As New Dataset
-        DGview.dataset(query)
-        dgvLager.DataSource = DGview.dataset(query)
-
-    End Sub
-    Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
-
-        Dim sok As String = txtsoek.Text
-        Dim query As String
-
-        query = "SELECT vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_status, vare_antall FROM vare where vare_navn like '%" & sok & "%';"
-
-        Dim DGview As New Dataset
-        DGview.dataset(query)
-        dgvLager.DataSource = DGview.dataset(query)
+        'Dim DGview As New Dataset
+        'DGview.dataset(query)
+        'dgvLager.DataSource = DGview.dataset(query)
+        Me.VareTableAdapter1.Fill(Me.VareData.vare)
 
     End Sub
+    'Private Sub btnSok_Click(sender As Object, e As EventArgs)
+
+    '    Dim sok As String = txtsoek.Text
+    '    Dim query As String
+
+    '    query = "SELECT vare_navn, vare_salg_utleie, vare_tilstand, vare_pris, vare_innkjopspris, vare_status, vare_antall FROM vare where vare_navn like '%" & sok & "%';"
+
+    '    Dim DGview As New Dataset
+    '    DGview.dataset(query)
+    '    dgvLager.DataSource = DGview.dataset(query)
+
+    'End Sub
     Private Sub btnLagreLager_Click(sender As Object, e As EventArgs) Handles btnLagreLager.Click
 
-        Me.VareTableAdapter.Update(Me.OppdatertDataset.vare)
+        Me.VareTableAdapter1.Update(Me.VareData.vare)
 
     End Sub
 
@@ -734,6 +733,10 @@ Public Class frmMain
 
         End If
 
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        con.Dispose()
     End Sub
 
 

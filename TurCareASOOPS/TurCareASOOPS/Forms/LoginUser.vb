@@ -30,6 +30,9 @@ Public Class LoginUser
             MsgBox("Feil brukernavn eller passord")
         End If
 
+        txtAnsattbrukernavn.Text = ""
+        txtAnsattpassord.Text = ""
+
     End Sub
 
 

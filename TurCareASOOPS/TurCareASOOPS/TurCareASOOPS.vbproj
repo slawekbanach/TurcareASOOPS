@@ -141,6 +141,11 @@
     <Compile Include="Forms\TurCareSplash.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VareData.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VareData.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\frmMain.resx">
@@ -215,6 +220,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="VareData.xsc">
+      <DependentUpon>VareData.xsd</DependentUpon>
+    </None>
+    <None Include="VareData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VareData.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VareData.xss">
+      <DependentUpon>VareData.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Hjem.png" />
