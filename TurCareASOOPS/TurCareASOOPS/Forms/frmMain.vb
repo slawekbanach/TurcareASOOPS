@@ -135,7 +135,6 @@ Public Class frmMain
             MessageBox.Show(ex.Message)
         End Try
 
-
         '//Laster inn kurs//
         dgvKursdeltagereOversikt.Visible = False
         Me.Pamelding_kursTableAdapter.Fill(Me.KursDataSet.pamelding_kurs)
@@ -183,8 +182,12 @@ Public Class frmMain
 
     'End Sub
     Private Sub btnLagreLager_Click(sender As Object, e As EventArgs) Handles btnLagreLager.Click
-
-        Me.VareTableAdapter1.Update(Me.VareData.vare)
+        Try
+            Me.VareTableAdapter1.Update(Me.VareData.vare)
+            MessageBox.Show("Data ble lagret!")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
 
@@ -254,7 +257,6 @@ Public Class frmMain
         'If Not Char.IsNumber(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
         '    e.KeyChar = ""
         'End If
-
 
     End Sub
 
@@ -410,7 +412,6 @@ Public Class frmMain
         dgvUtleieOversikt.DataSource = DGview.dataset(query)
 
     End Sub
-
 
     '//pageUtleie finito//
 
@@ -738,8 +739,6 @@ Public Class frmMain
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         con.Dispose()
     End Sub
-
-
 
     '//pageloggut finito//
 End Class
