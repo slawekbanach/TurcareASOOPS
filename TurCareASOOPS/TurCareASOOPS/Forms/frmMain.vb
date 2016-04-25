@@ -202,18 +202,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub btnsokperson_Click(sender As Object, e As EventArgs) Handles btnSokPerson.Click
 
-        Dim sok As String = txtSoekPerson.Text
-        Dim query As String
-
-        query = "SELECT person_fornavn, person_etternavn, person_epost, person_tlf, person_type FROM personer where person_type not like 'Kunde' and (person_fornavn like '%" & sok & "%' or person_etternavn like '%" & sok & "%');"
-
-        Dim DGview As New Dataset
-        DGview.dataset(query)
-        dgvPerson.DataSource = DGview.dataset(query)
-
-    End Sub
 
     Private Sub btnListUtKunder_Click(sender As Object, e As EventArgs) Handles btnListUtKunder.Click
 
@@ -294,7 +283,7 @@ Public Class frmMain
 
         If txtEnhetsprisSalg.Text = "" Then
 
-            MsgBox("Vennligst velg vare først", MsgBoxStyle.Critical, "Penis")
+            MsgBox("Vennligst velg vare først", MsgBoxStyle.Critical)
 
         Else
             If txtAntallSalg.Text IsNot Nothing Then
