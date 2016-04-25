@@ -2858,20 +2858,17 @@
   <metadata name="DatabaseDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 104</value>
   </metadata>
-  <data name="lblIntro.Text" xml:space="preserve">
-    <value>Velkommen til Turcare AS sitt datasystem
-Bruk menyen til venstre for å få tilgang til de forskjellige funksjonene i programmet.
-Ønsker du å logge ut, eller logge på med en annen bruker, trykk på den nederste knappen.</value>
-  </data>
-  <metadata name="VareBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>782, 239</value>
-  </metadata>
   <metadata name="VareBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>782, 239</value>
   </metadata>
   <metadata name="VareData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>680, 239</value>
   </metadata>
+  <data name="lblIntro.Text" xml:space="preserve">
+    <value>Velkommen til Turcare AS sitt datasystem
+Bruk menyen til venstre for å få tilgang til de forskjellige funksjonene i programmet.
+Ønsker du å logge ut, eller logge på med en annen bruker, trykk på den nederste knappen.</value>
+  </data>
   <metadata name="VareData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>680, 239</value>
   </metadata>
